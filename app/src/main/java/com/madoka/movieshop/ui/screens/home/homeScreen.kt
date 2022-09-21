@@ -1,6 +1,8 @@
 package com.madoka.movieshop.ui.screens.home
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
@@ -15,8 +17,11 @@ import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
 import com.madoka.movieshop.FakeTopSectionItems
+import com.madoka.movieshop.FakeTrendingSectionItems
 import com.madoka.movieshop.R
+import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
+import com.madoka.movieshop.ui.components.TrendingMoviesItem
 import com.madoka.movieshop.ui.theme.DeepBlue
 
 
@@ -26,7 +31,7 @@ fun HomeScreen() {
     val scrollState = rememberScrollState()
     Surface(
         //picks the color depending on  light mode or dark mode
-        color = MaterialTheme.colors.background,
+        color = MaterialTheme.colors.surface,
         modifier = Modifier.fillMaxSize()
     ) {
         Column(
@@ -47,6 +52,23 @@ fun HomeScreen() {
                     ),
 
                     )
+            )
+            TrendingNowMovies(
+                trendingMovies = listOf(
+                    FakeTrendingSectionItems(
+                        title = "chunk noris of the new mountanin of beggining ",
+                        R.drawable.drawable1
+                    ),
+
+                    FakeTrendingSectionItems(
+                        title = "Hulk Hogn",
+                        R.drawable.drawable1
+                    ),
+                    FakeTrendingSectionItems(
+                        title = "Cena sucks",
+                        R.drawable.drawable1
+                    )
+                )
             )
 
         }
@@ -99,5 +121,44 @@ private fun TopSectionPlayingNow(
 
 }
 
+@Composable
+fun TrendingNowMovies(
+    trendingMovies: List<FakeTrendingSectionItems>
+) {
+    //separate our sections class created in components
+    Separator(
+        modifier = Modifier
+            .padding(start = 16.dp, end = 16.dp, top = 12.dp)
+            .fillMaxWidth()
+            .wrapContentHeight(),
+        sectionTitle = "Trending Movies",
+        onItemClick = { /** navigate to view all**/ }
+    )
+    Spacer(modifier = Modifier.height(8.dp))
+
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 16.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+        /* .placeholder(
+                    visible = false,
+                    color = Gray,
+                    shape = RoundedCornerShape(4.dp),
+                    highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
+                )*/
+    ) {
+        items(items = trendingMovies) { item ->
+            TrendingMoviesItem(
+                trendingMovie = item,
+                onItemClick = { movie ->
+                    //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
+                }
+            )
+        }
+    }
+
+
+}
 
 

@@ -11,7 +11,7 @@ val DefColor = Color(0f, 0f, 1f, 0.44f)
 val SpAtkColor = Color(0.671f, 0f, 1f, 0.57f)
 val SpDefColor = Color(1f, 0f, 0.8f, 0.7f)
 val SpdColor = Color(0f, 1f, 0.063f, 0.55f)
-
+val DarkPrimaryColor = Color(0xFFB81D24)
 val TypeNormal = Color(0xFFA8A77A)
 val TypeFire = Color(0xFFEE8130)
 val TypeWater = Color(0xFF6390F0)
@@ -34,7 +34,7 @@ val TypeSteel = Color(0xFFB7B7CE)
 val TypeFairy = Color(0xFFD685AD)
 
 
-
+val White = Color(0xFFFFFFFF)
 val DeepBlue = Color(0xff06164c)
 val ButtonBlue = Color(0xff505cf3)
 val LightRed = Color(0xfffc879a)
