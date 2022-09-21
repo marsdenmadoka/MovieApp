@@ -16,12 +16,14 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
+import com.madoka.movieshop.FakePopularSectionItems
 import com.madoka.movieshop.FakeTopSectionItems
 import com.madoka.movieshop.FakeTrendingSectionItems
 import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
 import com.madoka.movieshop.ui.components.TrendingMoviesItem
+import com.madoka.movieshop.ui.components.popularMovieItem
 import com.madoka.movieshop.ui.theme.DeepBlue
 
 
@@ -38,6 +40,7 @@ fun HomeScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(scrollState),
+               // .paddingFromBaseline(bottom = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             TopSectionPlayingNow(
@@ -71,6 +74,30 @@ fun HomeScreen() {
                 )
             )
 
+            PopularMovies(
+                popularmovies = listOf(
+                    FakePopularSectionItems(
+
+                        title = "chunk noris of the new mountanin of beggining ",
+                        R.drawable.drawable1,
+                        releaseDate = "26/jun/2022"
+                    ),
+
+
+                    FakePopularSectionItems(
+                        title = "chunk noris of the new mountanin of beggining ",
+                        R.drawable.drawable1,
+                        releaseDate = "26/jun/2022"
+                    ),
+                    FakePopularSectionItems(
+                        title = "chunk noris of the new mountanin of beggining ",
+                        R.drawable.drawable1,
+                        releaseDate = "26/jun/2022"
+                    )
+                )
+            )
+
+            Spacer(modifier = Modifier.height(18.dp))
         }
     }
 
@@ -157,8 +184,45 @@ fun TrendingNowMovies(
             )
         }
     }
+}
 
+@Composable
+fun PopularMovies(
+    popularmovies: List<FakePopularSectionItems>
+) {
+    Separator(
+        modifier = Modifier
+            .padding(start = 16.dp, end = 16.dp, top = 12.dp)
+            .fillMaxWidth()
+            .wrapContentHeight(),
+        sectionTitle = "Popular Movies",
+        onItemClick = {
+            // click to view all
+        }
+    )
 
+    Spacer(modifier = Modifier.height(8.dp))
+
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 16.dp),
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+        modifier = Modifier
+            .wrapContentHeight()
+        /*
+    .placeholder(
+        visible = false,
+        color = Color.Gray,
+        highlight = PlaceholderHighlight.fade()
+    )*/
+    ) {
+        items(items = popularmovies) { item ->
+            popularMovieItem(
+                popularmovie = item,
+                onClickItem = { movie ->
+                }
+            )
+        }
+    }
 }
 
 

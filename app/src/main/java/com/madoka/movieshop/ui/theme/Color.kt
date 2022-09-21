@@ -4,7 +4,6 @@ import androidx.compose.ui.graphics.Color
 
 val LightBlue = Color(0xFFBAC7FF)
 val lightGrey = Color(0xFFAAAAAA)
-
 val HPColor = Color(0xFFF5FF00)
 val AtkColor = Color(1f, 0f, 0f, 0.66f)
 val DefColor = Color(0f, 0f, 1f, 0.44f)
@@ -32,12 +31,18 @@ val TypeDragon = Color(0xFF6F35FC)
 val TypeDark = Color(0xFF705746)
 val TypeSteel = Color(0xFFB7B7CE)
 val TypeFairy = Color(0xFFD685AD)
-
+val Surface = Color(0xFFF8F8F8)
+val DarkSurface = Color(0xFF000000)
 
 val White = Color(0xFFFFFFFF)
 val DeepBlue = Color(0xff06164c)
 val ButtonBlue = Color(0xff505cf3)
 val LightRed = Color(0xfffc879a)
+val TextSecondary = Color(0xFF666666)
+val TextPrimary = Color(0xFF212121)
+val DarkTextPrimary = Color(0xFFF8F8F8)
+val DarkTextSecondary = Color(0xFFC3C3C3)
+val PrimaryColor = Color(0xFFE50914)
 val AquaBlue = Color(0xff9aa5c4)
 val OrangeYellow1 = Color(0xfff0bd28)
 val OrangeYellow2 = Color(0xfff1c746)

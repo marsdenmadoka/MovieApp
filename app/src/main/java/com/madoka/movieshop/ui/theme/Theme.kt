@@ -5,27 +5,34 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 
 
 private val DarkColorPalette = darkColors(
-    primary = Color.Yellow,
-    background = Color(0xFF101010),
-    onBackground = Color.White,
-    surface = Color(0xFF303030),
-    onSurface = Color.White
+    primary = DarkPrimaryColor,
+    secondary = DarkPrimaryColor,
+    surface = DarkSurface,
+    onSurface = DarkTextPrimary
 )
 
 private val LightColorPalette = lightColors(
-    primary = Color.Blue,
-    background = White,
-    onBackground = Color.Black,
-    surface = Color.White,
-    onSurface = Color.Black
+    primary = PrimaryColor,
+    secondary = PrimaryColor,
+    surface = Surface,
+    onSurface = TextPrimary
+//    primary = Color.Blue,
+//    background = White,
+//    onBackground = Color.Black,
+//    surface = Color.White,
+//    onSurface = Color.Black
 )
 
 @Composable
-fun MovieShopTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun MovieShopTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    //systemUiController: SystemUiController,
+    content: @Composable () -> Unit
+) {
+
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
@@ -33,7 +40,7 @@ fun MovieShopTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
     }
 
     MaterialTheme(
-       colors = colors,
+        colors = colors,
         typography = Typography,
         shapes = Shapes,
         content = content
