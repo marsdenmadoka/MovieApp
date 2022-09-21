@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
@@ -28,7 +29,9 @@ import com.madoka.movieshop.ui.theme.DeepBlue
 
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    navController: NavController,
+) {
 
     val scrollState = rememberScrollState()
     Surface(
