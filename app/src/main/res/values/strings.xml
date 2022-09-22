@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MovieShop</string>
     <string name="title_presentation">presentation</string>
+    <string name="movie_overiview">
+        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</string>
 </resources>

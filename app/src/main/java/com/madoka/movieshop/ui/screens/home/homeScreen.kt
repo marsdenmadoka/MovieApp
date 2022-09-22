@@ -59,6 +59,7 @@ fun HomeScreen(
 
                     )
             )
+
             TrendingNowMovies(
                 trendingMovies = listOf(
                     FakeTrendingSectionItems(
@@ -74,7 +75,8 @@ fun HomeScreen(
                         title = "Cena sucks",
                         R.drawable.drawable1
                     )
-                )
+                ),
+                navController = navController
             )
 
             PopularMovies(
@@ -97,7 +99,8 @@ fun HomeScreen(
                         R.drawable.drawable1,
                         releaseDate = "26/jun/2022"
                     )
-                )
+                ),
+                navController = navController
             )
 
             Spacer(modifier = Modifier.height(18.dp))
@@ -153,7 +156,8 @@ private fun TopSectionPlayingNow(
 
 @Composable
 fun TrendingNowMovies(
-    trendingMovies: List<FakeTrendingSectionItems>
+    trendingMovies: List<FakeTrendingSectionItems>,
+    navController: NavController,
 ) {
     //separate our sections class created in components
     Separator(
@@ -181,7 +185,8 @@ fun TrendingNowMovies(
         items(items = trendingMovies) { item ->
             TrendingMoviesItem(
                 trendingMovie = item,
-                onItemClick = { movie ->
+                onItemClick = {
+                    navController.navigate("details")
                     //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
                 }
             )
@@ -191,7 +196,8 @@ fun TrendingNowMovies(
 
 @Composable
 fun PopularMovies(
-    popularmovies: List<FakePopularSectionItems>
+    popularmovies: List<FakePopularSectionItems>,
+navController: NavController
 ) {
     Separator(
         modifier = Modifier
@@ -221,8 +227,10 @@ fun PopularMovies(
         items(items = popularmovies) { item ->
             popularMovieItem(
                 popularmovie = item,
-                onClickItem = { movie ->
-                }
+//                onClickItem = {
+//
+//                }
+            navController = navController
             )
         }
     }

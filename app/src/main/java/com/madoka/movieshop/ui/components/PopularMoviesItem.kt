@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.madoka.movieshop.FakePopularSectionItems
 
@@ -28,7 +29,7 @@ import com.madoka.movieshop.FakePopularSectionItems
 @Composable
 fun popularMovieItem(
     popularmovie: FakePopularSectionItems,
-    onClickItem: (FakePopularSectionItems) -> Unit
+   navController:NavController
 ) {
 
     val defaultDominantTextColor = MaterialTheme.colors.onSurface
@@ -45,7 +46,9 @@ fun popularMovieItem(
         modifier = Modifier
             .width(300.dp)
             .height(220.dp)
-            .clickable { onClickItem(popularmovie) }
+            .clickable {
+//                onClickItem()
+                navController.navigate("details")}
         /* .placeholder(
              visible = false,
              color = Color.Black,

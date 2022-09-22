@@ -68,14 +68,14 @@ dependencies {
     implementation "com.google.accompanist:accompanist-swiperefresh:0.20.0"
 
 
-
     //constraints
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
-     //rating bar
+    //rating bar
     //implementation 'com.github.a914-gowtham:compose-ratingbar:1.2.3'
 
 
-
+    //get Dominant image color
+    implementation 'androidx.palette:palette-ktx:1.0.0'
 
     //dagger hilt
     implementation "com.google.dagger:hilt-android:2.40"
