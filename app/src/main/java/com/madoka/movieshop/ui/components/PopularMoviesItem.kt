@@ -115,7 +115,7 @@ fun popularMovieItem(
                 style = MaterialTheme.typography.h6,
                 overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.Start,
-                color = dominantTextColor
+                color = Color.White//dominantTextColor
             )
             //endregion
 
@@ -153,7 +153,7 @@ fun popularMovieItem(
                             .padding(horizontal = 4.dp)
                             .width(1.dp)
                             .height(13.dp),
-                        color = dominantSubTextColor,
+                        color =  Color.White//dominantSubTextColor,
                     )
 
                     Text(
@@ -164,7 +164,7 @@ fun popularMovieItem(
                         style = MaterialTheme.typography.h4,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Start,
-                        color = dominantSubTextColor
+                        color = Color.White//dominantSubTextColor
                     )
                 }
             }
