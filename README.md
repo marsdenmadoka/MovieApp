@@ -6,10 +6,13 @@ An Android app built using using jetpack compose
 ## Screenshoots
 These are the app's screenshots:
 
-<img src="screenshoots/screenshot1.jpg" width= 250/>
+
 
  
 ## Tech Stack
  
  - [Jetpack Compose](https://developer.android.com/jetpack/compose) - Jetpack Compose is Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
 
+## Clean Architecture Notes
+consider reading the below note very careful. It summaries on what each layer of the clean architecture should do
+<img src="screenshoots/CleanArchitectureNotes.png" width= 450/>
