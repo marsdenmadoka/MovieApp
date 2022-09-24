@@ -1,6 +1,16 @@
 buildscript {
     ext {
+
         compose_version = '1.1.0-beta01'
+        nav_version = "2.5.2"
+        hiltVersion = "2.38.1"
+        hiltCompiler = "1.0.0"
+        retrofitVersion = "2.9.0"
+        okhttpVersion = "4.9.1"
+
+        workVersion = "2.7.1"
+        mockito = "3.10.0"
+        pagingVersion = "3.1.1"
     }
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
     repositories {

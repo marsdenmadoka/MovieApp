@@ -14,6 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MovieShop"
 include ':app'
-
 include ':domain'
 include ':data'
+include ':commons'
