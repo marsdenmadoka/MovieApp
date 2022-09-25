@@ -58,7 +58,7 @@ fun TrendingMoviesItem(
                 ),
                 alignment = Alignment.Center,
                 contentScale = ContentScale.Crop,
-                contentDescription = "Trending Movies"
+                contentDescription = "Trending MovieDto"
             )
         }
 

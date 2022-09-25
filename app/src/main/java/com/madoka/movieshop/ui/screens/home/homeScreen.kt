@@ -165,7 +165,7 @@ fun TrendingNowMovies(
             .padding(start = 16.dp, end = 16.dp, top = 12.dp)
             .fillMaxWidth()
             .wrapContentHeight(),
-        sectionTitle = "Trending Movies",
+        sectionTitle = "Trending MovieDto",
         onItemClick = { /** navigate to view all**/ }
     )
     Spacer(modifier = Modifier.height(8.dp))
@@ -204,7 +204,7 @@ navController: NavController
             .padding(start = 16.dp, end = 16.dp, top = 12.dp)
             .fillMaxWidth()
             .wrapContentHeight(),
-        sectionTitle = "Popular Movies",
+        sectionTitle = "Popular MovieDto",
         onItemClick = {
             // click to view all
         }

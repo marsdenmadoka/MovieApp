@@ -58,7 +58,6 @@ object DataModule {
         chain.proceed(request.build())
     }
 
-
 }
 
 //
