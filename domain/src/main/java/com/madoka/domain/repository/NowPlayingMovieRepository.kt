@@ -1,4 +1,6 @@
 package com.madoka.domain.repository
 
-class NowPlayingMovieRepository {
+interface NowPlayingMovieRepository {
+
+    suspend fun getPlayingNowMovies():List
 }
