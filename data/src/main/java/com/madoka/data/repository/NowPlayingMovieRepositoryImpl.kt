@@ -19,7 +19,7 @@ class NowPlayingMovieRepositoryImpl(private val movieApiService: MovieApi) :
         try {
             val responsedata = movieApiService.fetchNowPlayingMovies()
             emit(Resource.Success(responsedata.movies.map { it.toMovie() }))
-            // responsedata.map{it.toMovie()}//this is what our we should have but we can get map iterator
+            /responsedata.map{it.toMovie()}//this is what our we should have but we can get map iterator
 
         } catch (e: IOException) {
             emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
