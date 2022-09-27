@@ -15,7 +15,7 @@ interface MovieApi {
     suspend fun fetchNowPlayingMovies(
       //  @Query("page") page: Int = STARTING_PAGE_INDEX,
         @Query("page") page: Int? = null,
-    ): Response<NowPlayingMovies>
+    ): NowPlayingMoviesDto
 
 
 //    @GET("discover/movie")

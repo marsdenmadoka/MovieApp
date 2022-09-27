@@ -1,6 +1,7 @@
 package com.madoka.data.repository
 
 import com.madoka.commons.Resource
+import com.madoka.data.mappers.toMovie
 import com.madoka.data.remote.api.MovieApi
 import com.madoka.data.util.SafeApiRequest
 import com.madoka.domain.model.Movie
@@ -10,14 +11,15 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
 
-class NowPlayingMovieRepositoryImpl(private val movieApiService:MovieApi)
-    :NowPlayingMovieRepository ,SafeApiRequest(){
+class NowPlayingMovieRepositoryImpl(private val movieApiService: MovieApi) :
+    NowPlayingMovieRepository, SafeApiRequest() {
 
     override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
         emit(Resource.Loading())
-          try {
-            val response = movieApiService.fetchNowPlayingMovies()
-            //emit(Resource.Success(response.isSuccessful))
+        try {
+            val responsedata = movieApiService.fetchNowPlayingMovies()
+            emit(Resource.Success(responsedata.movies.map { it.toMovie() }))
+            // responsedata.map{it.toMovie()}//this is what our we should have but we can get map iterator
 
         } catch (e: IOException) {
             emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
