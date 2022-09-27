@@ -30,10 +30,3 @@ data class MovieDto(
 )
 
 
-fun MovieDto.toMovie(): Movie {
-    return Movie(
-        movieId = id,
-        title = title,
-        posterPath = posterPath,
-    )
-}

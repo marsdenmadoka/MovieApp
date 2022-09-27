@@ -1,6 +1,8 @@
 package com.madoka.data.remote.api
 
+import com.madoka.data.remote.dto.MovieDto
 import com.madoka.data.remote.dto.NowPlayingMoviesDto
+import com.madoka.domain.model.NowPlayingMovies
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -11,9 +13,9 @@ interface MovieApi {
 
     @GET("movie/now_playing")
     suspend fun fetchNowPlayingMovies(
-        @Query("page") page: Int = STARTING_PAGE_INDEX,
-        @Query("language") language: String = "en"
-    ): Response<NowPlayingMoviesDto>
+      //  @Query("page") page: Int = STARTING_PAGE_INDEX,
+        @Query("page") page: Int? = null,
+    ): Response<NowPlayingMovies>
 
 
 //    @GET("discover/movie")
@@ -21,8 +23,10 @@ interface MovieApi {
 //        @Query("page") page: Int? = null,
 //    ): MovieResponse
 
-    @GET("movie/{id}")
-    suspend fun getMovieDetail(
-        @Path("id") id: Int
-    ): MovieDetailResponse
+//    @GET("movie/{id}")
+//    suspend fun getMovieDetail(
+//        @Path("id") id: Int
+//    ): MovieDetailResponse
+
+
 }

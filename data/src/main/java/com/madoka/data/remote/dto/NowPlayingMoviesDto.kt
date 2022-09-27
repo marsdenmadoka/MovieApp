@@ -20,9 +20,3 @@ data class NowPlayingMoviesDto(
     val totalResults: Int
 )
 
-fun NowPlayingMoviesDto.toNowPlayingMovies() : NowPlayingMovies {
-    return NowPlayingMovies(
-        page=page ,
-        movieslis = movies.map { it.toMovie() }
-    )
-}

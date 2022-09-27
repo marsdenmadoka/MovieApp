@@ -47,6 +47,10 @@ dependencies {
     implementation "androidx.hilt:hilt-work:$hiltCompiler"
 
 
+    /**Domain layer cannot access any other layer
+     NOTE here commons Layers is not part of clean arch its just our own
+     * additional layer for constants and resources*/
 
-    /**Domain layer cannot access any other layer*/
+    implementation project(':commons')
+
 }
