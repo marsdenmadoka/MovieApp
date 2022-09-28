@@ -15,9 +15,9 @@ fun MovieDto.toMovie(): Movie {
 }
 
 
-fun NowPlayingMoviesDto.toNowPlayingMovies() : NowPlayingMovies {
+fun NowPlayingMoviesDto.toDomain() : NowPlayingMovies {
     return NowPlayingMovies(
         page=page ,
-        movieslis = movies.map { it.toMovie() }
+        movies = movies.map { it.toMovie() }
     )
 }
