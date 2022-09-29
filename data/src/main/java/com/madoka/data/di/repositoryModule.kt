@@ -1,6 +1,6 @@
 package com.madoka.data.di
 import com.madoka.data.repository.NowPlayingMovieRepositoryImpl
-import com.madoka.domain.repository.NowPlayingMovieRepository
+import com.madoka.domain.repository.MovieRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 abstract class RepositoryModule {
     @Binds
     @Singleton
-    abstract fun providesRepository(repositoryImpl: NowPlayingMovieRepositoryImpl): NowPlayingMovieRepository
+    abstract fun providesRepository(repositoryImpl: NowPlayingMovieRepositoryImpl): MovieRepository
 
 
 }

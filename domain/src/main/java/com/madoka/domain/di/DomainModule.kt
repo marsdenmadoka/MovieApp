@@ -1,7 +1,6 @@
 package com.madoka.domain.di
 
-import com.madoka.domain.model.NowPlayingMovies
-import com.madoka.domain.repository.NowPlayingMovieRepository
+import com.madoka.domain.repository.MovieRepository
 import com.madoka.domain.usecase.NowPlayingMovieDetailUseCase
 import com.madoka.domain.usecase.NowPlayingMovieListUseCase
 import com.madoka.domain.usecase.TrendingMoviesUseCase
@@ -10,24 +9,24 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
-
+/**Inject our use cases*/
 @Module
 @InstallIn(SingletonComponent::class)
 object DomainModule {
     @Provides
     @Singleton
-    fun provideNowPlayingMovieListUseCase(nowPlayingMovieReposiory: NowPlayingMovieRepository) =
-        NowPlayingMovieListUseCase(nowPlayingMovieReposiory)
+    fun provideNowPlayingMovieListUseCase(MovieRepository: MovieRepository) =
+        NowPlayingMovieListUseCase(MovieRepository)
 
     @Provides
     @Singleton
-    fun provideNowPlayingMovieDetailUseCase(nowPlayingMovieReposiory: NowPlayingMovieRepository) =
-        NowPlayingMovieDetailUseCase(nowPlayingMovieReposiory)
+    fun provideNowPlayingMovieDetailUseCase(MovieRepository: MovieRepository) =
+        NowPlayingMovieDetailUseCase(MovieRepository)
 
     @Provides
     @Singleton
-    fun provideTrendingMoviesUseCase(TrendingMovieRepository: NowPlayingMovieRepository) =
-        TrendingMoviesUseCase(TrendingMovieRepository)
+    fun provideTrendingMoviesUseCase(MovieRepository: MovieRepository) =
+        TrendingMoviesUseCase(MovieRepository)
 
 
 }

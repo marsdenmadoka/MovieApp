@@ -5,7 +5,7 @@ import com.madoka.data.mappers.toMovie
 import com.madoka.data.remote.api.MovieApi
 //import com.madoka.data.util.SafeApiRequest
 import com.madoka.domain.model.Movie
-import com.madoka.domain.repository.NowPlayingMovieRepository
+import com.madoka.domain.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -13,7 +13,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiService: MovieApi) :
-    NowPlayingMovieRepository{
+    MovieRepository{
     override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
        //TODO make sure to add a safe api request!! to avoid blocking ui
         emit(Resource.Loading())
