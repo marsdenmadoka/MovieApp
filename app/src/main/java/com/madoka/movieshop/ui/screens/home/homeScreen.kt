@@ -35,7 +35,7 @@ fun HomeScreen(
     navController: NavController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
-    val state = viewModel.movieState.value
+    val playingNowMovieState = viewModel.movieState.value
     val trendingMovieState =  viewModel.movieTrendingState.value
 
     val scrollState = rememberScrollState()
@@ -53,7 +53,7 @@ fun HomeScreen(
         ) {
             TopSectionPlayingNow(
                 //movie = listOf()
-                moviesState = state,
+                moviesState = playingNowMovieState ,
             )
 
 
@@ -115,8 +115,6 @@ fun HomeScreen(
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 private fun TopSectionPlayingNow(
-    // faketopitems: List<FakeTopSectionItems>
-   // movies: List<Movie>,
     moviesState: MovieState,
 ) {
     val pagerState = rememberPagerState()
@@ -137,7 +135,6 @@ private fun TopSectionPlayingNow(
             modifier = Modifier
                 .fillMaxSize(),
             movie = moviesState.movies[page]
-            // faketopitem = faketopitems[page]
         ) {
             /** val items = faketopitems[page]
             navController.navigate("details/${movie.id!!}/${movie.cacheId!!}") */
@@ -165,7 +162,6 @@ fun TrendingNowMovies(
     moviesSate: MovieState,
     navController: NavController,
 ) {
-
     //separate our sections class created in components
     Separator(
         modifier = Modifier

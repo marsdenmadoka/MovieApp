@@ -36,8 +36,8 @@ class HomeViewModel @Inject constructor(
 
     init {
         getPlayingNowMovies()
-        TrendingNowMovies()
-        PopularNowMovies()
+        trendingNowMovies()
+        popularNowMovies()
 
     }
 
@@ -70,7 +70,7 @@ class HomeViewModel @Inject constructor(
 
 
 
-    private fun TrendingNowMovies() {
+    private fun trendingNowMovies() {
         viewModelScope.launch {
             TrendingMovieUseCase().collectLatest { result ->
                 when (result) {
@@ -100,23 +100,23 @@ class HomeViewModel @Inject constructor(
 
 
 
-    private fun opularNowMovies() {
+    private fun popularNowMovies() {
         viewModelScope.launch {
-            TrendingMovieUseCase().collectLatest { result ->
+            PopularMovieUsesCase().collectLatest { result ->
                 when (result) {
                     is Resource.Success -> {
-                        _movieTrendingState.value = movieTrendingState.value.copy(
+                        _moviePopularState.value = moviePopularState.value.copy(
                             movies = result.data ?: emptyList(),
                             isLoading = false
                         )
                     }
                     is Resource.Loading -> {
-                        _movieTrendingState.value = movieTrendingState.value.copy(
+                        _moviePopularState.value = moviePopularState.value.copy(
                             isLoading = true
                         )
                     }
                     is Resource.Error -> {
-                        _movieTrendingState.value =movieTrendingState.value.copy(
+                        _moviePopularState.value = moviePopularState.value.copy(
                             isLoading = false,
                             error = result.message ?: "An unexpected error occured"
                         )
