@@ -23,12 +23,13 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.FakePopularSectionItems
 
 
 @Composable
 fun popularMovieItem(
-    popularmovie: FakePopularSectionItems,
+    movie: Movie,
    navController:NavController
 ) {
 
@@ -38,7 +39,7 @@ fun popularMovieItem(
     var dominantSubTextColor by remember { mutableStateOf(defaultDominantTextColor) }
 
     val painter = rememberImagePainter(
-        data = popularmovie.Image, //backdropPath?.loadImage(),
+        data = movie.posterPath, //backdropPath?.loadImage(),
         builder = { crossfade(true) }
     )
 
@@ -109,7 +110,7 @@ fun popularMovieItem(
                         bottom.linkTo(rowRankRelease.top)
                         end.linkTo(parent.end)
                     },
-                text = popularmovie.title ?: "Unknown movie",
+                text = movie.title ?: "Unknown movie",
                 fontSize = 18.sp,
                 maxLines = 2,
                 style = MaterialTheme.typography.h6,
@@ -147,7 +148,7 @@ fun popularMovieItem(
                     onRatingChanged = {}
                 ) */
 
-                if (!popularmovie.releaseDate.isNullOrEmpty()) {
+                if (!movie.releaseDate.isNullOrEmpty()) {
                     Divider(
                         modifier = Modifier
                             .padding(horizontal = 4.dp)
@@ -158,7 +159,7 @@ fun popularMovieItem(
 
                     Text(
                         modifier = Modifier,
-                        text = popularmovie.releaseDate,
+                        text = movie.releaseDate,
                         fontSize = 14.sp,
                         maxLines = 1,
                         style = MaterialTheme.typography.h4,

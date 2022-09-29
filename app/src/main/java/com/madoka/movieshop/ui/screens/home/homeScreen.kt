@@ -7,9 +7,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Gray
@@ -20,9 +18,6 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
-import com.madoka.domain.model.Movie
-import com.madoka.movieshop.FakePopularSectionItems
-import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
 import com.madoka.movieshop.ui.components.TrendingMoviesItem
@@ -36,7 +31,8 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val playingNowMovieState = viewModel.movieState.value
-    val trendingMovieState =  viewModel.movieTrendingState.value
+    val trendingMovieState = viewModel.movieTrendingState.value
+    val popularMovieState = viewModel.moviePopularState.value
 
     val scrollState = rememberScrollState()
     Surface(
@@ -52,59 +48,16 @@ fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             TopSectionPlayingNow(
-                //movie = listOf()
-                moviesState = playingNowMovieState ,
+                moviesState = playingNowMovieState,
             )
-
-
             TrendingNowMovies(
                 moviesSate = trendingMovieState,
                 navController = navController,
             )
-//            TrendingNowMtovies(
-//
-//                trendingMovies = listOf(
-//                    FakeTrendingSectionItems(
-//                        title = "chunk noris of the new mountanin of beggining ",
-//                        R.drawable.drawable1
-//                    ),
-//
-//                    FakeTrendingSectionItems(
-//                        title = "Hulk Hogn",
-//                        R.drawable.drawable1
-//                    ),
-//                    FakeTrendingSectionItems(
-//                        title = "Cena sucks",
-//                        R.drawable.drawable1
-//                    )
-//                ),
-//                navController = navController
-//            )
-
             PopularMovies(
-                popularmovies = listOf(
-                    FakePopularSectionItems(
-
-                        title = "chunk noris of the new mountanin of beggining ",
-                        R.drawable.drawable1,
-                        releaseDate = "26/jun/2022"
-                    ),
-
-
-                    FakePopularSectionItems(
-                        title = "chunk noris of the new mountanin of beggining ",
-                        R.drawable.drawable1,
-                        releaseDate = "26/jun/2022"
-                    ),
-                    FakePopularSectionItems(
-                        title = "chunk noris of the new mountanin of beggining ",
-                        R.drawable.drawable1,
-                        releaseDate = "26/jun/2022"
-                    )
-                ),
+                moviesSate = popularMovieState,
                 navController = navController
             )
-
             Spacer(modifier = Modifier.height(18.dp))
         }
     }
@@ -199,7 +152,7 @@ fun TrendingNowMovies(
 
 @Composable
 fun PopularMovies(
-    popularmovies: List<FakePopularSectionItems>,
+    moviesSate: MovieState,
     navController: NavController
 ) {
     Separator(
@@ -227,9 +180,9 @@ fun PopularMovies(
         highlight = PlaceholderHighlight.fade()
     )*/
     ) {
-        items(items = popularmovies) { item ->
+        items(moviesSate.movies) { item ->
             popularMovieItem(
-                popularmovie = item,
+                movie = item,
 //                onClickItem = {
 //
 //                }
@@ -239,4 +192,75 @@ fun PopularMovies(
     }
 }
 
+
+/**
+PopularMovies(
+popularmovies = listOf(
+FakePopularSectionItems(
+
+title = "chunk noris of the new mountanin of beggining ",
+R.drawable.drawable1,
+releaseDate = "26/jun/2022"
+),
+
+
+FakePopularSectionItems(
+title = "chunk noris of the new mountanin of beggining ",
+R.drawable.drawable1,
+releaseDate = "26/jun/2022"
+),
+FakePopularSectionItems(
+title = "chunk noris of the new mountanin of beggining ",
+R.drawable.drawable1,
+releaseDate = "26/jun/2022"
+)
+),
+navController = navController
+)
+
+
+
+
+@Composable
+fun PopularMovies(
+popularmovies: List<FakePopularSectionItems>,
+navController: NavController
+) {
+Separator(
+modifier = Modifier
+.padding(start = 16.dp, end = 16.dp, top = 12.dp)
+.fillMaxWidth()
+.wrapContentHeight(),
+sectionTitle = "Popular Movies",
+onItemClick = {
+// click to view all
+}
+)
+
+Spacer(modifier = Modifier.height(8.dp))
+
+LazyRow(
+contentPadding = PaddingValues(horizontal = 16.dp),
+horizontalArrangement = Arrangement.spacedBy(14.dp),
+modifier = Modifier
+.wrapContentHeight()
+/*
+.placeholder(
+visible = false,
+color = Color.Gray,
+highlight = PlaceholderHighlight.fade()
+)*/
+) {
+items(items = popularmovies) { item ->
+popularMovieItem(
+popularmovie = item,
+//                onClickItem = {
+//
+//                }
+navController = navController
+)
+}
+}
+}
+ */
 

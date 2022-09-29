@@ -7,12 +7,14 @@ import com.madoka.domain.model.Movie
 import com.madoka.domain.model.NowPlayingMovies
 
 
-/**Since all our responses have same moviesT type will use the same mapper/converter*/
+/**Since all our responses have same moviesTtype will use the same mapper/converter*/
 fun MovieDto.toMovie(): Movie {
     return Movie(
         movieId = id,
         title = title,
-        posterPath = IMAGE_URL + posterPath
+        posterPath = IMAGE_URL + posterPath,
+        releaseDate = releaseDate.substringBefore("-") ?: ""
+
 
     )
 }
