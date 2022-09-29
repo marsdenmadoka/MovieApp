@@ -26,4 +26,11 @@ interface MovieApi {
     ):TrendingMoviesDto
 
 
+    @GET("movie/popular")
+    suspend fun fetchPopularMovies(
+        @Query("page") page: Int = 1,
+    ): NowPlayingMoviesDto
+
+
+
 }

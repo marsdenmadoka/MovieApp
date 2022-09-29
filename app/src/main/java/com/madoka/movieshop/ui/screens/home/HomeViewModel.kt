@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.madoka.commons.Resource
 import com.madoka.domain.usecase.NowPlayingMovieListUseCase
+import com.madoka.domain.usecase.PopularMoviesUseCase
 import com.madoka.domain.usecase.TrendingMoviesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,6 +20,7 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val playingNowUseCase: NowPlayingMovieListUseCase,
     private val TrendingMovieUseCase: TrendingMoviesUseCase,
+    private val PopularMovieUsesCase: PopularMoviesUseCase
 ) : ViewModel() {
 
     private val _movieState = mutableStateOf(MovieState())
@@ -28,9 +30,14 @@ class HomeViewModel @Inject constructor(
     private val _movieTrendingState = mutableStateOf(MovieState())
     val movieTrendingState: State<MovieState> = _movieTrendingState
 
+
+    private val _moviePopularState = mutableStateOf(MovieState())
+    val moviePopularState: State<MovieState> = _moviePopularState
+
     init {
         getPlayingNowMovies()
         TrendingNowMovies()
+        PopularNowMovies()
 
     }
 
@@ -71,7 +78,6 @@ class HomeViewModel @Inject constructor(
                         _movieTrendingState.value = movieTrendingState.value.copy(
                             movies = result.data ?: emptyList(),
                             isLoading = false
-
                         )
                     }
                     is Resource.Loading -> {
@@ -93,5 +99,31 @@ class HomeViewModel @Inject constructor(
 
 
 
+
+    private fun opularNowMovies() {
+        viewModelScope.launch {
+            TrendingMovieUseCase().collectLatest { result ->
+                when (result) {
+                    is Resource.Success -> {
+                        _movieTrendingState.value = movieTrendingState.value.copy(
+                            movies = result.data ?: emptyList(),
+                            isLoading = false
+                        )
+                    }
+                    is Resource.Loading -> {
+                        _movieTrendingState.value = movieTrendingState.value.copy(
+                            isLoading = true
+                        )
+                    }
+                    is Resource.Error -> {
+                        _movieTrendingState.value =movieTrendingState.value.copy(
+                            isLoading = false,
+                            error = result.message ?: "An unexpected error occured"
+                        )
+                    }
+                }
+            }
+        }
+    }
 
 }

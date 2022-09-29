@@ -28,7 +28,6 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
 
     }
 
-
     override suspend fun getTrendingMovies(): Flow<Resource<List<Movie>>> = flow {
         //TODO make sure to add a safe api request!! to avoid blocking ui
         emit(Resource.Loading())
@@ -43,7 +42,18 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
 
     }
 
+    override suspend fun getPopularMovies(): Flow<Resource<List<Movie>>> = flow {
 
+        emit(Resource.Loading())
+        try {
+            val responseData = movieApiService.fetchTrendingMovies()
+            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
+        } catch (e: IOException) {
+            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+        } catch (e: HttpException) {
+            emit(Resource.Error(message = "Oops, something went wrong!"))
+        }
+    }
 
 
 }
