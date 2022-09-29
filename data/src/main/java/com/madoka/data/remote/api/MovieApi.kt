@@ -2,6 +2,7 @@ package com.madoka.data.remote.api
 
 import com.madoka.data.remote.dto.MovieDto
 import com.madoka.data.remote.dto.NowPlayingMoviesDto
+import com.madoka.data.remote.dto.PopularMoviesDto
 import com.madoka.data.remote.dto.TrendingMoviesDto
 import com.madoka.domain.model.NowPlayingMovies
 import retrofit2.Response
@@ -29,7 +30,7 @@ interface MovieApi {
     @GET("movie/popular")
     suspend fun fetchPopularMovies(
         @Query("page") page: Int = 1,
-    ): NowPlayingMoviesDto
+    ): PopularMoviesDto
 
 
 

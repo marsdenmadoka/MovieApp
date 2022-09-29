@@ -46,7 +46,7 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
 
         emit(Resource.Loading())
         try {
-            val responseData = movieApiService.fetchTrendingMovies()
+            val responseData = movieApiService.fetchPopularMovies()
             emit(Resource.Success(responseData.movies.map { it.toMovie() }))
         } catch (e: IOException) {
             emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
