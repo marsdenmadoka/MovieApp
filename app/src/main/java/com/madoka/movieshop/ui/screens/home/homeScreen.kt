@@ -36,6 +36,7 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val state = viewModel.movieState.value
+    val trendingMovieState =  viewModel.movieTrendingState.value
 
     val scrollState = rememberScrollState()
     Surface(
@@ -57,7 +58,7 @@ fun HomeScreen(
 
 
             TrendingNowMovies(
-                moviesSate = state,
+                moviesSate = trendingMovieState,
                 navController = navController,
             )
 //            TrendingNowMtovies(

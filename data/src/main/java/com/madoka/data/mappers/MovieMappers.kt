@@ -7,6 +7,7 @@ import com.madoka.domain.model.Movie
 import com.madoka.domain.model.NowPlayingMovies
 
 
+/**Since all our responses have same moviesT type will use the same mapper/converter*/
 fun MovieDto.toMovie(): Movie {
     return Movie(
         movieId = id,
@@ -23,3 +24,5 @@ fun NowPlayingMoviesDto.toDomain(): NowPlayingMovies {
         movies = movies.map { it.toMovie() }
     )
 }
+
+

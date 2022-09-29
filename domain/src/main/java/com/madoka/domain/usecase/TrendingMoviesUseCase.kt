@@ -6,11 +6,10 @@ import com.madoka.domain.repository.NowPlayingMovieRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class NowPlayingMovieListUseCase @Inject constructor(private val nowPlayingMoviesRepository: NowPlayingMovieRepository) {
+class TrendingMoviesUseCase @Inject constructor(private val nowPlayingMoviesRepository: NowPlayingMovieRepository) {
 
     suspend operator fun invoke(): Flow<Resource<List<Movie>>> {
-        return nowPlayingMoviesRepository.getPlayingNowMovies()
+        return nowPlayingMoviesRepository.getTrendingMovies()
     }
-
 
 }

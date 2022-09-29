@@ -26,16 +26,24 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
             emit(Resource.Error(message = "Oops, something went wrong!"))
         }
 
-//        val response = safeApiRequest {
-//            movieApiService.fetchNowPlayingMovies()
-//        }.toNowPlayingMovies()
-//
-//        emit(Resource.Loading())
-//        try {
-//            val response = movieApiService.fetchNowPlayingMovies()
-//            emit(Resource.Success(respo))
-//        }
     }
+
+
+    override suspend fun getTrendingMovies(): Flow<Resource<List<Movie>>> = flow {
+        //TODO make sure to add a safe api request!! to avoid blocking ui
+        emit(Resource.Loading())
+        try {
+            val responseData = movieApiService.fetchTrendingMovies()
+            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
+        } catch (e: IOException) {
+            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+        } catch (e: HttpException) {
+            emit(Resource.Error(message = "Oops, something went wrong!"))
+        }
+
+    }
+
+
 
 
 }

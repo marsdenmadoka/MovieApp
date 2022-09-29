@@ -13,6 +13,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun providesRepository(repositoryImpl: NowPlayingMovieRepositoryImpl): NowPlayingMovieRepository
+
+
 }
 
 

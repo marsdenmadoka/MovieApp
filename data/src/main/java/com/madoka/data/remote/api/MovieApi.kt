@@ -18,8 +18,7 @@ interface MovieApi {
     ): NowPlayingMoviesDto
 
 
-
-    @GET("movie/now_playing")
+    @GET("trending/{media_type}/{time_window}")
     suspend fun fetchTrendingMovies(
         @Path("media_type") mediaType: String = "movie",
         @Path("time_window") timeWindow: String = "day",
