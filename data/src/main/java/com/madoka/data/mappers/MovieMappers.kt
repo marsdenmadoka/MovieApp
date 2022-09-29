@@ -13,8 +13,7 @@ fun MovieDto.toMovie(): Movie {
         movieId = id,
         title = title,
         posterPath = IMAGE_URL + posterPath,
-        releaseDate = releaseDate
-            //.substringBefore("-") ?: ""
+        releaseDate = releaseDate   //.substringBefore("-") ?: ""
 
 
     )
