@@ -18,18 +18,16 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import coil.compose.rememberImagePainter
 import com.madoka.domain.model.Movie
-import com.madoka.movieshop.FakeTopSectionItems
 
 
 @Composable
 fun TopPlayingNowSectionItem(
     modifier: Modifier = Modifier,
-  //  faketopitem: FakeTopSectionItems,
     movie: Movie,
     onItemClick: () -> Unit
 ) {
     val painter = rememberImagePainter(
-        data = movie.posterPath,//posterPath, //faketopitem.Image,
+        data = movie.posterPath,
         builder = {
             crossfade(true)
         }
@@ -66,7 +64,7 @@ fun TopPlayingNowSectionItem(
                         bottom.linkTo(imageMovieCover.bottom) //bottom.linkTo(ratingBarRanking.top)
                         end.linkTo(parent.end)
                     },
-                text = movie.title ?: "Unknown movie" ,//faketopitem.title ?: "Unknown movie",
+                text = movie.title ?: "Unknown movie" ,
                 fontSize = 32.sp,
                 maxLines = 2,
                 style = MaterialTheme.typography.h2,

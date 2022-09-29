@@ -29,7 +29,7 @@ fun Separator(modifier: Modifier = Modifier, sectionTitle: String, onItemClick: 
         )
 
         Text(
-                  text ="View Alll", //stringResource(id = R.string.view_all),
+                  text ="View All", //stringResource(id = R.string.view_all),
                   color = DarkPrimaryColor,
                   style = MaterialTheme.typography.h5,
                   fontSize = 14.sp

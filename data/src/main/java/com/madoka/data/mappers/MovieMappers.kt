@@ -10,7 +10,7 @@ fun MovieDto.toMovie(): Movie {
     return Movie(
         movieId = id,
         title = title,
-        posterPath = posterPath,
+        posterPath = poster_path,
         backdrop_path = backdrop_path,
         originalTitle = originalTitle,
     )
