@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+
 }
 
 android {
@@ -93,11 +94,17 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.0"
+
+    implementation project(':commons')
 
     /** AppLayer/PresentationLayer can access any/both layers*/
-    implementation project(':commons')
     implementation project(':domain')
     implementation project(':data')
 
 
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

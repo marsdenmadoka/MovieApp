@@ -46,7 +46,7 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.40"
     kapt "com.google.dagger:hilt-android-compiler:2.40.5"
     kapt "androidx.hilt:hilt-compiler:$hiltCompiler"
-    implementation "androidx.hilt:hilt-work:$hiltCompiler"
+   // implementation "androidx.hilt:hilt-work:$hiltCompiler"
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
@@ -62,10 +62,16 @@ dependencies {
 
     //pagination
     implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.0"
+    implementation project(':commons')
 
     /**data layer can access only domain NOTE here commons Layers is not part of clean arch its just our own
      * additional layer for constants*/
-    implementation project(':commons')
     implementation project(':domain')
 
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

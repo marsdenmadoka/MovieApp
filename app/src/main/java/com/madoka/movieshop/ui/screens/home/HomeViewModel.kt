@@ -19,24 +19,27 @@ class HomeViewModel @Inject constructor(
     private val _movieState = mutableStateOf(MovieState())
     val movieState: State<MovieState> = _movieState
 
+    init {
+        getPlayingNowMovies()
+    }
 
-    fun getPlayingNowMovies() {
+    private fun getPlayingNowMovies() {
         viewModelScope.launch {
             playingNowUseCase().collectLatest { result ->
                 when (result) {
-                    is Resource.Success -> {
+                    is com.madoka.commons.Resource.Success -> {
                         _movieState.value = movieState.value.copy(
                             movies = result.data ?: emptyList(),
                             isLoading = false
 
                         )
                     }
-                    is Resource.Loading -> {
+                    is com.madoka.commons.Resource.Loading -> {
                         _movieState.value = movieState.value.copy(
                             isLoading = true
                         )
                     }
-                    is Resource.Error -> {
+                    is com.madoka.commons.Resource.Error -> {
                         _movieState.value =movieState.value.copy(
                             isLoading = false,
                             error = result.message ?: "An unexpected error occured"

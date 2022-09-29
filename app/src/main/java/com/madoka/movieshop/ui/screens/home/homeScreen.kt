@@ -12,11 +12,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.FakePopularSectionItems
 import com.madoka.movieshop.FakeTopSectionItems
 import com.madoka.movieshop.FakeTrendingSectionItems
@@ -31,6 +33,7 @@ import com.madoka.movieshop.ui.theme.DeepBlue
 @Composable
 fun HomeScreen(
     navController: NavController,
+    viewModel: HomeViewModel = hiltViewModel()
 ) {
 
     val scrollState = rememberScrollState()
@@ -47,17 +50,7 @@ fun HomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             TopSectionPlayingNow(
-                faketopitems = listOf(
-                    FakeTopSectionItems(
-                        title = "movie 1",
-                        R.drawable.drawable1
-                    ),
-                    FakeTopSectionItems(
-                        title = "movie 2",
-                        R.drawable.ic_videocam
-                    ),
-
-                    )
+                movie = listOf()
             )
 
             TrendingNowMovies(
@@ -113,7 +106,8 @@ fun HomeScreen(
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 private fun TopSectionPlayingNow(
-    faketopitems: List<FakeTopSectionItems>
+   // faketopitems: List<FakeTopSectionItems>
+    movie: List<Movie>
 ) {
     val pagerState = rememberPagerState()
     HorizontalPager(
@@ -125,13 +119,14 @@ private fun TopSectionPlayingNow(
         color = Color.Gray,
         highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
         ),**/
-        count = if (faketopitems.size >= 5) 5 else faketopitems.size,
+        count = if (movie.size >= 5) 5 else movie.size,
         state = pagerState
     ) { page ->
         TopPlayingNowSectionItem(
             modifier = Modifier
                 .fillMaxSize(),
-            faketopitem = faketopitems[page]
+            movie = movie[page]
+           // faketopitem = faketopitems[page]
         ) {
             /** val items = faketopitems[page]
             navController.navigate("details/${movie.id!!}/${movie.cacheId!!}") */

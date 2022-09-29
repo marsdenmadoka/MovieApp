@@ -8,19 +8,19 @@ import retrofit2.HttpException
 open class BaseRepository {
     suspend fun <T> safeApiCall(
         apiCall: suspend () -> T
-    ): Resource<T> {
+    ): com.madoka.commons.Resource<T> {
 
         return  withContext(Dispatchers.IO){
             try {
-                Resource.Success(apiCall.invoke())
+                com.madoka.commons.Resource.Success(apiCall.invoke())
             }catch (throwable: Throwable){
                 when(throwable){
                     is HttpException -> {
-                        Resource.Error(
+                        com.madoka.commons.Resource.Error(
                             throwable.message()
                         )
                     }else -> {
-                    Resource.Error(null)
+                    com.madoka.commons.Resource.Error(null)
                 }
                 }
             }
