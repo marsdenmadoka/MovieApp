@@ -16,13 +16,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.FakeTrendingSectionItems
 
 
 @Composable
 fun TrendingMoviesItem(
-    trendingMovie: FakeTrendingSectionItems,
-    onItemClick: (FakeTrendingSectionItems) -> Unit
+   // trendingMovie: FakeTrendingSectionItems,
+    movie: Movie,
+    onItemClick: (Movie) -> Unit
+   // onItemClick: (FakeTrendingSectionItems) -> Unit
 ) {
 
     Column(
@@ -53,7 +56,7 @@ fun TrendingMoviesItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(220.dp),
-                painter = rememberImagePainter(data = trendingMovie.Image,
+                painter = rememberImagePainter(data = movie.backdrop_path,//trendingMovie.Image,
                     builder = { crossfade(true) }
                 ),
                 alignment = Alignment.Center,
@@ -65,7 +68,7 @@ fun TrendingMoviesItem(
         Text(
             modifier = Modifier
                 .width(145.dp),
-            text = trendingMovie.title ?: "Unknown movie",
+            text =  movie.title ?: "Unknown movie", //trendingMovie.title ?: "Unknown movie",
             style = MaterialTheme.typography.h2,
             color = MaterialTheme.colors.onSurface,
             fontSize = 14.sp,

@@ -7,6 +7,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,8 +21,6 @@ import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
 import com.madoka.domain.model.Movie
 import com.madoka.movieshop.FakePopularSectionItems
-import com.madoka.movieshop.FakeTopSectionItems
-import com.madoka.movieshop.FakeTrendingSectionItems
 import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
@@ -35,6 +34,7 @@ fun HomeScreen(
     navController: NavController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
+    val state = viewModel.movieState.value
 
     val scrollState = rememberScrollState()
     Surface(
@@ -46,31 +46,38 @@ fun HomeScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(scrollState),
-               // .paddingFromBaseline(bottom = 10.dp),
+            // .paddingFromBaseline(bottom = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             TopSectionPlayingNow(
-                movie = listOf()
+                //movie = listOf()
+                moviesState = state,
             )
+
 
             TrendingNowMovies(
-                trendingMovies = listOf(
-                    FakeTrendingSectionItems(
-                        title = "chunk noris of the new mountanin of beggining ",
-                        R.drawable.drawable1
-                    ),
-
-                    FakeTrendingSectionItems(
-                        title = "Hulk Hogn",
-                        R.drawable.drawable1
-                    ),
-                    FakeTrendingSectionItems(
-                        title = "Cena sucks",
-                        R.drawable.drawable1
-                    )
-                ),
-                navController = navController
+                moviesSate = state,
+                navController = navController,
             )
+//            TrendingNowMtovies(
+//
+//                trendingMovies = listOf(
+//                    FakeTrendingSectionItems(
+//                        title = "chunk noris of the new mountanin of beggining ",
+//                        R.drawable.drawable1
+//                    ),
+//
+//                    FakeTrendingSectionItems(
+//                        title = "Hulk Hogn",
+//                        R.drawable.drawable1
+//                    ),
+//                    FakeTrendingSectionItems(
+//                        title = "Cena sucks",
+//                        R.drawable.drawable1
+//                    )
+//                ),
+//                navController = navController
+//            )
 
             PopularMovies(
                 popularmovies = listOf(
@@ -106,8 +113,9 @@ fun HomeScreen(
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 private fun TopSectionPlayingNow(
-   // faketopitems: List<FakeTopSectionItems>
-    movie: List<Movie>
+    // faketopitems: List<FakeTopSectionItems>
+   // movies: List<Movie>,
+    moviesState: MovieState,
 ) {
     val pagerState = rememberPagerState()
     HorizontalPager(
@@ -119,14 +127,15 @@ private fun TopSectionPlayingNow(
         color = Color.Gray,
         highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
         ),**/
-        count = if (movie.size >= 5) 5 else movie.size,
+        count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
         state = pagerState
     ) { page ->
+
         TopPlayingNowSectionItem(
             modifier = Modifier
                 .fillMaxSize(),
-            movie = movie[page]
-           // faketopitem = faketopitems[page]
+            movie = moviesState.movies[page]
+            // faketopitem = faketopitems[page]
         ) {
             /** val items = faketopitems[page]
             navController.navigate("details/${movie.id!!}/${movie.cacheId!!}") */
@@ -151,16 +160,17 @@ private fun TopSectionPlayingNow(
 
 @Composable
 fun TrendingNowMovies(
-    trendingMovies: List<FakeTrendingSectionItems>,
+    moviesSate: MovieState,
     navController: NavController,
 ) {
+
     //separate our sections class created in components
     Separator(
         modifier = Modifier
             .padding(start = 16.dp, end = 16.dp, top = 12.dp)
             .fillMaxWidth()
             .wrapContentHeight(),
-        sectionTitle = "Trending MovieDto",
+        sectionTitle = "Trending Movies",
         onItemClick = { /** navigate to view all**/ }
     )
     Spacer(modifier = Modifier.height(8.dp))
@@ -177,9 +187,9 @@ fun TrendingNowMovies(
                     highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
                 )*/
     ) {
-        items(items = trendingMovies) { item ->
+        items(moviesSate.movies) { item ->
             TrendingMoviesItem(
-                trendingMovie = item,
+                movie = item,
                 onItemClick = {
                     navController.navigate("details")
                     //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
@@ -192,14 +202,14 @@ fun TrendingNowMovies(
 @Composable
 fun PopularMovies(
     popularmovies: List<FakePopularSectionItems>,
-navController: NavController
+    navController: NavController
 ) {
     Separator(
         modifier = Modifier
             .padding(start = 16.dp, end = 16.dp, top = 12.dp)
             .fillMaxWidth()
             .wrapContentHeight(),
-        sectionTitle = "Popular MovieDto",
+        sectionTitle = "Popular Movies",
         onItemClick = {
             // click to view all
         }
@@ -225,7 +235,7 @@ navController: NavController
 //                onClickItem = {
 //
 //                }
-            navController = navController
+                navController = navController
             )
         }
     }

@@ -11,13 +11,15 @@ fun MovieDto.toMovie(): Movie {
         movieId = id,
         title = title,
         posterPath = posterPath,
+        backdrop_path = backdrop_path,
+        originalTitle = originalTitle,
     )
 }
 
 
-fun NowPlayingMoviesDto.toDomain() : NowPlayingMovies {
+fun NowPlayingMoviesDto.toDomain(): NowPlayingMovies {
     return NowPlayingMovies(
-        page=page ,
+        page = page,
         movies = movies.map { it.toMovie() }
     )
 }

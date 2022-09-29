@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DomainModule {
+object DomainModule {
     @Provides
     @Singleton
     fun provideNowPlayingMovieListUseCase(nowPlayingMovieReposiory: NowPlayingMovieRepository) =

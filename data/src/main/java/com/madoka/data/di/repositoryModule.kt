@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class repositoryModule {
+abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun providesRepository(repositoryImpl: NowPlayingMovieRepositoryImpl): NowPlayingMovieRepository

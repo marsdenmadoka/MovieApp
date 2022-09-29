@@ -10,19 +10,20 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
+import javax.inject.Inject
 
-class NowPlayingMovieRepositoryImpl(private val movieApiService: MovieApi) :
+class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiService: MovieApi) :
     NowPlayingMovieRepository{
-    override suspend fun getPlayingNowMovies(): Flow<com.madoka.commons.Resource<List<Movie>>> = flow {
+    override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
        //TODO make sure to add a safe api request!! to avoid blocking ui
-        emit(com.madoka.commons.Resource.Loading())
+        emit(Resource.Loading())
         try {
             val responseData = movieApiService.fetchNowPlayingMovies()
-            emit(com.madoka.commons.Resource.Success(responseData.movies.map { it.toMovie() }))
+            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
         } catch (e: IOException) {
-            emit(com.madoka.commons.Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
         } catch (e: HttpException) {
-            emit(com.madoka.commons.Resource.Error(message = "Oops, something went wrong!"))
+            emit(Resource.Error(message = "Oops, something went wrong!"))
         }
 
 //        val response = safeApiRequest {
