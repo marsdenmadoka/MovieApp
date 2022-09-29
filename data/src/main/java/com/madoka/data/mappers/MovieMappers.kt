@@ -1,5 +1,6 @@
 package com.madoka.data.mappers
 
+import com.madoka.commons.IMAGE_URL
 import com.madoka.data.remote.dto.MovieDto
 import com.madoka.data.remote.dto.NowPlayingMoviesDto
 import com.madoka.domain.model.Movie
@@ -10,9 +11,8 @@ fun MovieDto.toMovie(): Movie {
     return Movie(
         movieId = id,
         title = title,
-        posterPath = poster_path,
-        backdrop_path = backdrop_path,
-        originalTitle = originalTitle,
+        posterPath = IMAGE_URL + posterPath
+
     )
 }
 
