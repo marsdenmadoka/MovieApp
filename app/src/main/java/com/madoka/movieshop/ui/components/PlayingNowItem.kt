@@ -75,7 +75,7 @@ fun TopPlayingNowSectionItem(
                 .fillMaxSize()
                 .align(Alignment.Center)
                 .placeholder(
-                    visible = false,
+                    visible = false ,
                     color = Color.Gray,
                     highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
                 ),

@@ -9,6 +9,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
@@ -17,6 +18,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.placeholder
+import com.google.accompanist.placeholder.shimmer
 import com.madoka.domain.model.Movie
 
 
@@ -41,11 +45,11 @@ fun TrendingMoviesItem(
             .width(150.dp)
             .fillMaxHeight()
             .clickable { }
-            /**.placeholder(
+            .placeholder(
             visible = false,
             color = Color.Black,
             highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-            )**/
+            )
             ,
             elevation = 8.dp,
             shape = RoundedCornerShape(4.dp)

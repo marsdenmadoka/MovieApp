@@ -76,20 +76,21 @@ fun HomeScreen(
 private fun TopSectionPlayingNow(
     moviesState: MovieState,
 ) {
+
     val pagerState = rememberPagerState()
     HorizontalPager(
         modifier = Modifier
             .fillMaxWidth()
             .height(360.dp)
             .placeholder(
-                visible = false,
+                visible = moviesState.isLoading,//false,
                 color = Gray,
                 highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
             ),
         count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
         state = pagerState
-    ) { page ->
-
+    )
+    { page ->
         TopPlayingNowSectionItem(
             modifier = Modifier
                 .fillMaxSize(),
@@ -138,7 +139,7 @@ fun TrendingNowMovies(
         modifier = Modifier
             .fillMaxWidth()
             .placeholder(
-                visible = false,
+                visible = moviesSate.isLoading,//false,
                 color = Gray,
                 shape = RoundedCornerShape(4.dp),
                 highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
@@ -180,7 +181,7 @@ fun PopularMovies(
         modifier = Modifier
             .wrapContentHeight()
             .placeholder(
-                visible = false,
+                visible =moviesSate.isLoading, //false,
                 color = Color.Gray,
                 highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
             )
