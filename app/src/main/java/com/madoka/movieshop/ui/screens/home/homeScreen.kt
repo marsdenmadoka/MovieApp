@@ -10,6 +10,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -18,6 +19,9 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.placeholder
+import com.google.accompanist.placeholder.shimmer
 import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
 import com.madoka.movieshop.ui.components.TrendingMoviesItem
@@ -74,12 +78,12 @@ private fun TopSectionPlayingNow(
     HorizontalPager(
         modifier = Modifier
             .fillMaxWidth()
-            .height(360.dp),
-        /**          .placeholder(
+            .height(360.dp)
+              .placeholder(
         visible = false,
         color = Color.Gray,
         highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-        ),**/
+        ),
         count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
         state = pagerState
     ) { page ->
