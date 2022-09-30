@@ -182,7 +182,7 @@ fun PopularMovies(
             .placeholder(
                 visible = false,
                 color = Color.Gray,
-                highlight = PlaceholderHighlight.fade()
+                highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
             )
     ) {
         items(moviesSate.movies) { item ->
