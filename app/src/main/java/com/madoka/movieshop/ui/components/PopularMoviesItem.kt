@@ -23,8 +23,10 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.fade
+import com.google.accompanist.placeholder.placeholder
 import com.madoka.domain.model.Movie
-import com.madoka.movieshop.FakePopularSectionItems
 
 
 @Composable
@@ -34,9 +36,10 @@ fun popularMovieItem(
 ) {
 
     val defaultDominantTextColor = MaterialTheme.colors.onSurface
-    var dominantColor by remember { mutableStateOf(Color.Transparent) }
+    var dominantColor =  MaterialTheme.colors.surface
     var dominantTextColor by remember { mutableStateOf(defaultDominantTextColor) }
     var dominantSubTextColor by remember { mutableStateOf(defaultDominantTextColor) }
+
 
     val painter = rememberImagePainter(
         data = movie.posterPath, //backdropPath?.loadImage(),
@@ -50,11 +53,11 @@ fun popularMovieItem(
             .clickable {
 //                onClickItem()
                 navController.navigate("details")}
-        /* .placeholder(
+         .placeholder(
              visible = false,
              color = Color.Black,
-             highlight = PlaceholderHighlight.fade()
-         )*/,
+             highlight = PlaceholderHighlight.fade(highlightColor = Color.White)
+         ),
         elevation = 8.dp,
         shape = RoundedCornerShape(4.dp)
     ) {
@@ -116,7 +119,7 @@ fun popularMovieItem(
                 style = MaterialTheme.typography.h6,
                 overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.Start,
-                color = Color.White//dominantTextColor
+                color = dominantTextColor
             )
             //endregion
 
@@ -165,7 +168,7 @@ fun popularMovieItem(
                         style = MaterialTheme.typography.h4,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Start,
-                        color = Color.White//dominantSubTextColor
+                        color =  dominantSubTextColor
                     )
                 }
             }
