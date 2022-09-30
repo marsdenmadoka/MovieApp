@@ -81,11 +81,11 @@ private fun TopSectionPlayingNow(
         modifier = Modifier
             .fillMaxWidth()
             .height(360.dp)
-              .placeholder(
-        visible = false,
-        color = Gray,
-        highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-        ),
+            .placeholder(
+                visible = false,
+                color = Gray,
+                highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
+            ),
         count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
         state = pagerState
     ) { page ->
@@ -137,12 +137,12 @@ fun TrendingNowMovies(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         modifier = Modifier
             .fillMaxWidth()
-       .placeholder(
-                    visible = false,
-                    color = Gray,
-                    shape = RoundedCornerShape(4.dp),
-                    highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
-                )
+            .placeholder(
+                visible = false,
+                color = Gray,
+                shape = RoundedCornerShape(4.dp),
+                highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
+            )
     ) {
         items(moviesSate.movies) { item ->
             TrendingMoviesItem(
@@ -179,12 +179,11 @@ fun PopularMovies(
         horizontalArrangement = Arrangement.spacedBy(14.dp),
         modifier = Modifier
             .wrapContentHeight()
-        /*
-    .placeholder(
-        visible = false,
-        color = Color.Gray,
-        highlight = PlaceholderHighlight.fade()
-    )*/
+            .placeholder(
+                visible = false,
+                color = Color.Gray,
+                highlight = PlaceholderHighlight.fade()
+            )
     ) {
         items(moviesSate.movies) { item ->
             popularMovieItem(
