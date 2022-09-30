@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -20,6 +21,7 @@ import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
 import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
 import com.madoka.movieshop.ui.components.Separator
@@ -81,7 +83,7 @@ private fun TopSectionPlayingNow(
             .height(360.dp)
               .placeholder(
         visible = false,
-        color = Color.Gray,
+        color = Gray,
         highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
         ),
         count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
@@ -135,12 +137,12 @@ fun TrendingNowMovies(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         modifier = Modifier
             .fillMaxWidth()
-        /* .placeholder(
+       .placeholder(
                     visible = false,
                     color = Gray,
                     shape = RoundedCornerShape(4.dp),
                     highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
-                )*/
+                )
     ) {
         items(moviesSate.movies) { item ->
             TrendingMoviesItem(
