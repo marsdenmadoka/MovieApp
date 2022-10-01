@@ -23,16 +23,24 @@ class HomeViewModel @Inject constructor(
     private val PopularMovieUsesCase: PopularMoviesUseCase
 ) : ViewModel() {
 
-    private val _movieState = mutableStateOf(MovieState())
-    val movieState: State<MovieState> = _movieState
+//    private val _movieState = mutableStateOf(MovieState())
+//    val movieState: State<MovieState> = _movieState
+
+//    private val _movieTrendingState = mutableStateOf(MovieState())
+//    val movieTrendingState: State<MovieState> = _movieTrendingState
+
+//    private val _moviePopularState = mutableStateOf(MovieState())
+//    val moviePopularState: State<MovieState> = _moviePopularState
+
+    private val _movieState = MutableStateFlow(MovieState())
+    val movieState: StateFlow<MovieState> = _movieState
+
+    private val _movieTrendingState = MutableStateFlow(MovieState())
+    val movieTrendingState: StateFlow<MovieState> = _movieTrendingState
 
 
-    private val _movieTrendingState = mutableStateOf(MovieState())
-    val movieTrendingState: State<MovieState> = _movieTrendingState
-
-
-    private val _moviePopularState = mutableStateOf(MovieState())
-    val moviePopularState: State<MovieState> = _moviePopularState
+    private val _moviePopularState = MutableStateFlow(MovieState())
+    val moviePopularState: StateFlow<MovieState> = _moviePopularState
 
     init {
         getPlayingNowMovies()
@@ -41,7 +49,7 @@ class HomeViewModel @Inject constructor(
 
     }
 
-    private fun getPlayingNowMovies() {
+private fun getPlayingNowMovies() {
         viewModelScope.launch {
             playingNowUseCase().collectLatest { result ->
                 when (result) {

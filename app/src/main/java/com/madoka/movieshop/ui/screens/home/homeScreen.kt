@@ -9,6 +9,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -36,9 +37,13 @@ fun HomeScreen(
     navController: NavController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
-    val playingNowMovieState = viewModel.movieState.value
-    val trendingMovieState = viewModel.movieTrendingState.value
-    val popularMovieState = viewModel.moviePopularState.value
+//    val playingNowMovieState = viewModel.movieState.value
+//    val trendingMovieState = viewModel.movieTrendingState.value
+//    val popularMovieState = viewModel.moviePopularState.value
+
+    val playingNowMovieState = viewModel.movieState.collectAsState().value
+    val trendingMovieState = viewModel.movieTrendingState.collectAsState().value
+    val popularMovieState = viewModel.moviePopularState.collectAsState().value
 
     val scrollState = rememberScrollState()
     Surface(
@@ -190,9 +195,7 @@ fun PopularMovies(
         items(moviesSate.movies) { item ->
             popularMovieItem(
                 movie = item,
-//                onClickItem = {
-//
-//                }
+//                onClickItem = { }
                 navController = navController
             )
         }

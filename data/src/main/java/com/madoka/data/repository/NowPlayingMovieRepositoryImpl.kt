@@ -8,6 +8,7 @@ import com.madoka.domain.model.Movie
 import com.madoka.domain.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.stateIn
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
