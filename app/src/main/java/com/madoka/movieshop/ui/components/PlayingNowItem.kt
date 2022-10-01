@@ -29,6 +29,7 @@ import com.gowtham.ratingbar.RatingBarConfig
 import com.gowtham.ratingbar.RatingBarStyle
 import com.gowtham.ratingbar.StepSize
 import com.madoka.domain.model.Movie
+import com.madoka.movieshop.ui.screens.home.MovieState
 import com.madoka.movieshop.ui.theme.DarkSurface
 import com.madoka.movieshop.ui.theme.Golden
 import com.madoka.movieshop.ui.utils.PaletteGenerator
@@ -39,6 +40,7 @@ import com.madoka.movieshop.ui.utils.getRating
 fun TopPlayingNowSectionItem(
     modifier: Modifier = Modifier,
     movie: Movie,
+    moviesState: MovieState,
     onItemClick: () -> Unit
 ) {
 
@@ -75,7 +77,7 @@ fun TopPlayingNowSectionItem(
                 .fillMaxSize()
                 .align(Alignment.Center)
                 .placeholder(
-                    visible = false ,
+                    visible = moviesState.isLoading ,
                     color = Color.Gray,
                     highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
                 ),

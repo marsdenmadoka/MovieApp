@@ -94,7 +94,8 @@ private fun TopSectionPlayingNow(
         TopPlayingNowSectionItem(
             modifier = Modifier
                 .fillMaxSize(),
-            movie = moviesState.movies[page]
+            movie = moviesState.movies[page],
+            moviesState = moviesState
         ) {
             /** val items = faketopitems[page]
             navController.navigate("details/${movie.id!!}/${movie.cacheId!!}") */
@@ -181,8 +182,8 @@ fun PopularMovies(
         modifier = Modifier
             .wrapContentHeight()
             .placeholder(
-                visible =moviesSate.isLoading, //false,
-                color = Color.Gray,
+                visible = moviesSate.isLoading, //false,
+                color = Gray,
                 highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
             )
     ) {
