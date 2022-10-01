@@ -28,7 +28,7 @@ import com.google.accompanist.placeholder.shimmer
 import com.madoka.movieshop.ui.components.Separator
 import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
 import com.madoka.movieshop.ui.components.TrendingMoviesItem
-import com.madoka.movieshop.ui.components.popularMovieItem
+import com.madoka.movieshop.ui.components.PopularMovieItem
 import com.madoka.movieshop.ui.theme.DeepBlue
 
 
@@ -37,11 +37,11 @@ fun HomeScreen(
     navController: NavController,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
-//    val playingNowMovieState = viewModel.movieState.value
+//    val playingNowMovieState = viewModel.moviePlayingNowState.value
 //    val trendingMovieState = viewModel.movieTrendingState.value
 //    val popularMovieState = viewModel.moviePopularState.value
 
-    val playingNowMovieState = viewModel.movieState.collectAsState().value
+    val playingNowMovieState = viewModel.moviePlayingNowState.collectAsState().value
     val trendingMovieState = viewModel.movieTrendingState.collectAsState().value
     val popularMovieState = viewModel.moviePopularState.collectAsState().value
 
@@ -76,6 +76,7 @@ fun HomeScreen(
 }
 
 
+
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 private fun TopSectionPlayingNow(
@@ -89,7 +90,7 @@ private fun TopSectionPlayingNow(
             .height(360.dp)
             .placeholder(
                 visible = moviesState.isLoading,//false,
-                color = Gray,
+                color = Color.White,
                 highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
             ),
         count = if (moviesState.movies.size >= 5) 5 else moviesState.movies.size,
@@ -146,9 +147,9 @@ fun TrendingNowMovies(
             .fillMaxWidth()
             .placeholder(
                 visible = moviesSate.isLoading,//false,
-                color = Gray,
+                color = Color.White,
                 shape = RoundedCornerShape(4.dp),
-                highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
+                highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
             )
     ) {
         items(moviesSate.movies) { item ->
@@ -189,11 +190,11 @@ fun PopularMovies(
             .placeholder(
                 visible = moviesSate.isLoading, //false,
                 color = Gray,
-                highlight = PlaceholderHighlight.fade(highlightColor = Color.Transparent)
+                highlight = PlaceholderHighlight.fade(highlightColor = Color.White)
             )
     ) {
         items(moviesSate.movies) { item ->
-            popularMovieItem(
+            PopularMovieItem(
                 movie = item,
 //                onClickItem = { }
                 navController = navController

@@ -22,30 +22,30 @@ import com.madoka.movieshop.ui.screens.home.HomeScreen
 fun MainNavigationGraph() {
 
     val navController = rememberAnimatedNavController()
-    NavHost(navController = navController, startDestination = NavItem.Home.route ){
+    NavHost(navController = navController, startDestination = NavItem.Home.route ) {
 
-        composable(route=NavItem.Home.route){
-           HomeScreen(navController = navController)
+        composable(route = NavItem.Home.route) {
+            HomeScreen(navController = navController)
         }
 
-        composable(route=NavItem.Details.route){
-            detailsScreen(navController = navController)
-           // navController.popBackStack()
+//        composable(route=NavItem.Details.route){
+//            detailsScreen(navController = navController)
+//        }
+
+        composable(
+            route = NavItem.Details.route,
+            arguments = listOf(
+                navArgument("movieId") {
+                    type = NavType.IntType
+                }
+            )
+
+        ) {
+            val movieID = it.arguments?.getInt("movieId")
+            if (movieID != null) {
+                 detailsScreen(navController = navController, movieId = movieID)
+            }
+
         }
-        /*
-       composable(
-           route = NavItem.Details.route,
-           arguments = listOf(
-               navArgument("movieId"){
-                   type = NavType.IntType
-               }
-           )
-
-       ){
-           val movieID = it.arguments?.getInt("movieId")
-           if (movieID !=null){
-             //  detailsScreen(navController = navController, movieId = movieID)
-           } */
-
-       }
     }
+}

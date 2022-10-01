@@ -8,10 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -30,7 +27,9 @@ import com.madoka.movieshop.ui.components.MovieRatingSection
 
 
 @Composable
-fun detailsScreen(navController: NavController,) {
+fun detailsScreen(
+    navController: NavController,
+    movieId: Int) {
 
     val scrollState = rememberScrollState()
     Surface(
@@ -50,7 +49,7 @@ fun detailsScreen(navController: NavController,) {
                 //region Movie Poster
                 MoviePoster(
                     modifier = Modifier,
-                    navController=navController
+                    navController = navController
                     // movieDetails = movieDetails
                 )
                 //region Movie Ratings
@@ -104,7 +103,8 @@ fun MoviePoster(
     var dominantColor by remember { mutableStateOf(defaultDominantColor) }
     var dominantTextColor by remember { mutableStateOf(defaultDominantTextColor) }
 
-    val painter = rememberImagePainter(data = R.drawable.drawable1)//movieDetails?.backdropPath?.loadImage())
+    val painter =
+        rememberImagePainter(data = R.drawable.drawable1)//movieDetails?.backdropPath?.loadImage())
 
 //    if (painter.state is ImagePainter.State.Success) {
 //        LaunchedEffect(key1 = painter) {
@@ -122,15 +122,15 @@ fun MoviePoster(
         modifier = modifier
             .fillMaxWidth()
             .height(350.dp)
-             /*
-            .placeholder(
-                visible = movieDetails == null,
-                color = Gray,
-                highlight = PlaceholderHighlight.shimmer(highlightColor = TextSecondary)
-            )*/
+        /*
+       .placeholder(
+           visible = movieDetails == null,
+           color = Gray,
+           highlight = PlaceholderHighlight.shimmer(highlightColor = TextSecondary)
+       )*/
     ) {
 
-        val (imageMovie, boxFadingEdge, textViewRunTime, textViewTitle,backIcon) = createRefs()
+        val (imageMovie, boxFadingEdge, textViewRunTime, textViewTitle, backIcon) = createRefs()
 
         //region Movie Poster
         Image(
@@ -148,11 +148,11 @@ fun MoviePoster(
         Icon(
             imageVector = Icons.Default.ArrowBack,//from material icons
             contentDescription = null,
-            tint = Color.White,
+            tint = dominantColor, //Color.White,
             modifier = Modifier
                 .size(36.dp)
-//                .offset(16.dp, 16.dp)
-                .constrainAs(backIcon){
+                // .offset(16.dp, 16.dp)
+                .constrainAs(backIcon) {
                     top.linkTo(parent.top)
                     start.linkTo(parent.start)
                 }
@@ -176,11 +176,11 @@ fun MoviePoster(
                     bottom.linkTo(parent.bottom)
                 }
         )
-        //endregion
+
 
         //region Movie Duration
         Text(
-            text =  "1 hour 30 min",  //movieDetails?.runtime?.getMovieDuration() ?: "",
+            text = "1 hour 30 min",  //movieDetails?.runtime?.getMovieDuration() ?: "",
             color = dominantTextColor,
             style = MaterialTheme.typography.h5,
             fontSize = 15.sp,
@@ -189,7 +189,7 @@ fun MoviePoster(
                 bottom.linkTo(textViewTitle.top)
             }
         )
-        //endregion
+
 
         //region Movie Title
         Text(

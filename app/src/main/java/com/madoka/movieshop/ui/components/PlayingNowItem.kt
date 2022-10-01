@@ -11,7 +11,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
@@ -77,8 +76,8 @@ fun TopPlayingNowSectionItem(
                 .fillMaxSize()
                 .align(Alignment.Center)
                 .placeholder(
-                    visible = moviesState.isLoading ,
-                    color = Color.Gray,
+                    visible = false,//moviesState.isLoading ,
+                    color = Color.White,
                     highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
                 ),
             alignment = Alignment.Center,
@@ -144,81 +143,6 @@ fun TopPlayingNowSectionItem(
     }
 
 
-//        ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-//            val (imageMovieCover, textMovieTitle, ratingBarRanking) = createRefs()
-//
-//            //region Movie Cover Image
-//            AsyncImage(
-//                model = ImageRequest.Builder(LocalContext.current)
-//                    .data(movie.posterPath)
-//                    .crossfade(true)
-//                    .build(),
-//                contentDescription = "Movie Image",
-//                modifier = Modifier
-//                    .fillMaxSize()
-//                    .constrainAs(imageMovieCover) {}
-//                /**                 .placeholder(
-//                visible = false,
-//                color = Color.Gray,
-//                //highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-//                ) **/,
-//                alignment = Alignment.Center,
-//                contentScale = ContentScale.Crop,
-//
-//                )
-//            //region Movie Title
-//            Text(
-//                modifier = Modifier
-//                    .padding(start = 8.dp, end = 8.dp)
-//                    .constrainAs(textMovieTitle) {
-//                        width = Dimension.fillToConstraints
-//                        start.linkTo(parent.start)
-//                        bottom.linkTo(imageMovieCover.bottom) //bottom.linkTo(ratingBarRanking.top)
-//                        end.linkTo(parent.end)
-//                    },
-//                text = movie.title ?: "Unknown movie" ,
-//                fontSize = 32.sp,
-//                maxLines = 2,
-//                style = MaterialTheme.typography.h2,
-//                overflow = TextOverflow.Ellipsis,
-//                textAlign = TextAlign.Start,
-//                 color = dominantTextColor
-//            )
-//
-//
-//            RatingBar(value =
-//                , onValueChange ={} ,
-//                onRatingChanged ={} ,
-//                modifier = Modifier,
-//                numStart
-//            )
-//
-//            RatingBarConfig()
-//                .activeColor(Color.Yellow)
-//                .hideInactiveStars(true)
-//                .inactiveColor(Color.LightGray)
-//                .inactiveBorderColor(Color.Blue)
-//                .stepSize(StepSize.HALF)
-//                .numStars(10)
-//                .isIndicator(true)
-//                .size(24.dp)
-//                .padding(6.dp)
-//                .style(RatingBarStyle.HighLighted)
-//
-//
-//            RatingBarConfig(
-//                modifier = Modifier,
-//                numStars = 5,
-//                size = 18.dp,
-//                stepSize = StepSize.HALF,
-//                isIndicator = true,
-//                ratingBarStyle = RatingBarStyle.Normal,
-//                activeColor = Golden,
-//                inactiveColor = Black,
-//                onValueChange = {},
-//                onRatingChanged = {}
-//            )
-//        }
 }
 
 

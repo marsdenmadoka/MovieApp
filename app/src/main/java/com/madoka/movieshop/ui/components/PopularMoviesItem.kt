@@ -9,12 +9,16 @@ import androidx.compose.material.Card
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -22,42 +26,55 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
-import coil.compose.rememberImagePainter
+import coil.compose.rememberAsyncImagePainter
+import coil.request.ImageRequest
 import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
+import com.gowtham.ratingbar.RatingBar
+import com.gowtham.ratingbar.RatingBarConfig
+import com.gowtham.ratingbar.RatingBarStyle
+import com.gowtham.ratingbar.StepSize
 import com.madoka.domain.model.Movie
+import com.madoka.movieshop.ui.theme.DarkSurface
+import com.madoka.movieshop.ui.theme.Golden
+import com.madoka.movieshop.ui.utils.getRating
 
 
 @Composable
-fun popularMovieItem(
+fun PopularMovieItem(
     movie: Movie,
-   navController:NavController
+    navController: NavController
 ) {
 
     val defaultDominantTextColor = MaterialTheme.colors.onSurface
-    var dominantColor =  MaterialTheme.colors.surface
-    var dominantTextColor by remember { mutableStateOf(defaultDominantTextColor) }
-    var dominantSubTextColor by remember { mutableStateOf(defaultDominantTextColor) }
+    val dominantColor = MaterialTheme.colors.surface
+    val dominantTextColor by remember { mutableStateOf(defaultDominantTextColor) }
+    val dominantSubTextColor by remember { mutableStateOf(defaultDominantTextColor) }
 
 
-    val painter = rememberImagePainter(
-        data = movie.posterPath, //backdropPath?.loadImage(),
-        builder = { crossfade(true) }
+    val painter = rememberAsyncImagePainter(
+        ImageRequest.Builder(LocalContext.current).data(data = movie.posterPath)
+            .apply(block = fun ImageRequest.Builder.() {
+                crossfade(true)
+            }).build()
     )
+
+
 
     Card(
         modifier = Modifier
             .width(300.dp)
             .height(220.dp)
             .clickable {
-//                onClickItem()
-                navController.navigate("details")}
-         .placeholder(
-             visible = false,
-             color = Color.Black,
-             highlight = PlaceholderHighlight.fade(highlightColor = Color.White)
-         ),
+                // onClickItem()
+                navController.navigate("details")
+            }
+            .placeholder(
+                visible = false,
+                color = Color.Black,
+                highlight = PlaceholderHighlight.fade(highlightColor = Color.White)
+            ),
         elevation = 8.dp,
         shape = RoundedCornerShape(4.dp)
     ) {
@@ -69,12 +86,11 @@ fun popularMovieItem(
             Image(
                 modifier = Modifier
                     .fillMaxSize()
-                    /*
-                .placeholder(
-                    visible = false,
-                    color = Color.Black,
-                    highlight = PlaceholderHighlight.fade()
-                )*/
+                    .placeholder(
+                        visible = false,
+                        color = Color.Black,
+                        highlight = PlaceholderHighlight.fade(highlightColor = Color.White)
+                    )
                     .background(color = Color.Gray)
                     .constrainAs(imageMovieCover) {},
                 alignment = Alignment.Center,
@@ -82,7 +98,6 @@ fun popularMovieItem(
                 painter = painter,
                 contentDescription = null
             )
-            //endregion
 
             //region Fading Edge
             Box(
@@ -101,7 +116,6 @@ fun popularMovieItem(
                         bottom.linkTo(parent.bottom)
                     }
             )
-            //endregion
 
             //region Movie Title
             Text(
@@ -121,7 +135,6 @@ fun popularMovieItem(
                 textAlign = TextAlign.Start,
                 color = dominantTextColor
             )
-            //endregion
 
             //region Movie Rating
             Row(
@@ -136,28 +149,29 @@ fun popularMovieItem(
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-/*
                 RatingBar(
                     modifier = Modifier,
-                    value = movie.voteAverage?.getRating() ?: 0f,
-                    numStars = 5,
-                    size = 15.dp,
-                    stepSize = StepSize.HALF,
-                    isIndicator = true,
-                    ratingBarStyle = RatingBarStyle.Normal,
-                    activeColor = Golden,
-                    inactiveColor = Gray,
+                    value = movie.voteAverage?.getRating()?.toFloat() ?: 0f,
+                    config = RatingBarConfig()
+                        .activeColor(Golden)
+                        .inactiveColor(DarkSurface)
+                        .stepSize(StepSize.HALF)
+                        .isIndicator(true)
+                        .stepSize(StepSize.HALF)
+                        .numStars(5)
+                        .isIndicator(true)
+                        .size(16.dp)
+                        .style(RatingBarStyle.HighLighted),
                     onValueChange = {},
                     onRatingChanged = {}
-                ) */
-
+                )
                 if (!movie.releaseDate.isNullOrEmpty()) {
                     Divider(
                         modifier = Modifier
                             .padding(horizontal = 4.dp)
                             .width(1.dp)
                             .height(13.dp),
-                        color =  Color.White//dominantSubTextColor,
+                        color = dominantSubTextColor,
                     )
 
                     Text(
@@ -168,7 +182,7 @@ fun popularMovieItem(
                         style = MaterialTheme.typography.h4,
                         overflow = TextOverflow.Ellipsis,
                         textAlign = TextAlign.Start,
-                        color =  dominantSubTextColor
+                        color = dominantSubTextColor
                     )
                 }
             }

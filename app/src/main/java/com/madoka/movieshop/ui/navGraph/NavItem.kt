@@ -4,8 +4,7 @@ sealed class NavItem(
     val route: String
     ) {
     object Home : NavItem("home")
-    object Details : NavItem("details")
-    //object Details : NavItem("details/{movieId}")
+    object Details : NavItem("details/{movieId}")
 }
 
 //sealed class NavigationItem(

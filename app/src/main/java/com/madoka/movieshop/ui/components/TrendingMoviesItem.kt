@@ -32,12 +32,11 @@ fun TrendingMoviesItem(
 
     Column(
         modifier = Modifier
-        /**      .placeholder(
+           .placeholder(
         visible = false,
         color = Color.Gray,
         highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-        ),**/
-        ,
+        ),
 
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
@@ -67,18 +66,6 @@ fun TrendingMoviesItem(
                 contentScale = ContentScale.Crop,
 
                 )
-
-//            Image(
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .height(220.dp),
-//                painter = rememberImagePainter(data = movie.posterPath,
-//                    builder = { crossfade(true) }
-//                ),
-//                alignment = Alignment.Center,
-//                contentScale = ContentScale.Crop,
-//                contentDescription = "Trending Movies"
-//            )
         }
 
         Text(

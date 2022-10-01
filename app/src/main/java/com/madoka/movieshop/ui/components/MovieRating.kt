@@ -1,23 +1,22 @@
 package com.madoka.movieshop.ui.components
 
-import com.madoka.movieshop.R
-import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+import com.madoka.movieshop.R
 
 
 @Composable
 fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -56,8 +55,9 @@ fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
 
         Divider(
             modifier = Modifier
-                .fillMaxHeight()
-                .width(2.dp),
+                .padding(horizontal = 4.dp)
+                .width(1.dp)
+                .fillMaxHeight(1f),
             color = MaterialTheme.colors.onSurface
         )
 
@@ -79,6 +79,5 @@ fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
                 color = MaterialTheme.colors.onSurface,
             )
         }
-        //endregion
     }
 }

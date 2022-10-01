@@ -9,26 +9,32 @@ import retrofit2.http.Query
 
 interface MovieApi {
 
-
+    /*get now playing movies*/
     @GET("movie/now_playing")
     suspend fun fetchNowPlayingMovies(
         @Query("page") page: Int = 1,
     ): NowPlayingMoviesDto
 
-
+    /*get trending movies*/
     @GET("trending/{media_type}/{time_window}")
     suspend fun fetchTrendingMovies(
         @Path("media_type") mediaType: String = "movie",
         @Path("time_window") timeWindow: String = "day",
         @Query("page") page: Int = 1,
-    ):TrendingMoviesDto
+    ): TrendingMoviesDto
 
 
+    /*get popular movies*/
     @GET("movie/popular")
     suspend fun fetchPopularMovies(
         @Query("page") page: Int = 1,
     ): PopularMoviesDto
 
 
+    /*get Movie Details */
+    @GET("/movie/{movie_id}")
+    suspend fun getMovieDetails(
+
+    )
 
 }

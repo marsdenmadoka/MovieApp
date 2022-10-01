@@ -45,9 +45,10 @@ object DataModule {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    //passing the api key to all our routes
+
     @Provides
     @Singleton
+    //here we passing the our api key to all our routes
     fun ProvidesApi(retrofit: Retrofit): MovieApi = retrofit.create(MovieApi::class.java)
     private val apiInterceptor = Interceptor { chain ->
         val request = chain.request().newBuilder()

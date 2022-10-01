@@ -1,7 +1,5 @@
 package com.madoka.movieshop.ui.screens.home
 
-import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.madoka.commons.Resource
@@ -23,8 +21,8 @@ class HomeViewModel @Inject constructor(
     private val PopularMovieUsesCase: PopularMoviesUseCase
 ) : ViewModel() {
 
-//    private val _movieState = mutableStateOf(MovieState())
-//    val movieState: State<MovieState> = _movieState
+//    private val _moviePlayingNowState = mutableStateOf(MovieState())
+//    val moviePlayingNowState: State<MovieState> = _moviePlayingNowState
 
 //    private val _movieTrendingState = mutableStateOf(MovieState())
 //    val movieTrendingState: State<MovieState> = _movieTrendingState
@@ -32,8 +30,8 @@ class HomeViewModel @Inject constructor(
 //    private val _moviePopularState = mutableStateOf(MovieState())
 //    val moviePopularState: State<MovieState> = _moviePopularState
 
-    private val _movieState = MutableStateFlow(MovieState())
-    val movieState: StateFlow<MovieState> = _movieState
+    private val _moviePlayingNowState = MutableStateFlow(MovieState())
+    val moviePlayingNowState: StateFlow<MovieState> = _moviePlayingNowState
 
     private val _movieTrendingState = MutableStateFlow(MovieState())
     val movieTrendingState: StateFlow<MovieState> = _movieTrendingState
@@ -54,21 +52,21 @@ private fun getPlayingNowMovies() {
             playingNowUseCase().collectLatest { result ->
                 when (result) {
                     is Resource.Success -> {
-                        _movieState.value = movieState.value.copy(
+                        _moviePlayingNowState.value = moviePlayingNowState.value.copy(
                             movies = result.data ?: emptyList(),
                             isLoading = false
 
                         )
                     }
                     is Resource.Loading -> {
-                        _movieState.value = movieState.value.copy(
+                        _moviePlayingNowState.value = moviePlayingNowState.value.copy(
                             isLoading = true
                         )
                     }
                     is Resource.Error -> {
-                        _movieState.value =movieState.value.copy(
+                        _moviePlayingNowState.value = moviePlayingNowState.value.copy(
                             isLoading = false,
-                            error = result.message ?: "An unexpected error occured"
+                            error = result.message ?: "An unexpected error occurred"
                         )
                     }
                 }
@@ -96,7 +94,7 @@ private fun getPlayingNowMovies() {
                     is Resource.Error -> {
                         _movieTrendingState.value =movieTrendingState.value.copy(
                             isLoading = false,
-                            error = result.message ?: "An unexpected error occured"
+                            error = result.message ?: "An unexpected error occurred"
                         )
                     }
                 }
@@ -126,7 +124,7 @@ private fun getPlayingNowMovies() {
                     is Resource.Error -> {
                         _moviePopularState.value = moviePopularState.value.copy(
                             isLoading = false,
-                            error = result.message ?: "An unexpected error occured"
+                            error = result.message ?: "An unexpected error occurred"
                         )
                     }
                 }
