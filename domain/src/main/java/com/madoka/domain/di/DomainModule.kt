@@ -1,7 +1,7 @@
 package com.madoka.domain.di
 
 import com.madoka.domain.repository.MovieRepository
-import com.madoka.domain.usecase.NowPlayingMovieDetailUseCase
+import com.madoka.domain.usecase.MovieDetailUseCase
 import com.madoka.domain.usecase.NowPlayingMovieListUseCase
 import com.madoka.domain.usecase.PopularMoviesUseCase
 import com.madoka.domain.usecase.TrendingMoviesUseCase
@@ -19,10 +19,6 @@ object DomainModule {
     fun provideNowPlayingMovieListUseCase(MovieRepository: MovieRepository) =
         NowPlayingMovieListUseCase(MovieRepository)
 
-    @Provides
-    @Singleton
-    fun provideNowPlayingMovieDetailUseCase(MovieRepository: MovieRepository) =
-        NowPlayingMovieDetailUseCase(MovieRepository)
 
     @Provides
     @Singleton
@@ -34,5 +30,10 @@ object DomainModule {
     @Singleton
     fun providePopularMoviesUseCase(MovieRepository: MovieRepository) =
         PopularMoviesUseCase(MovieRepository)
+
+    @Provides
+    @Singleton
+    fun provideMovieDetailUseCase(MovieRepository: MovieRepository) =
+        MovieDetailUseCase(MovieRepository)
 
 }

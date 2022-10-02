@@ -13,6 +13,5 @@ interface MovieRepository {
 
     suspend fun getPopularMovies(): Flow<Resource<List<Movie>>>
 
-    // TODO:  add fun for fetch movie detail
-
+    suspend fun getMovieDetail(movieId: Int): Flow<Resource<Movie>>
 }

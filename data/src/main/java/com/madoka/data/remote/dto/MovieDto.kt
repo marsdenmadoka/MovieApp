@@ -9,6 +9,7 @@ data class MovieDto(
     val genre_ids: List<Int>,
     val id: Int,
     val original_language: String,
+
     @SerializedName("original_title")
     val originalTitle: String,
     val overview: String,

@@ -29,7 +29,8 @@ import com.madoka.movieshop.ui.components.MovieRatingSection
 @Composable
 fun detailsScreen(
     navController: NavController,
-    movieId: Int) {
+    movieId: Int
+) {
 
     val scrollState = rememberScrollState()
     Surface(

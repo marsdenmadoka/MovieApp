@@ -67,8 +67,8 @@ fun PopularMovieItem(
             .width(300.dp)
             .height(220.dp)
             .clickable {
-                // onClickItem()
                 navController.navigate("details")
+                //   navController.navigate(Screen.Detail.createRoute(movie.id.toString()))
             }
             .placeholder(
                 visible = false,

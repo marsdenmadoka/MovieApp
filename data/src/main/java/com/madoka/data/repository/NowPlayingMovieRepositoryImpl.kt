@@ -56,5 +56,19 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
         }
     }
 
+    override suspend fun getMovieDetail(movieId:Int): Flow<Resource<Movie>> = flow {
+       emit(Resource.Loading())
+
+        try {
+            val responseData = movieApiService.getMovieDetails(movieId)
+            emit(Resource.Success(responseData.toMovie()))
+        }catch (e: IOException){
+            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+        }catch (e:HttpException){
+            emit(Resource.Error(message = "Oops, something went wrong!"))
+        }
+
+    }
+
 
 }

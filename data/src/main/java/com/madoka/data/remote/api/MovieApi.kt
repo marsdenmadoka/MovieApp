@@ -1,5 +1,6 @@
 package com.madoka.data.remote.api
 
+import com.madoka.data.remote.dto.MovieDto
 import com.madoka.data.remote.dto.NowPlayingMoviesDto
 import com.madoka.data.remote.dto.PopularMoviesDto
 import com.madoka.data.remote.dto.TrendingMoviesDto
@@ -34,7 +35,11 @@ interface MovieApi {
     /*get Movie Details */
     @GET("/movie/{movie_id}")
     suspend fun getMovieDetails(
+        @Path("movie_id") movie_id:Int
+    ):MovieDto
 
-    )
+
+//    @GET("/v1/coins/{coinId}")
+//    suspend fun getCoinById(@Path("coinId") coinId: String): CoinDetailDto
 
 }
