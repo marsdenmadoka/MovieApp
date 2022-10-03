@@ -17,10 +17,11 @@ which in turn communicates to the usecase which communicates with Repository to 
 
 ## Screenshoots
 These are the app's screenshots:
-<img src="screenshoots/Screenshot1.png" width=300/>|<img src="screenshoots/Screenshot2.png" width=300/>|
-|:----:|:----:|
-<img src="screenshoots/Screenshot3.png" width=300/>|<img src="screenshoots/Screenshot4.png" width=300/>|
-|:----:|:----:|
+<img src="screenshoots/Screenshot1.png" width=300/>   |<img src="screenshoots/Screenshot2.png" width=300/>
+
+
+<img src="screenshoots/Screenshot3.png" width=300/>|    <img src="screenshoots/Screenshot4.png" width=300/>|
+
 
 
 ## Layers.
@@ -66,7 +67,7 @@ The ```presentation``` layer contains components involved in showing information
    the composables
 
 ## Clean Architecture
-<img src="screenshoots/CleanArchitecture.png" width= 450/>
+<img src="screenshoots/cleanArchitecture.png" width= 450/>
 
 ## Clean Architecture Notes
 consider reading the below note very careful. It summaries on what each layer of the clean architecture should do
