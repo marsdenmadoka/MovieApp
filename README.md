@@ -28,6 +28,7 @@ These are the app's screenshots:
 
 
 <p align="center">
+
 ## Demo
 </p>
 <p align="center">
