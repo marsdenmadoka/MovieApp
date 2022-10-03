@@ -18,7 +18,9 @@ which in turn communicates to the usecase which communicates with Repository to 
 ## Screenshoots
 These are the app's screenshots:
 
+<p align="center">
 <img src="screenshoots/Screenshot1.png" width=300/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <img src="screenshoots/Screenshot2.png" width=300/>|
+
 
 <img src="screenshoots/Screenshot3.png" width=300/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="screenshoots/Screenshot4.png" width=300/>|
 
@@ -26,6 +28,7 @@ These are the app's screenshots:
 
 ## Demo
 <img src="screenshoots/gif.gif" width=300/>
+</p>
 
 ## Layers.
 ### 1. Domain.
