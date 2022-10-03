@@ -33,7 +33,7 @@ interface MovieApi {
 
 
     /*get Movie Details */
-    @GET("/movie/{movie_id}")
+    @GET("movie/{movie_id}")
     suspend fun getMovieDetails(
         @Path("movie_id") movie_id:Int
     ):MovieDto

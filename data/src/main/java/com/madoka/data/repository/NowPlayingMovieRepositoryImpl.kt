@@ -58,7 +58,6 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(private val movieApiServ
 
     override suspend fun getMovieDetail(movieId:Int): Flow<Resource<Movie>> = flow {
        emit(Resource.Loading())
-
         try {
             val responseData = movieApiService.getMovieDetails(movieId)
             emit(Resource.Success(responseData.toMovie()))
