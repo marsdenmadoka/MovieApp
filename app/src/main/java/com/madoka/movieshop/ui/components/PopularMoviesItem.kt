@@ -44,7 +44,8 @@ import com.madoka.movieshop.ui.utils.getRating
 @Composable
 fun PopularMovieItem(
     movie: Movie,
-    navController: NavController
+    navController: NavController,
+    onClickItem: (Movie) -> Unit
 ) {
 
     val defaultDominantTextColor = MaterialTheme.colors.onSurface
@@ -67,8 +68,8 @@ fun PopularMovieItem(
             .width(300.dp)
             .height(220.dp)
             .clickable {
-                navController.navigate("details")
-                //   navController.navigate(Screen.Detail.createRoute(movie.id.toString()))
+                onClickItem(movie)
+
             }
             .placeholder(
                 visible = false,

@@ -155,8 +155,8 @@ fun TrendingNowMovies(
         items(moviesSate.movies) { item ->
             TrendingMoviesItem(
                 movie = item,
-                onItemClick = {
-                    navController.navigate("details")
+                onItemClick = { movie ->
+                    navController.navigate("details/${movie.movieId}")
                     //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
                 }
             )
@@ -196,7 +196,10 @@ fun PopularMovies(
         items(moviesSate.movies) { item ->
             PopularMovieItem(
                 movie = item,
-//                onClickItem = { }
+                onClickItem = { movie ->
+                    navController.navigate("details/${movie.movieId}")
+                    //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
+                },
                 navController = navController
             )
         }
