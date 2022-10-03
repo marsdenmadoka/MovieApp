@@ -16,9 +16,6 @@ import javax.inject.Inject
 @HiltViewModel
 class detailsViewModel @Inject constructor(private val movieDetailUseCase: MovieDetailUseCase) :
     ViewModel() {
-//    private val _movieDetails = MutableStateFlow<Movie>(null)
-//    val movieDetails get() = _movieDetails.asStateFlow()
-
 
     private val _movieDetailState = MutableStateFlow(MovieDetailState())
     val movieDetailState get() = _movieDetailState.asStateFlow()

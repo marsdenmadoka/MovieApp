@@ -8,30 +8,33 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.fade
+import com.google.accompanist.placeholder.placeholder
 import com.madoka.domain.model.Movie
 import com.madoka.movieshop.R
+import com.madoka.movieshop.ui.theme.TextSecondary
 import com.madoka.movieshop.ui.utils.getRating
 
 
 @Composable
 fun MovieRatingSection(
 popularity: String?, voteAverage: String?
-//movie: Movie
 ) {
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
-                /*
             .placeholder(
                 visible = popularity.isNullOrEmpty(),
                 color = Gray,
                 highlight = PlaceholderHighlight.fade(highlightColor = TextSecondary)
-            )*/,
+            ),
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -43,7 +46,7 @@ popularity: String?, voteAverage: String?
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text = if (popularity.isNullOrEmpty()) "N/A" else popularity,//movie.popularity.toString() ,   //"$popularity",
+                text = if (popularity.isNullOrEmpty()) "N/A" else popularity,
                 style = MaterialTheme.typography.h6,
                 fontSize = 42.sp,
                 color = MaterialTheme.colors.onSurface,

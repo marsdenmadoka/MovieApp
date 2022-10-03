@@ -13,6 +13,7 @@ data class MovieDto(
     @SerializedName("original_title")
     val originalTitle: String,
     val overview: String,
+    val runtime: Int,
     val popularity: Double,
 
     @SerializedName("poster_path")

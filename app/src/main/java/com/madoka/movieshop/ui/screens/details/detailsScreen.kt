@@ -35,6 +35,8 @@ import com.madoka.movieshop.ui.components.MovieRatingSection
 import com.madoka.movieshop.ui.screens.home.HomeViewModel
 import com.madoka.movieshop.ui.screens.home.MovieState
 import com.madoka.movieshop.ui.utils.PaletteGenerator
+import com.madoka.movieshop.ui.utils.getMovieDuration
+import com.madoka.movieshop.ui.utils.getPopularity
 import com.madoka.movieshop.ui.utils.getRating
 
 
@@ -96,7 +98,7 @@ fun detailsScreen(
                          color = Gray,
                          highlight = PlaceholderHighlight.fade(highlightColor = Color.Gray)
                      ),*/
-                    text = stringResource(R.string.movie_overiview), //movieDetails?.overview ?: "",
+                    text = moviedetailsState.movie?.overview ?:"No Overview",
                     style = MaterialTheme.typography.body1,
                     color = MaterialTheme.colors.onSurface,
                     fontSize = 15.sp,
@@ -206,7 +208,7 @@ fun MoviePoster(
 
         //region Movie Duration
         Text(
-            text = moviedetailstate.movie.   //"1 hour 30 min",  //movieDetails?.runtime?.getMovieDuration() ?: "",
+            text = moviedetailstate.movie?.runtime.getMovieDuration()?:"",   //"1 hour 30 min",
             color = dominantTextColor,
             style = MaterialTheme.typography.h5,
             fontSize = 15.sp,
@@ -227,7 +229,7 @@ fun MoviePoster(
                     end.linkTo(parent.end, margin = 6.dp)
                     bottom.linkTo(parent.bottom, margin = 10.dp)
                 },
-            text = "chuck hulk",//movieDetails?.title ?: stringResource(R.string.unknown_movie),
+            text = moviedetailstate.movie?.title ?: "/Unknown Movie",
             style = MaterialTheme.typography.h6,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
