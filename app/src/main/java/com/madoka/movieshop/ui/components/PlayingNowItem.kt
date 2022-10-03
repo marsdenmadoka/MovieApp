@@ -40,7 +40,7 @@ fun TopPlayingNowSectionItem(
     modifier: Modifier = Modifier,
     movie: Movie,
     moviesState: MovieState,
-    onItemClick: () -> Unit
+    onClickItem: (Movie) -> Unit
 ) {
 
     val defaultDominantColor = MaterialTheme.colors.surface
@@ -69,7 +69,8 @@ fun TopPlayingNowSectionItem(
     }
 
 
-    Box(modifier = Modifier.clickable { onItemClick }) {
+    Box(modifier = Modifier
+        .clickable {   onClickItem(movie)   }) {
         //region Movie Cover Image
         Image(
             modifier = Modifier

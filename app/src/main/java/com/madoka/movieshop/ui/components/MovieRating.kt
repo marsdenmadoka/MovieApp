@@ -8,6 +8,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -68,7 +69,7 @@ popularity: String?, voteAverage: String?
                 .padding(horizontal = 4.dp)
                 .width(1.dp)
                 .fillMaxHeight(1f),
-            color = MaterialTheme.colors.onSurface
+            color = Black //MaterialTheme.colors.onSurface
         )
 
         //region Rating

@@ -60,6 +60,7 @@ fun HomeScreen(
         ) {
             TopSectionPlayingNow(
                 moviesState = playingNowMovieState,
+                navController = navController
             )
             TrendingNowMovies(
                 moviesSate = trendingMovieState,
@@ -81,6 +82,7 @@ fun HomeScreen(
 @Composable
 private fun TopSectionPlayingNow(
     moviesState: MovieState,
+    navController: NavController,
 ) {
 
     val pagerState = rememberPagerState()
@@ -97,14 +99,15 @@ private fun TopSectionPlayingNow(
         state = pagerState
     )
     { page ->
+//        TopPlayingNowSectionItem(movie = , moviesState = , onClickItem = )
         TopPlayingNowSectionItem(
             modifier = Modifier
                 .fillMaxSize(),
             movie = moviesState.movies[page],
             moviesState = moviesState
-        ) {
-            /** val items = faketopitems[page]
-            navController.navigate("details/${movie.id!!}/${movie.cacheId!!}") */
+        ) { movie ->
+             val items = moviesState.movies[page]
+            navController.navigate("details/${movie.movieId}")
         }
     }
 
@@ -155,10 +158,10 @@ fun TrendingNowMovies(
         items(moviesSate.movies) { item ->
             TrendingMoviesItem(
                 movie = item,
-                onItemClick = { movie ->
+                onClickItem = { movie ->
                     navController.navigate("details/${movie.movieId}")
                     //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
-                }
+                },
             )
         }
     }
@@ -198,7 +201,6 @@ fun PopularMovies(
                 movie = item,
                 onClickItem = { movie ->
                     navController.navigate("details/${movie.movieId}")
-                    //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
                 },
                 navController = navController
             )

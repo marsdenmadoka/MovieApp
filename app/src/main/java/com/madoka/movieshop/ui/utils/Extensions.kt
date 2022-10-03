@@ -10,7 +10,7 @@ fun Int?.getMovieDuration(): String? {
         val hours = (this / 60)
         val minutes = this % 60
 
-        val runtime = if (hours <= 1) "${hours}hr ${minutes}mins" else "${hours}hrs ${minutes}mins"
+        val runtime = if (hours <= 1) "${hours} hr ${minutes} mins" else "${hours} hrs ${minutes} mins"
 
         runtime
     } else null

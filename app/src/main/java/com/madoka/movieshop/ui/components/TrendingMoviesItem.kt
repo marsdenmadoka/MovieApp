@@ -27,29 +27,28 @@ import com.madoka.domain.model.Movie
 @Composable
 fun TrendingMoviesItem(
     movie: Movie,
-    onItemClick: (Movie) -> Unit
+    onClickItem: (Movie) -> Unit
 ) {
 
     Column(
         modifier = Modifier
-           .placeholder(
-        visible = false,
-        color = Color.Gray,
-        highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-        ),
+            .placeholder(
+                visible = false,
+                color = Color.Gray,
+                highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
+            ),
 
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
         Card(modifier = Modifier
             .width(150.dp)
             .fillMaxHeight()
-            .clickable { }
+            .clickable {  onClickItem(movie)  }
             .placeholder(
-            visible = false,
-            color = Color.Black,
-            highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-            )
-            ,
+                visible = false,
+                color = Color.Black,
+                highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
+            ),
             elevation = 8.dp,
             shape = RoundedCornerShape(4.dp)
         ) {

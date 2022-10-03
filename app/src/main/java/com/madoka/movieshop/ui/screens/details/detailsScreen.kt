@@ -2,16 +2,14 @@ package com.madoka.movieshop.ui.screens.details
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -29,11 +27,15 @@ import coil.compose.ImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import coil.request.ImageRequest
+import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.placeholder
+import com.google.accompanist.placeholder.shimmer
 import com.madoka.domain.model.Movie
 import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.MovieRatingSection
 import com.madoka.movieshop.ui.screens.home.HomeViewModel
 import com.madoka.movieshop.ui.screens.home.MovieState
+import com.madoka.movieshop.ui.theme.TextSecondary
 import com.madoka.movieshop.ui.utils.PaletteGenerator
 import com.madoka.movieshop.ui.utils.getMovieDuration
 import com.madoka.movieshop.ui.utils.getPopularity
@@ -51,6 +53,11 @@ fun detailsScreen(
     }
 
  val moviedetailsState = detailsviewModel.movieDetailState.collectAsState().value
+
+if (moviedetailsState.isLoading){
+    CircularProgressIndicator()
+}
+
 
 
     val scrollState = rememberScrollState()
@@ -150,12 +157,12 @@ fun MoviePoster(
         modifier = modifier
             .fillMaxWidth()
             .height(350.dp)
-        /*
-       .placeholder(
-           visible = movieDetails == null,
-           color = Gray,
-           highlight = PlaceholderHighlight.shimmer(highlightColor = TextSecondary)
-       )*/
+
+            .placeholder(
+                visible = moviedetailstate == null,
+                color = Gray,
+                highlight = PlaceholderHighlight.shimmer(highlightColor = TextSecondary)
+            )
     ) {
 
         val (imageMovie, boxFadingEdge, textViewRunTime, textViewTitle, backIcon) = createRefs()
@@ -176,7 +183,7 @@ fun MoviePoster(
         Icon(
             imageVector = Icons.Default.ArrowBack,//from material icons
             contentDescription = null,
-            tint = dominantColor, //Color.White,
+            tint = dominantTextColor, //Color.White,
             modifier = Modifier
                 .size(36.dp)
                 // .offset(16.dp, 16.dp)
