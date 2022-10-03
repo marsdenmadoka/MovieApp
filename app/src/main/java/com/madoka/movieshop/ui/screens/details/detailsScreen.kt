@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -22,19 +21,13 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImagePainter
-import coil.compose.AsyncImagePainter.State.Empty.painter
-import coil.compose.ImagePainter
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import coil.request.ImageRequest
 import com.google.accompanist.placeholder.PlaceholderHighlight
+import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
-import com.madoka.domain.model.Movie
-import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.MovieRatingSection
-import com.madoka.movieshop.ui.screens.home.HomeViewModel
-import com.madoka.movieshop.ui.screens.home.MovieState
 import com.madoka.movieshop.ui.theme.TextSecondary
 import com.madoka.movieshop.ui.utils.PaletteGenerator
 import com.madoka.movieshop.ui.utils.getMovieDuration
@@ -48,16 +41,15 @@ fun detailsScreen(
     movieId: Int,
     detailsviewModel: detailsViewModel = hiltViewModel()
 ) {
-    LaunchedEffect(key1 =  detailsviewModel) {
+    LaunchedEffect(key1 = detailsviewModel) {
         detailsviewModel.getMovieDetail(movieId)
     }
 
- val moviedetailsState = detailsviewModel.movieDetailState.collectAsState().value
+    val moviedetailsState = detailsviewModel.movieDetailState.collectAsState().value
 
-if (moviedetailsState.isLoading){
-    CircularProgressIndicator()
-}
-
+    if (moviedetailsState.isLoading) {
+        CircularProgressIndicator()
+    }
 
 
     val scrollState = rememberScrollState()
@@ -76,8 +68,8 @@ if (moviedetailsState.isLoading){
 
                 //region Movie Poster
                 MoviePoster(
-                    modifier = Modifier ,
-                    navController =navController ,
+                    modifier = Modifier,
+                    navController = navController,
                     moviedetailstate = moviedetailsState
                 )
 
@@ -85,7 +77,7 @@ if (moviedetailsState.isLoading){
                 val voteAverage = moviedetailsState.movie?.voteAverage
                 MovieRatingSection(
                     popularity = voteAverage?.getPopularity(),
-                   voteAverage = voteAverage?.getRating()
+                    voteAverage = voteAverage?.getRating()
                 )
 
                 //region Movie Overview
@@ -99,13 +91,13 @@ if (moviedetailsState.isLoading){
 
                 Text(
                     modifier = Modifier
-                        .padding(horizontal = 16.dp),
-                    /* .placeholder(
-                         visible = movieDetails?.overview.isNullOrEmpty(),
-                         color = Gray,
-                         highlight = PlaceholderHighlight.fade(highlightColor = Color.Gray)
-                     ),*/
-                    text = moviedetailsState.movie?.overview ?:"No Overview",
+                        .padding(horizontal = 16.dp)
+                        .placeholder(
+                            visible = moviedetailsState.isLoading,
+                            color = Gray,
+                            highlight = PlaceholderHighlight.fade(highlightColor = Color.Gray)
+                        ),
+                    text = moviedetailsState.movie?.overview ?: "No Overview",
                     style = MaterialTheme.typography.body1,
                     color = MaterialTheme.colors.onSurface,
                     fontSize = 15.sp,
@@ -125,7 +117,7 @@ if (moviedetailsState.isLoading){
 fun MoviePoster(
     modifier: Modifier,
     navController: NavController,
-    moviedetailstate:MovieDetailState
+    moviedetailstate: MovieDetailState
 ) {
     var defaultDominantTextColor = MaterialTheme.colors.onSurface
     var dominantColor = MaterialTheme.colors.surface
@@ -157,7 +149,6 @@ fun MoviePoster(
         modifier = modifier
             .fillMaxWidth()
             .height(350.dp)
-
             .placeholder(
                 visible = moviedetailstate == null,
                 color = Gray,
@@ -183,7 +174,7 @@ fun MoviePoster(
         Icon(
             imageVector = Icons.Default.ArrowBack,//from material icons
             contentDescription = null,
-            tint = dominantTextColor, //Color.White,
+            tint = dominantSubTextColor, //Color.White,
             modifier = Modifier
                 .size(36.dp)
                 // .offset(16.dp, 16.dp)
@@ -215,7 +206,7 @@ fun MoviePoster(
 
         //region Movie Duration
         Text(
-            text = moviedetailstate.movie?.runtime.getMovieDuration()?:"",   //"1 hour 30 min",
+            text = moviedetailstate.movie?.runtime.getMovieDuration() ?: "",   //"1 hour 30 min",
             color = dominantTextColor,
             style = MaterialTheme.typography.h5,
             fontSize = 15.sp,
@@ -230,6 +221,11 @@ fun MoviePoster(
         Text(
             modifier = Modifier
                 .fillMaxWidth()
+                .placeholder(
+                    visible = moviedetailstate.isLoading,
+                    color = Gray,
+                    highlight = PlaceholderHighlight.fade(highlightColor = Color.Gray)
+                )
                 .constrainAs(textViewTitle) {
                     width = Dimension.fillToConstraints
                     start.linkTo(parent.start, margin = 6.dp)
