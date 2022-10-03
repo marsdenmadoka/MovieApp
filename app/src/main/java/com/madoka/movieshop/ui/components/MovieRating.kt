@@ -11,11 +11,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.R
+import com.madoka.movieshop.ui.utils.getRating
 
 
 @Composable
-fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
+fun MovieRatingSection(
+popularity: String?, voteAverage: String?
+//movie: Movie
+) {
 
     Row(
         modifier = Modifier
@@ -38,10 +43,12 @@ fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
             verticalArrangement = Arrangement.Center
         ) {
             Text(
-                text ="60", //"$popularity",
+                text = if (popularity.isNullOrEmpty()) "N/A" else popularity,//movie.popularity.toString() ,   //"$popularity",
                 style = MaterialTheme.typography.h6,
                 fontSize = 42.sp,
                 color = MaterialTheme.colors.onSurface,
+
+
             )
 
             Text(
@@ -73,7 +80,7 @@ fun MovieRatingSection(/*popularity: String?, voteAverage: Float?*/) {
             )
 
             Text(
-                text = "5.0",//"$voteAverage/5.0",
+                text = if (voteAverage.isNullOrEmpty()) "N/A" else "$voteAverage/5.0",//movie.voteAverage?.getRating()?.toFloat().toString(), ///5.0 "$voteAverage/5.0",
                 style = MaterialTheme.typography.h6,
                 fontSize = 20.sp,
                 color = MaterialTheme.colors.onSurface,

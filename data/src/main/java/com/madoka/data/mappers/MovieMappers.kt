@@ -14,7 +14,8 @@ fun MovieDto.toMovie(): Movie {
         title = title,
         posterPath = IMAGE_URL + posterPath,
         releaseDate = releaseDate ,  //.substringBefore("-") ?: ""
-        voteAverage= voteAverage
+        voteAverage= voteAverage ,
+        popularity = popularity
 
     )
 }

@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -20,17 +21,35 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import coil.compose.AsyncImagePainter
+import coil.compose.AsyncImagePainter.State.Empty.painter
+import coil.compose.ImagePainter
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
+import coil.request.ImageRequest
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.components.MovieRatingSection
+import com.madoka.movieshop.ui.screens.home.HomeViewModel
+import com.madoka.movieshop.ui.screens.home.MovieState
+import com.madoka.movieshop.ui.utils.PaletteGenerator
+import com.madoka.movieshop.ui.utils.getRating
 
 
 @Composable
 fun detailsScreen(
     navController: NavController,
-    movieId: Int
+    movieId: Int,
+    detailsviewModel: detailsViewModel = hiltViewModel()
 ) {
+    LaunchedEffect(key1 =  detailsviewModel) {
+        detailsviewModel.getMovieDetail(movieId)
+    }
+
+ val moviedetailsState = detailsviewModel.movieDetailState.collectAsState().value
+
 
     val scrollState = rememberScrollState()
     Surface(
@@ -46,18 +65,18 @@ fun detailsScreen(
                 verticalArrangement = Arrangement.spacedBy(14.dp)
             ) {
 
-
                 //region Movie Poster
                 MoviePoster(
-                    modifier = Modifier,
-                    navController = navController
-                    // movieDetails = movieDetails
+                    modifier = Modifier ,
+                    navController =navController ,
+                    moviedetailstate = moviedetailsState
                 )
+
                 //region Movie Ratings
-                //val voteAverage = movieDetails?.voteAverage
+                val voteAverage = moviedetailsState.movie?.voteAverage
                 MovieRatingSection(
-                    // popularity = voteAverage?.getPopularity(),
-//                    voteAverage = voteAverage?.getRating()
+                    popularity = voteAverage?.getPopularity(),
+                   voteAverage = voteAverage?.getRating()
                 )
 
                 //region Movie Overview
@@ -97,27 +116,33 @@ fun detailsScreen(
 fun MoviePoster(
     modifier: Modifier,
     navController: NavController,
+    moviedetailstate:MovieDetailState
 ) {
-
-    val defaultDominantColor = MaterialTheme.colors.surface
-    val defaultDominantTextColor = MaterialTheme.colors.onSurface
-    var dominantColor by remember { mutableStateOf(defaultDominantColor) }
+    var defaultDominantTextColor = MaterialTheme.colors.onSurface
+    var dominantColor = MaterialTheme.colors.surface
     var dominantTextColor by remember { mutableStateOf(defaultDominantTextColor) }
+    var dominantSubTextColor by remember { mutableStateOf(defaultDominantTextColor) }
 
-    val painter =
-        rememberImagePainter(data = R.drawable.drawable1)//movieDetails?.backdropPath?.loadImage())
 
-//    if (painter.state is ImagePainter.State.Success) {
-//        LaunchedEffect(key1 = painter) {
-//            val imageDrawable = painter.imageLoader.execute(painter.request).drawable
-//            imageDrawable?.let {
-//                PaletteGenerator.generateImagePalette(imageDrawable = it) { color ->
-//                    dominantColor = Color(color.rgb)
-//                    dominantTextColor = Color(color.titleTextColor)
-//                }
-//            }
-//        }
-// }
+    val painter = rememberAsyncImagePainter(
+        ImageRequest.Builder(LocalContext.current).data(data = moviedetailstate.movie?.posterPath)
+            .apply(block = fun ImageRequest.Builder.() {
+                crossfade(true)
+            }).build()
+    )
+
+
+    if (painter.state is AsyncImagePainter.State.Success) {
+        LaunchedEffect(key1 = painter) {
+            val imageDrawable = painter.imageLoader.execute(painter.request).drawable
+            imageDrawable?.let {
+                PaletteGenerator.generateImagePalette(imageDrawable = it) { color ->
+                    dominantColor = Color(color.rgb)
+                    dominantTextColor = Color(color.titleTextColor)
+                }
+            }
+        }
+    }
 
     ConstraintLayout(
         modifier = modifier
@@ -181,7 +206,7 @@ fun MoviePoster(
 
         //region Movie Duration
         Text(
-            text = "1 hour 30 min",  //movieDetails?.runtime?.getMovieDuration() ?: "",
+            text = moviedetailstate.movie.   //"1 hour 30 min",  //movieDetails?.runtime?.getMovieDuration() ?: "",
             color = dominantTextColor,
             style = MaterialTheme.typography.h5,
             fontSize = 15.sp,
