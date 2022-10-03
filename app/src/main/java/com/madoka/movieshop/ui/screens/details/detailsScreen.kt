@@ -2,7 +2,10 @@ package com.madoka.movieshop.ui.screens.details
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.*
@@ -47,9 +50,9 @@ fun detailsScreen(
 
     val moviedetailsState = detailsviewModel.movieDetailState.collectAsState().value
 
-    if (moviedetailsState.isLoading) {
-        CircularProgressIndicator()
-    }
+//    if (moviedetailsState.isLoading) {
+//        CircularProgressIndicator()
+//    }
 
 
     val scrollState = rememberScrollState()
@@ -68,7 +71,12 @@ fun detailsScreen(
 
                 //region Movie Poster
                 MoviePoster(
-                    modifier = Modifier,
+                    modifier = Modifier
+                        .placeholder(
+                            visible = moviedetailsState.isLoading,
+                            color = Gray,
+                            highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
+                        ),
                     navController = navController,
                     moviedetailstate = moviedetailsState
                 )
@@ -95,7 +103,7 @@ fun detailsScreen(
                         .placeholder(
                             visible = moviedetailsState.isLoading,
                             color = Gray,
-                            highlight = PlaceholderHighlight.fade(highlightColor = Color.Gray)
+                            highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
                         ),
                     text = moviedetailsState.movie?.overview ?: "No Overview",
                     style = MaterialTheme.typography.body1,
