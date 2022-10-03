@@ -17,12 +17,14 @@ which in turn communicates to the usecase which communicates with Repository to 
 
 ## Screenshoots
 These are the app's screenshots:
-<img src="screenshoots/Screenshot1.png" width=300/><img src="screenshoots/Screenshot2.png" width=300/>
+<img src="screenshoots/Screenshot1.png" width=300/>|<img src="screenshoots/Screenshot2.png" width=300/>|
+
+<img src="screenshoots/Screenshot3.png" width=300/>|<img src="screenshoots/Screenshot4.png" width=300/>|
 
 
-<img src="screenshoots/Screenshot3.png" width=300/>  <img src="screenshoots/Screenshot4.png" width=300/>
 
-
+## Demo
+<img src="screenshoots/gif.gif" width=300/>
 
 ## Layers.
 ### 1. Domain.
