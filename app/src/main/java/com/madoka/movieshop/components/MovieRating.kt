@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.components
+package com.madoka.movieshop.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -16,10 +16,8 @@ import androidx.compose.ui.unit.sp
 import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
-import com.madoka.domain.model.Movie
 import com.madoka.movieshop.R
 import com.madoka.movieshop.ui.theme.TextSecondary
-import com.madoka.movieshop.ui.utils.getRating
 
 
 @Composable

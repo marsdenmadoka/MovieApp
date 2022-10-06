@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.utils
+package com.madoka.movieshop.utils
 
 
 /**Converts movie duration from minutes to hours and minutes

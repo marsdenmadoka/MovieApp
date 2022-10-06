@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.screens.home
+package com.madoka.movieshop.screens.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -25,10 +25,10 @@ import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
-import com.madoka.movieshop.ui.components.Separator
-import com.madoka.movieshop.ui.components.TopPlayingNowSectionItem
-import com.madoka.movieshop.ui.components.TrendingMoviesItem
-import com.madoka.movieshop.ui.components.PopularMovieItem
+import com.madoka.movieshop.components.Separator
+import com.madoka.movieshop.components.TopPlayingNowSectionItem
+import com.madoka.movieshop.components.TrendingMoviesItem
+import com.madoka.movieshop.components.PopularMovieItem
 import com.madoka.movieshop.ui.theme.DeepBlue
 
 

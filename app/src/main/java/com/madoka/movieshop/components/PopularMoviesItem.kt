@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.components
+package com.madoka.movieshop.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -38,7 +38,7 @@ import com.gowtham.ratingbar.StepSize
 import com.madoka.domain.model.Movie
 import com.madoka.movieshop.ui.theme.DarkSurface
 import com.madoka.movieshop.ui.theme.Golden
-import com.madoka.movieshop.ui.utils.getRating
+import com.madoka.movieshop.utils.getRating
 
 
 @Composable

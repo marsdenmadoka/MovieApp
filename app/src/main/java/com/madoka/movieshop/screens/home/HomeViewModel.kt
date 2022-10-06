@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.screens.home
+package com.madoka.movieshop.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

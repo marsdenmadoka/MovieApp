@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.navGraph
+package com.madoka.movieshop.navGraph
 
 sealed class NavItem(
     val route: String

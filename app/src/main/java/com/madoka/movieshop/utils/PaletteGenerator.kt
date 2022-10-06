@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.utils
+package com.madoka.movieshop.utils
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable

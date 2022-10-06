@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.components
+package com.madoka.movieshop.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

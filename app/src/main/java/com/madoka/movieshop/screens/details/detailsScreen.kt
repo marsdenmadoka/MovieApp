@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.screens.details
+package com.madoka.movieshop.screens.details
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
@@ -30,12 +30,12 @@ import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
-import com.madoka.movieshop.ui.components.MovieRatingSection
+import com.madoka.movieshop.components.MovieRatingSection
 import com.madoka.movieshop.ui.theme.TextSecondary
-import com.madoka.movieshop.ui.utils.PaletteGenerator
-import com.madoka.movieshop.ui.utils.getMovieDuration
-import com.madoka.movieshop.ui.utils.getPopularity
-import com.madoka.movieshop.ui.utils.getRating
+import com.madoka.movieshop.utils.PaletteGenerator
+import com.madoka.movieshop.utils.getMovieDuration
+import com.madoka.movieshop.utils.getPopularity
+import com.madoka.movieshop.utils.getRating
 
 
 @Composable

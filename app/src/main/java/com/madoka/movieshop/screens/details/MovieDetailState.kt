@@ -1,4 +1,4 @@
-package com.madoka.movieshop.ui.screens.details
+package com.madoka.movieshop.screens.details
 
 import com.madoka.domain.model.Movie
 
