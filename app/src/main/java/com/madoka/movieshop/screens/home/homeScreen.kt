@@ -212,3 +212,10 @@ fun PopularMovies(
 }
 
 
+@Preview(name = "Home screen")
+@Composable
+private fun HomeScreenPreview() {
+    val navController: NavController? = null
+    HomeScreen(navController = navController!!)
+
+}
