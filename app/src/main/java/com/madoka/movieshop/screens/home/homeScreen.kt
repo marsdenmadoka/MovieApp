@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Gray
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -25,10 +26,12 @@ import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.components.Separator
 import com.madoka.movieshop.components.TopPlayingNowSectionItem
 import com.madoka.movieshop.components.TrendingMoviesItem
 import com.madoka.movieshop.components.PopularMovieItem
+import com.madoka.movieshop.screens.details.detailsScreen
 import com.madoka.movieshop.ui.theme.DeepBlue
 
 
@@ -207,4 +210,5 @@ fun PopularMovies(
         }
     }
 }
+
 

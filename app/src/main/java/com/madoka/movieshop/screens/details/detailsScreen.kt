@@ -17,6 +17,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
@@ -30,6 +31,7 @@ import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
+import com.madoka.domain.model.Movie
 import com.madoka.movieshop.components.MovieRatingSection
 import com.madoka.movieshop.ui.theme.TextSecondary
 import com.madoka.movieshop.utils.PaletteGenerator
@@ -253,7 +255,14 @@ fun MoviePoster(
 }
 
 
+@Preview(name = "details screen")
+@Composable
+private fun DetailsScreenPreview() {
+    val movie: Movie? = null
+    val navController: NavController? = null
 
+    detailsScreen(navController = navController!!, movieId = movie?.movieId!!)
 
+}
 
 
