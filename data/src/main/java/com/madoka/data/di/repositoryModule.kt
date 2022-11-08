@@ -14,7 +14,6 @@ abstract class RepositoryModule {
     @Singleton
     abstract fun providesRepository(repositoryImpl: NowPlayingMovieRepositoryImpl): MovieRepository
 
-
 }
 
 
