@@ -1,4 +1,4 @@
-package com.madoka.data
+package com.madoka.network
 
 import org.junit.Test
 

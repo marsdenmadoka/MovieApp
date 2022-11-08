@@ -1,5 +1,5 @@
-package com.madoka.data.di
-import com.madoka.data.repository.NowPlayingMovieRepositoryImpl
+package com.madoka.network.di
+import com.madoka.network.repository.NowPlayingMovieRepositoryImpl
 import com.madoka.domain.repository.MovieRepository
 import dagger.Binds
 import dagger.Module

@@ -1,4 +1,4 @@
-package com.madoka.data.remote.dto
+package com.madoka.network.remote.dto
 
 data class Dates(
     val maximum: String,

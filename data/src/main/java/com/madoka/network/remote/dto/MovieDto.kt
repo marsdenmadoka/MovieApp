@@ -1,14 +1,16 @@
-package com.madoka.data.remote.dto
+package com.madoka.network.remote.dto
 
 import com.google.gson.annotations.SerializedName
-import com.madoka.domain.model.Movie
 
+/*single movie properties*/
 data class MovieDto(
     val adult: Boolean,
     val backdrop_path: String,
     val genre_ids: List<Int>,
     val id: Int,
-    val original_language: String,
+
+    @SerializedName("original_language")
+    val  originalLanguage: String,
 
     @SerializedName("original_title")
     val originalTitle: String,

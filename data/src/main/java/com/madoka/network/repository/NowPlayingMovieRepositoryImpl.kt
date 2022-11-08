@@ -1,14 +1,13 @@
-package com.madoka.data.repository
+package com.madoka.network.repository
 
 import com.madoka.commons.Resource
-import com.madoka.data.mappers.toMovie
-import com.madoka.data.remote.api.MovieApi
+import com.madoka.network.mappers.toMovie
+import com.madoka.network.remote.api.MovieApi
 //import com.madoka.data.util.SafeApiRequest
 import com.madoka.domain.model.Movie
 import com.madoka.domain.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.stateIn
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject

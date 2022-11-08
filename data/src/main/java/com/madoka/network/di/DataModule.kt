@@ -1,9 +1,9 @@
-package com.madoka.data.di
+package com.madoka.network.di
 
 import com.madoka.commons.BASE_URL
 import com.madoka.commons.BuildConfig
 import com.madoka.commons.KEY
-import com.madoka.data.remote.api.MovieApi
+import com.madoka.network.remote.api.MovieApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

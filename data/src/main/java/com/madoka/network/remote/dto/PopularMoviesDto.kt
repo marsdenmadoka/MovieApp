@@ -1,4 +1,4 @@
-package com.madoka.data.remote.dto
+package com.madoka.network.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

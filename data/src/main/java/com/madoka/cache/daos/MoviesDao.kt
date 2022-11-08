@@ -15,7 +15,7 @@ interface MoviesDao {
 
     /*getting movies from our local db NOT A SUSPEND FUNCTION*/
     @Query("SELECT * FROM `Movies Table` WHERE category=:category")
-    fun getMovies(category: String): Flow<List<MovieEntity>> //note category  e.g trending movies,now playing movies etc
+    fun getMovies(category: String): Flow<List<MovieEntity>>
 
     @Query("DELETE FROM `Movies Table`")
     suspend fun deleteAllMovies()

@@ -1,12 +1,14 @@
-package com.madoka.data.mappers
+package com.madoka.network.mappers
 
 import com.madoka.commons.IMAGE_URL
-import com.madoka.data.remote.dto.MovieDto
-import com.madoka.data.remote.dto.NowPlayingMoviesDto
+import com.madoka.network.remote.dto.MovieDto
+import com.madoka.network.remote.dto.NowPlayingMoviesDto
 import com.madoka.domain.model.Movie
 import com.madoka.domain.model.NowPlayingMovies
 
-
+//DtoToDomain mappers
+/*When we use Cache Data together with remote data we might not need this class
+* we will only need DtoToEntity and EntityToDomain*/
 /**Since all our responses have same moviesTtype will use the same mapper/converter*/
 fun MovieDto.toMovie(): Movie {
     return Movie(
@@ -29,5 +31,4 @@ fun NowPlayingMoviesDto.toDomain(): NowPlayingMovies {
         movies = movies.map { it.toMovie() }
     )
 }
-
 

@@ -1,4 +1,4 @@
-package com.madoka.data.util
+package com.madoka.network.util
 
 import java.io.IOException
 

@@ -1,9 +1,10 @@
-package com.madoka.data.remote.dto
+package com.madoka.network.remote.dto
 
 import com.google.gson.annotations.SerializedName
-import com.madoka.domain.model.Movie
-import com.madoka.domain.model.NowPlayingMovies
 
+/*we can all choose to have ONE MoviesDTO(s) to represent NowPlayingMoviesDTO,
+ PopularMoviesDto and TrendingMoviesDto this is because there all have same
+* properties */
 data class NowPlayingMoviesDto(
 
     val dates: Dates,

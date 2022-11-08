@@ -1,9 +1,9 @@
-package com.madoka.data.remote.api
+package com.madoka.network.remote.api
 
-import com.madoka.data.remote.dto.MovieDto
-import com.madoka.data.remote.dto.NowPlayingMoviesDto
-import com.madoka.data.remote.dto.PopularMoviesDto
-import com.madoka.data.remote.dto.TrendingMoviesDto
+import com.madoka.network.remote.dto.MovieDto
+import com.madoka.network.remote.dto.NowPlayingMoviesDto
+import com.madoka.network.remote.dto.PopularMoviesDto
+import com.madoka.network.remote.dto.TrendingMoviesDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

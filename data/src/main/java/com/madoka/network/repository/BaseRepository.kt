@@ -1,4 +1,4 @@
-package com.madoka.data.repository
+package com.madoka.network.repository
 
 import com.madoka.commons.Resource
 import kotlinx.coroutines.Dispatchers
