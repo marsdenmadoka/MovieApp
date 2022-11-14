@@ -9,7 +9,7 @@ import com.madoka.domain.model.NowPlayingMovies
 //DtoToDomain mappers
 /*When we use Cache Data together with remote data we might not need this class
 * we will only need DtoToEntity and EntityToDomain*/
-/**Since all our responses have same moviesTtype will use the same mapper/converter*/
+///**Since all our responses have same moviesTtype will use the same mapper/converter*/
 fun MovieDto.toMovie(): Movie {
     return Movie(
         movieId = id,

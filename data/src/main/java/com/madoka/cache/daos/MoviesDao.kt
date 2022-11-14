@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface MoviesDao {
     /*saving movies from our network to local db/room*/
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun saveMovies(movieEntitities: List<MovieEntity>)
+    suspend fun saveMovies(movieEntities: List<MovieEntity>)
 
     /*getting movies from our local db NOT A SUSPEND FUNCTION*/
     @Query("SELECT * FROM `Movies Table` WHERE category=:category")
@@ -20,5 +20,7 @@ interface MoviesDao {
     @Query("DELETE FROM `Movies Table`")
     suspend fun deleteAllMovies()
 
+    @Query("SELECT COUNT(*) FROM `Movies Table` WHERE category=:category")
+    suspend fun isCategoryCacheAvailable(category: String): Int
 
 }

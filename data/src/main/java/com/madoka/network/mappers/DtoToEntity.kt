@@ -15,7 +15,7 @@ fun MovieDto.toEntity(category: String? = null): MovieEntity {
     return MovieEntity(
         adult = adult,
         backdropPath = backdrop_path,
-        genreIds = genre_ids,
+        //genreIds = genre_ids,
         id = id,
         originalLanguage = originalLanguage,
         originalTitle = originalTitle,
