@@ -12,7 +12,8 @@ import com.madoka.domain.repository.MovieRepository
 import com.madoka.domain.utils.Coroutines
 import com.madoka.network.mappers.toDomain
 import com.madoka.network.mappers.toEntity
-import com.madoka.network.util.safeApiCall
+import com.madoka.network.util.SafeApiRequest
+//import com.madoka.network.util.safeApiCall
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
@@ -22,9 +23,8 @@ import javax.inject.Inject
 
 class NowPlayingMovieRepositoryImpl @Inject constructor(
     private val movieApiService: MovieApi,
-    private val appDatabase:AppDatabase  ) : MovieRepository{
+    private val appDatabase:AppDatabase  ) : MovieRepository, SafeApiRequest(){
 
-    /**
     //saving our nowplaying movies to localdb
       private val moviesDao= appDatabase.MoviesDao()
       private val nowPlayingMoviesLivedata = MutableLiveData<List<MovieEntity>>()
@@ -37,11 +37,25 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
 
     private suspend fun saveNowPlayingMovies(movies: List<MovieEntity>) =
         moviesDao.saveMovies(movieEntities = movies)
-    **/
+   // **/
 
-    override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
-    //val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
+    override suspend fun getPlayingNowMovies(): Flow<List<Movie>> {
+    val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
 
+        return if (isCategoryCacheAvailable) {
+            val cacheResponse = moviesDao.getMovies("now_playing")
+            cacheResponse.map { it.map { it.toDomain() } }
+        } else {
+            val networkResponse = safeApiRequest { movieApiService.fetchNowPlayingMovies() }
+                .movies.map { it.toEntity(category = "now_playing")}
+            nowPlayingMoviesLivedata.value = networkResponse!!
+
+            val cacheResponse = moviesDao.getMovies("now_playing")
+
+            cacheResponse.map { it.map { it.toDomain() } }
+        }
+
+        /**
        //TODO make sure to add a safe api request!! to avoid blocking ui
         emit(Resource.Loading())
         try {
@@ -53,27 +67,24 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
         } catch (e: HttpException) {
             emit(Resource.Error(message = "Oops, something went wrong!"))
         }
+        **/
 
     }
 
 
     override suspend fun getTrendingMovies(): Flow<Resource<List<Movie>>> = flow {
-        //TODO make sure to add a safe api request!! to avoid blocking ui
 
-        safeApiCall {
-          movieApiService.fetchTrendingMovies().movies.map { it.toMovie() }
 
+    //TODO make sure to add a safe api request!! to avoid blocking ui
+        emit(Resource.Loading())
+        try {
+            val responseData = movieApiService.fetchTrendingMovies()
+            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
+        } catch (e: IOException) {
+            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+        } catch (e: HttpException) {
+            emit(Resource.Error(message = "Oops, something went wrong!"))
         }
-
-//        emit(Resource.Loading())
-//        try {
-//            val responseData = movieApiService.fetchTrendingMovies()
-//            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
-//        } catch (e: IOException) {
-//            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
-//        } catch (e: HttpException) {
-//            emit(Resource.Error(message = "Oops, something went wrong!"))
-//        }
 
     }
 

@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class NowPlayingMovieListUseCase @Inject constructor(private val MoviesRepository: MovieRepository) {
 
-    suspend operator fun invoke(): Flow<Resource<List<Movie>>> {
+    suspend operator fun invoke(): Flow<List<Movie>> {
         return MoviesRepository.getPlayingNowMovies()
     }
 

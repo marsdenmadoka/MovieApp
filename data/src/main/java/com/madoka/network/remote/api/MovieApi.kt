@@ -7,6 +7,7 @@ import com.madoka.network.remote.dto.TrendingMoviesDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.Response
 
 interface MovieApi {
 
@@ -14,7 +15,7 @@ interface MovieApi {
     @GET("movie/now_playing")
     suspend fun fetchNowPlayingMovies(
         @Query("page") page: Int = 1,
-    ): NowPlayingMoviesDto
+    ): Response<NowPlayingMoviesDto>
 
     /*get trending movies*/
     @GET("trending/{media_type}/{time_window}")
