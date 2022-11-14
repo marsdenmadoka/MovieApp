@@ -8,3 +8,8 @@ data class MovieState(
     val error: String? = null
 
 )
+//sealed class MovieState {
+//    object Loading : MovieState()
+//    data class Success(val movies: List<Movie>) : MovieState()
+//    data class Error(val error: String) : MovieState()
+//}

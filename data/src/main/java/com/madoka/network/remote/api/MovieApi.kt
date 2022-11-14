@@ -11,11 +11,19 @@ import retrofit2.Response
 
 interface MovieApi {
 
-    /*get now playing movies*/
+    /* get now playing movies */
+    @GET("movie/now_playing")
+    suspend fun fetchNowPlayingMovies(
+        @Query("page") page: Int = 1,
+    ): NowPlayingMoviesDto
+
+    /**
+    //get now playing movies :: use this when we want to save to local db
     @GET("movie/now_playing")
     suspend fun fetchNowPlayingMovies(
         @Query("page") page: Int = 1,
     ): Response<NowPlayingMoviesDto>
+     **/
 
     /*get trending movies*/
     @GET("trending/{media_type}/{time_window}")

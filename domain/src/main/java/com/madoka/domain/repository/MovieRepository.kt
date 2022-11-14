@@ -7,7 +7,8 @@ import kotlinx.coroutines.flow.Flow
 interface MovieRepository {
 
     //we are not implementing paging data yet so we use list instead of paging
-    suspend fun getPlayingNowMovies(): Flow<List<Movie>>
+    suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>>
+    //suspend fun getPlayingNowMovies(): Flow<List<Movie>>
 
     suspend fun getTrendingMovies(): Flow<Resource<List<Movie>>>
 
