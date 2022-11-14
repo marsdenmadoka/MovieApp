@@ -24,6 +24,7 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
     private val movieApiService: MovieApi,
     private val appDatabase:AppDatabase  ) : MovieRepository{
 
+    /**
     //saving our nowplaying movies to localdb
       private val moviesDao= appDatabase.MoviesDao()
       private val nowPlayingMoviesLivedata = MutableLiveData<List<MovieEntity>>()
@@ -36,28 +37,16 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
 
     private suspend fun saveNowPlayingMovies(movies: List<MovieEntity>) =
         moviesDao.saveMovies(movieEntities = movies)
+    **/
 
     override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
-
-    val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
+    //val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
 
        //TODO make sure to add a safe api request!! to avoid blocking ui
         emit(Resource.Loading())
         try {
-             return if (isCategoryCacheAvailable){
-                val cacheResponse = moviesDao.getMovies("now_playing")
-                 cacheResponse.map { it.map { it.toDomain() } }
-            }else{
-                moviesDao.deleteAllMovies("")
-                val responseData = movieApiService.fetchNowPlayingMovies()
-                    .movies.map { it.toEntity(category = "now_playing") }
-
-                emit(Resource.Success(responseData))
-
-                nowPlayingMoviesLivedata.value = responseData
-                val cacheResponse = moviesDao.getMovies("now_playing")
-                cacheResponse.map  { it.map { it.toDomain() } }
-            }
+            val responseData = movieApiService.fetchNowPlayingMovies()
+            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
 
         } catch (e: IOException) {
             emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
@@ -76,15 +65,15 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
 
         }
 
-        emit(Resource.Loading())
-        try {
-            val responseData = movieApiService.fetchTrendingMovies()
-            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
-        } catch (e: IOException) {
-            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
-        } catch (e: HttpException) {
-            emit(Resource.Error(message = "Oops, something went wrong!"))
-        }
+//        emit(Resource.Loading())
+//        try {
+//            val responseData = movieApiService.fetchTrendingMovies()
+//            emit(Resource.Success(responseData.movies.map { it.toMovie() }))
+//        } catch (e: IOException) {
+//            emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
+//        } catch (e: HttpException) {
+//            emit(Resource.Error(message = "Oops, something went wrong!"))
+//        }
 
     }
 
