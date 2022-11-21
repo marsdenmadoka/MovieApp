@@ -1,34 +1,25 @@
 package com.madoka.network.repository
 
-import androidx.lifecycle.MutableLiveData
 import com.madoka.cache.AppDatabase
-import com.madoka.cache.models.MovieEntity
 import com.madoka.commons.Resource
-import com.madoka.network.mappers.toMovie
-import com.madoka.network.remote.api.MovieApi
-//import com.madoka.data.util.SafeApiRequest
 import com.madoka.domain.model.Movie
 import com.madoka.domain.repository.MovieRepository
-import com.madoka.domain.utils.Coroutines
-import com.madoka.network.mappers.toDomain
-import com.madoka.network.mappers.toEntity
-//import com.madoka.network.util.SafeApiRequest
-import com.madoka.network.util.safeApiCall
-//import com.madoka.network.util.safeApiCall
+import com.madoka.network.mappers.toMovie
+import com.madoka.network.remote.api.MovieApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
 import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
 class NowPlayingMovieRepositoryImpl @Inject constructor(
     private val movieApiService: MovieApi,
-    private val appDatabase:AppDatabase  ) : MovieRepository /*,SafeApiRequest()**/{
+    private val appDatabase: AppDatabase
+) : MovieRepository /*,SafeApiRequest()**/ {
 
-    override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow{
+    override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
 
-       //TODO make sure to add a safe api request!! to avoid blocking ui and save this to local db
+        //TODO make sure to add a safe api request!! to avoid blocking ui and save this to local db
         emit(Resource.Loading())
         try {
             val responseData = movieApiService.fetchNowPlayingMovies()
@@ -45,7 +36,7 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
 
     override suspend fun getTrendingMovies(): Flow<Resource<List<Movie>>> = flow {
 
-    //TODO make sure to add a safe api request!! to avoid blocking ui
+        //TODO make sure to add a safe api request!! to avoid blocking ui
         emit(Resource.Loading())
         try {
             val responseData = movieApiService.fetchTrendingMovies()
@@ -71,54 +62,52 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun getMovieDetail(movieId:Int): Flow<Resource<Movie>> = flow {
-       emit(Resource.Loading())
+    override suspend fun getMovieDetail(movieId: Int): Flow<Resource<Movie>> = flow {
+        emit(Resource.Loading())
         try {
             val responseData = movieApiService.getMovieDetails(movieId)
             emit(Resource.Success(responseData.toMovie()))
-        }catch (e: IOException){
+        } catch (e: IOException) {
             emit(Resource.Error(message = "Could not reach the server, please check your internet connection!"))
-        }catch (e:HttpException){
+        } catch (e: HttpException) {
             emit(Resource.Error(message = "Oops, something went wrong!"))
         }
 
     }
 
-
-
-    /**
-    //saving our nowplaying movies to localdb
-    private val moviesDao= appDatabase.MoviesDao()
+/*
+    //saving our nowPlaying movies to localdb
+    private val moviesDao = appDatabase.MoviesDao()
     private val nowPlayingMoviesLivedata = MutableLiveData<List<MovieEntity>>()
 
     init {
-    nowPlayingMoviesLivedata.observeForever {
-    Coroutines.io { saveNowPlayingMovies(it) }
-    }
+        nowPlayingMoviesLivedata.observeForever {
+            Coroutines.io { saveNowPlayingMovies(it) }
+        }
     }
 
     private suspend fun saveNowPlayingMovies(movies: List<MovieEntity>) =
-    moviesDao.saveMovies(movieEntities = movies)
+        moviesDao.saveMovies(movieEntities = movies)
 
 
     override suspend fun getPlayingNowMovies(): Flow<List<Movie>> {
-    val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
+        val isCategoryCacheAvailable = moviesDao.isCategoryCacheAvailable("now_playing") > 0
 
-    return if (isCategoryCacheAvailable) {
-    val cacheResponse = moviesDao.getMovies("now_playing")
-    cacheResponse.map { it.map { it.toDomain() } }
-    } else {
-    val networkResponse = safeApiRequest { movieApiService.fetchNowPlayingMovies() }
-    .movies.map { it.toEntity(category = "now_playing")}
-    nowPlayingMoviesLivedata.value = networkResponse!!
+        return if (isCategoryCacheAvailable) {
+            val cacheResponse = moviesDao.getMovies("now_playing")
+            cacheResponse.map { it.map { it.toDomain() } }
+        } else {
+            val networkResponse = safeApiRequest { movieApiService.fetchNowPlayingMovies() }
+                .movies.map { it.toEntity(category = "now_playing") }
+            nowPlayingMoviesLivedata.value = networkResponse!!
 
-    val cacheResponse = moviesDao.getMovies("now_playing")
+            val cacheResponse = moviesDao.getMovies("now_playing")
 
-    cacheResponse.map { it.map { it.toDomain() } }
+            cacheResponse.map { it.map { it.toDomain() } }
+        }
     }
-    }
 
-     **/
+    */
 
 
 }
