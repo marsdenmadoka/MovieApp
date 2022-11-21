@@ -19,7 +19,9 @@ class NowPlayingMovieRepositoryImpl @Inject constructor(
 
     override suspend fun getPlayingNowMovies(): Flow<Resource<List<Movie>>> = flow {
 
-        //TODO make sure to add a safe api request!! to avoid blocking ui and save this to local db
+        //TODO 1.make sure to add a safe api request!! to avoid blocking ui
+        // 2.save and retrieve this to a local database,the room code is provided in cache dir
+
         emit(Resource.Loading())
         try {
             val responseData = movieApiService.fetchNowPlayingMovies()
