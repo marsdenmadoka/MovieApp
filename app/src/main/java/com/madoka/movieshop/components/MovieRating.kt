@@ -1,5 +1,6 @@
 package com.madoka.movieshop.components
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
@@ -11,13 +12,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.accompanist.placeholder.PlaceholderHighlight
 import com.google.accompanist.placeholder.fade
 import com.google.accompanist.placeholder.placeholder
 import com.madoka.movieshop.R
+import com.madoka.movieshop.ui.theme.MovieShopTheme
 import com.madoka.movieshop.ui.theme.TextSecondary
+
+
 
 
 @Composable
@@ -90,3 +96,16 @@ popularity: String?, voteAverage: String?
         }
     }
 }
+
+@Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Composable
+fun DetailsTopBarPreview() {
+    MovieShopTheme {
+        MovieRatingSection("po","2.5")
+    }
+}
+
+
+
+//Composable functions with non-default parameters are not supported in Preview unless they are annotated with @PreviewParameter

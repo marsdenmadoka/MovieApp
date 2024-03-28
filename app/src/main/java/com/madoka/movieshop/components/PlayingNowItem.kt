@@ -1,5 +1,6 @@
 package com.madoka.movieshop.components
 
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,6 +16,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImagePainter
@@ -31,6 +33,7 @@ import com.madoka.domain.model.Movie
 import com.madoka.movieshop.screens.home.MovieState
 import com.madoka.movieshop.ui.theme.DarkSurface
 import com.madoka.movieshop.ui.theme.Golden
+import com.madoka.movieshop.ui.theme.MovieShopTheme
 import com.madoka.movieshop.utils.PaletteGenerator
 import com.madoka.movieshop.utils.getRating
 
@@ -147,3 +150,15 @@ fun TopPlayingNowSectionItem(
 }
 
 
+@Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+fun playingnowPreview() {
+    MovieShopTheme {
+        TopPlayingNowSectionItem(modifier = Modifier, movie =
+        Movie(1,"title","posterpath",
+            "23.9.2022",
+            3.5,5.0,"abcdefghijklmn",3),
+            moviesState = MovieState(), onClickItem = {})
+    }
+}

@@ -30,7 +30,7 @@ These are the app's screenshots:
 </p>
 
 <p align="center">
-<img src="screenshoots/Screenshot3.png" width=300/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="screenshoots/Screenshot4.png" width=300/>|
+<img src="Screenshoots/Screenshot3.png" width=300/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="screenshoots/Screenshot4.png" width=300/>|
 </p>
 
 
