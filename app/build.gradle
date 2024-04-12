@@ -81,6 +81,7 @@ dependencies {
 
     //dagger hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
+    implementation 'androidx.compose.foundation:foundation-android:1.6.5'
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
     kapt "androidx.hilt:hilt-compiler:$hiltCompiler"
     implementation "androidx.hilt:hilt-work:$hiltCompiler"
