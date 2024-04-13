@@ -4,7 +4,7 @@ An Android app consuming [MovieDb API]("https://developers.themoviedb.org/3") to
 built with Jetpack Compose,Clean Architecture Principle , MVVM pattern as
 well as Architecture Components.
 
-# 🛠️Migrating to room  🛠
+# 🛠️Migrating to Kotlin Multi Platform  🛠
 
 ## App
 The app loads the the movies from the api and displays them in a list. When the Movie is clicked the
