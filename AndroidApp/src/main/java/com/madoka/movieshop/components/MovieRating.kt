@@ -102,7 +102,7 @@ popularity: String?, voteAverage: String?
 @Composable
 fun DetailsTopBarPreview() {
     MovieShopTheme {
-        MovieRatingSection("po","2.5")
+        MovieRatingSection("popular","2.5")
     }
 }
 

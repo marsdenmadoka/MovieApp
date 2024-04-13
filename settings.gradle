@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MovieShop"
-include ':app'
+include ':AndroidApp'
 include ':domain'
 include ':data'
 include ':commons'

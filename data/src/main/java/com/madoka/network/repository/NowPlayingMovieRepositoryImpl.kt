@@ -6,6 +6,7 @@ import com.madoka.domain.model.Movie
 import com.madoka.domain.repository.MovieRepository
 import com.madoka.network.mappers.toMovie
 import com.madoka.network.remote.api.MovieApi
+import com.madoka.network.util.SafeApiRequest
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
