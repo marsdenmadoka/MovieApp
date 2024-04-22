@@ -1,5 +1,6 @@
 [versions]
 agp = "8.2.1"
+hiltAndroidGradlePlugin = "2.44"
 kotlin = "1.9.20"
 compose = "1.5.4"
 compose-compiler = "1.5.4"
@@ -8,6 +9,7 @@ androidx-activityCompose = "1.8.0"
 kotlinGradlePlugin = "1.6.10"
 
 [libraries]
+hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }

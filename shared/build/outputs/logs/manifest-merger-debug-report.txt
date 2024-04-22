@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml:2:13-83
-INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml:2:13-83
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml:2:13-83
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml:2:13-83
 	package
-		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml
 	xmlns:android
-		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml:2:23-81
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml:2:23-81
 uses-sdk
-INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml reason: use-sdk injection requested
-INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml
-INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml reason: use-sdk injection requested
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml
 	android:targetSdkVersion
-		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml
 	android:minSdkVersion
-		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15783738571987950278.xml
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest14991409231203353140.xml
