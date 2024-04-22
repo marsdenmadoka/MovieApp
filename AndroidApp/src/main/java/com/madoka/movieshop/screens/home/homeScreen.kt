@@ -1,5 +1,6 @@
 package com.madoka.movieshop.screens.home
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -134,6 +135,7 @@ private fun TopSectionPlayingNow(
 fun TrendingNowMovies(
     moviesSate: MovieState,
     navController: NavController,
+    modifier: Modifier = Modifier
 ) {
     //separate our sections class created in components
     Separator(
@@ -161,6 +163,8 @@ fun TrendingNowMovies(
         items(moviesSate.movies) { item ->
             TrendingMoviesItem(
                 movie = item,
+//                modifier = Modifier
+//                    .clickable {  },
                 onClickItem = { movie ->
                     navController.navigate("details/${movie.movieId}")
                     //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
