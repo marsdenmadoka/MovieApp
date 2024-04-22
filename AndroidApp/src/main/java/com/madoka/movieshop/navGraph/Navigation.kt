@@ -44,8 +44,8 @@ SharedTransitionLayout(){
         ) {
             val movieID = it.arguments?.getInt("movieId")
             if (movieID != null) {
-                detailsScreen( //animatedVisiilityScope = this@composable,
-
+                detailsScreen(
+                    animatedVisibilityScope = this@composable,
                     navController = navController,
                     movieId = movieID,)
             }

@@ -1,5 +1,8 @@
 package com.madoka.movieshop.screens.details
 
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
@@ -33,6 +36,7 @@ import com.google.accompanist.placeholder.placeholder
 import com.google.accompanist.placeholder.shimmer
 import com.madoka.domain.model.Movie
 import com.madoka.movieshop.components.MovieRatingSection
+import com.madoka.movieshop.components.TrendingMoviesItem
 import com.madoka.movieshop.ui.theme.TextSecondary
 import com.madoka.movieshop.utils.PaletteGenerator
 import com.madoka.movieshop.utils.getMovieDuration
@@ -40,11 +44,13 @@ import com.madoka.movieshop.utils.getPopularity
 import com.madoka.movieshop.utils.getRating
 
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun detailsScreen(
     navController: NavController,
     movieId: Int,
-    detailsviewModel: detailsViewModel = hiltViewModel()
+    detailsviewModel: detailsViewModel = hiltViewModel(),
+    animatedVisibilityScope: AnimatedVisibilityScope
 ) {
     LaunchedEffect(key1 = detailsviewModel) {
         detailsviewModel.getMovieDetail(movieId)
@@ -72,17 +78,20 @@ fun detailsScreen(
             ) {
 
                 //region Movie Poster
-                MoviePoster(
-                    modifier = Modifier
-                        .placeholder(
-                            visible = moviedetailsState.isLoading,
-                            color = Gray,
-                            highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
-                        ),
-                    navController = navController,
-                    moviedetailstate = moviedetailsState
-                )
 
+                SharedTransitionScope {
+                    MoviePoster(
+                        modifier = Modifier
+                            .placeholder(
+                                visible = moviedetailsState.isLoading,
+                                color = Gray,
+                                highlight = PlaceholderHighlight.shimmer(highlightColor = Color.White)
+                            ),
+                        animatedVisibilityScope=animatedVisibilityScope,
+                        navController = navController,
+                        moviedetailstate = moviedetailsState
+                    )
+                }
                 //region Movie Ratings
                 val voteAverage = moviedetailsState.movie?.voteAverage
                 MovieRatingSection(
@@ -123,8 +132,10 @@ fun detailsScreen(
 }
 
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun MoviePoster(
+fun SharedTransitionScope.MoviePoster(
+    animatedVisibilityScope: AnimatedVisibilityScope,
     modifier: Modifier,
     navController: NavController,
     moviedetailstate: MovieDetailState
@@ -178,7 +189,11 @@ fun MoviePoster(
                     top.linkTo(parent.top)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
-                },
+                }
+                .sharedElement(
+                    state = rememberSharedContentState(key = "image-${moviedetailstate.movie?.posterPath}"),
+                    animatedVisibilityScope = animatedVisibilityScope
+                ),
             contentScale = ContentScale.Crop
         )
         Icon(
@@ -261,7 +276,7 @@ private fun DetailsScreenPreview() {
     val movie: Movie? = null
     val navController: NavController? = null
 
-    detailsScreen(navController = navController!!, movieId = movie?.movieId!!)
+    // detailsScreen(navController = navController!!, movieId = movie?.movieId!!)
 
 }
 
