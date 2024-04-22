@@ -1,5 +1,8 @@
 package com.madoka.movieshop.screens.home
 
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -82,9 +85,9 @@ fun HomeScreen(
 
 
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalPagerApi::class, ExperimentalSharedTransitionApi::class)
 @Composable
-private fun TopSectionPlayingNow(
+ private  fun TopSectionPlayingNow(
     moviesState: MovieState,
     navController: NavController,
 ) {

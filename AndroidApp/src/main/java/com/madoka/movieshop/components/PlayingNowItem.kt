@@ -1,9 +1,13 @@
 package com.madoka.movieshop.components
 
 import android.content.res.Configuration
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -38,8 +42,11 @@ import com.madoka.movieshop.utils.PaletteGenerator
 import com.madoka.movieshop.utils.getRating
 
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun TopPlayingNowSectionItem(
+fun SharedTransitionScope.TopPlayingNowSectionItem(
+    animatedVisibilityScope: AnimatedVisibilityScope,
+
     modifier: Modifier = Modifier,
     movie: Movie,
     moviesState: MovieState,
@@ -73,12 +80,22 @@ fun TopPlayingNowSectionItem(
 
 
     Box(modifier = Modifier
-        .clickable {   onClickItem(movie)   }) {
+        .clickable(
+            interactionSource = remember {
+                MutableInteractionSource()
+            },
+            indication = null
+        ) {
+            onClickItem(movie)   }) {
         //region Movie Cover Image
         Image(
             modifier = Modifier
                 .fillMaxSize()
                 .align(Alignment.Center)
+                .sharedElement(
+                    state = rememberSharedContentState(key = "image-$url"),
+                    animatedVisibilityScope = animatedVisibilityScope
+                )
                 .placeholder(
                     visible = false,//moviesState.isLoading ,
                     color = Color.White,
