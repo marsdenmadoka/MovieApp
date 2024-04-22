@@ -21,9 +21,6 @@ fun MainNavigationGraph() {
     val navController = rememberAnimatedNavController()
 
 SharedTransitionLayout(){
-
-
-}
     NavHost(navController = navController, startDestination = NavItem.Home.route ) {
 
         composable(route = NavItem.Home.route) {
@@ -45,9 +42,12 @@ SharedTransitionLayout(){
         ) {
             val movieID = it.arguments?.getInt("movieId")
             if (movieID != null) {
-                 detailsScreen(navController = navController, movieId = movieID)
+                detailsScreen(navController = navController, movieId = movieID)
             }
 
         }
     }
+
+}
+
 }
