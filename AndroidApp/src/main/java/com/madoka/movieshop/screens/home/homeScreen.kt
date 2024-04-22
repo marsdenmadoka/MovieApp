@@ -42,7 +42,8 @@ import com.madoka.movieshop.ui.theme.DeepBlue
 @Composable
 fun HomeScreen(
     navController: NavController,
-    viewModel: HomeViewModel = hiltViewModel()
+    viewModel: HomeViewModel = hiltViewModel(),
+    animatedVisibilityScope: AnimatedVisibilityScope
 ) {
 //    val playingNowMovieState = viewModel.moviePlayingNowState.value
 //    val trendingMovieState = viewModel.movieTrendingState.value
@@ -72,6 +73,7 @@ fun HomeScreen(
             TrendingNowMovies(
                 moviesSate = trendingMovieState,
                 navController = navController,
+                animatedVisibilityScope = animatedVisibilityScope
             )
             PopularMovies(
                 moviesSate = popularMovieState,
@@ -140,7 +142,8 @@ fun HomeScreen(
 fun TrendingNowMovies(
     moviesSate: MovieState,
     navController: NavController,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    animatedVisibilityScope: AnimatedVisibilityScope
 ) {
     //separate our sections class created in components
     Separator(
@@ -169,20 +172,18 @@ fun TrendingNowMovies(
 
             SharedTransitionScope {
                 TrendingMoviesItem(
-                    animatedVisibilityScope = , movie = , onClickItem = )
-            }
-
-            SharedTransitionScope.TrendingMoviesItem()
-
-            TrendingMoviesItem(
-                movie = item,
+                  animatedVisibilityScope=animatedVisibilityScope,
+                    movie = item,
 //                modifier = Modifier
 //                    .clickable {  },
-                onClickItem = { movie ->
-                    navController.navigate("details/${movie.movieId}")
-                    //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
-                },
-            )
+                    onClickItem = { movie ->
+                        navController.navigate("details/${movie.movieId}")
+                        //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
+                    },
+                )
+            }
+
+
         }
     }
 }
@@ -233,6 +234,6 @@ fun PopularMovies(
 @Composable
 private fun HomeScreenPreview() {
     val navController: NavController? = null
-    HomeScreen(navController = navController!!)
+    //HomeScreen(navController = navController!!)
 
 }

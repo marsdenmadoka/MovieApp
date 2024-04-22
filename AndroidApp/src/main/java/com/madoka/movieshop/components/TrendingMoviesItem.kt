@@ -98,9 +98,9 @@ fun SharedTransitionScope.TrendingMoviesItem(
 @Composable
 fun TrendingnowPreview() {
     MovieShopTheme {
-        TrendingMoviesItem(movie = Movie(
-            1, "title", "posterpath", "23.9.2022", 3.5, 5.0, "abcdefghijklmn", 3
-        ), onClickItem = {})
+//        TrendingMoviesItem(movie = Movie(
+//            1, "title", "posterpath", "23.9.2022", 3.5, 5.0, "abcdefghijklmn", 3
+//        ), onClickItem = {})
     }
 }
 
