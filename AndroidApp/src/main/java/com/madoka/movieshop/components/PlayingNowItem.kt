@@ -44,9 +44,7 @@ import com.madoka.movieshop.utils.getRating
 
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
-fun SharedTransitionScope.TopPlayingNowSectionItem(
-    animatedVisibilityScope: AnimatedVisibilityScope,
-
+fun TopPlayingNowSectionItem(
     modifier: Modifier = Modifier,
     movie: Movie,
     moviesState: MovieState,
@@ -80,22 +78,13 @@ fun SharedTransitionScope.TopPlayingNowSectionItem(
 
 
     Box(modifier = Modifier
-        .clickable(
-            interactionSource = remember {
-                MutableInteractionSource()
-            },
-            indication = null
-        ) {
+        .clickable{
             onClickItem(movie)   }) {
         //region Movie Cover Image
         Image(
             modifier = Modifier
                 .fillMaxSize()
                 .align(Alignment.Center)
-                .sharedElement(
-                    state = rememberSharedContentState(key = "image-$url"),
-                    animatedVisibilityScope = animatedVisibilityScope
-                )
                 .placeholder(
                     visible = false,//moviesState.isLoading ,
                     color = Color.White,

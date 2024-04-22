@@ -106,6 +106,7 @@ fun HomeScreen(
         state = pagerState
     )
     { page ->
+
 //        TopPlayingNowSectionItem(movie = , moviesState = , onClickItem = )
         TopPlayingNowSectionItem(
             modifier = Modifier
@@ -134,6 +135,7 @@ fun HomeScreen(
 
 }
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun TrendingNowMovies(
     moviesSate: MovieState,
@@ -164,6 +166,14 @@ fun TrendingNowMovies(
             )
     ) {
         items(moviesSate.movies) { item ->
+
+            SharedTransitionScope {
+                TrendingMoviesItem(
+                    animatedVisibilityScope = , movie = , onClickItem = )
+            }
+
+            SharedTransitionScope.TrendingMoviesItem()
+
             TrendingMoviesItem(
                 movie = item,
 //                modifier = Modifier

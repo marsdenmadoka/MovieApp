@@ -24,7 +24,8 @@ SharedTransitionLayout(){
     NavHost(navController = navController, startDestination = NavItem.Home.route ) {
 
         composable(route = NavItem.Home.route) {
-            HomeScreen(navController = navController)
+            HomeScreen(
+                navController = navController)
         }
 
 //        composable(route=NavItem.Details.route){
@@ -42,7 +43,10 @@ SharedTransitionLayout(){
         ) {
             val movieID = it.arguments?.getInt("movieId")
             if (movieID != null) {
-                detailsScreen(navController = navController, movieId = movieID)
+                detailsScreen( animatedVisiilityScope = this@composable,
+
+                    navController = navController,
+                    movieId = movieID,)
             }
 
         }
