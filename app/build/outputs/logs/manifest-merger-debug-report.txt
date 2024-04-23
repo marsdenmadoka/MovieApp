@@ -1,0 +1,778 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.google.accompanist:accompanist-pager-indicators:0.19.0] /home/madoka/.gradle/caches/transforms-3/a856e88f1e828dfff7d8abfc6f45a6c0/transformed/accompanist-pager-indicators-0.19.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.accompanist:accompanist-pager:0.19.0] /home/madoka/.gradle/caches/transforms-3/aa0c64d1d99efe3e78d76ada85f31ec2/transformed/accompanist-pager-0.19.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.20.0] /home/madoka/.gradle/caches/transforms-3/eb98c80eeea880d650b1852b2e67d357/transformed/accompanist-swiperefresh-0.20.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.accompanist:accompanist-placeholder:0.20.0] /home/madoka/.gradle/caches/transforms-3/f67a89a43e68c933e63c8076845a6a98/transformed/accompanist-placeholder-0.20.0/AndroidManifest.xml:17:1-24:12
+MERGED from [io.github.a914-gowtham:compose-ratingbar:1.2.3] /home/madoka/.gradle/caches/transforms-3/d1432f687ce74ab8d7927e833aafbf98/transformed/compose-ratingbar-1.2.3/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /home/madoka/.gradle/caches/transforms-3/b9f0d4486d1bc6569ce3e82c16930314/transformed/constraintlayout-compose-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [:data] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:commons] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/commons/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.work:work-runtime-ktx:2.7.0] /home/madoka/.gradle/caches/transforms-3/efa2391869c286017b9ee13df04b39c6/transformed/work-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-ktx:2.4.3] /home/madoka/.gradle/caches/transforms-3/b754ae97edd6a55a77ba7530fc0807f0/transformed/room-ktx-2.4.3/AndroidManifest.xml:17:1-24:12
+MERGED from [io.coil-kt:coil-compose:2.2.0] /home/madoka/.gradle/caches/transforms-3/35d32bf3bcbeefeb795edde9fdd5542a/transformed/coil-compose-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-compose-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/c09c281c346a6805144857ab41b1e648/transformed/coil-compose-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil:2.2.0] /home/madoka/.gradle/caches/transforms-3/eb9690a62bc453bc34cb53fe302d01c7/transformed/coil-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/ed1c011544753b6e1c64b180eee9c9eb/transformed/coil-base-2.2.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.24.3-alpha] /home/madoka/.gradle/caches/transforms-3/48c08446abb6684c13948a682d437d22/transformed/accompanist-navigation-animation-0.24.3-alpha/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/madoka/.gradle/caches/transforms-3/9bfba83052e1b4e388ac9473138d092b/transformed/hilt-navigation-compose-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-compose:2.5.2] /home/madoka/.gradle/caches/transforms-3/d69d9fde014be414b171916435daaaea/transformed/navigation-compose-2.5.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material-ripple:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/aa32fc884d687f61200f2429870e2fee/transformed/material-ripple-1.2.0-alpha04/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/3417a3689369339ad1c38344776131eb/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/29180102c5248b9a2735fea779bfa910/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8cd676666615b0afb7ffbf75f45cd64d/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/f05fc2bf18472cb5d91d2e0af072da9e/transformed/material-icons-core-1.2.0-alpha04/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.25.1] /home/madoka/.gradle/caches/transforms-3/fb48e8798936f4b39c8a0aad7a59520a/transformed/accompanist-drawablepainter-0.25.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8f6b27834376192523df741863a03b75/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/944ebeba16417e4ea82c33cd9a448d6c/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9919801bb4a0ff91304f079dffa16c1f/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/d84956f4e9f54e8dffabc086024e98ef/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/552f562c7a6f197112018c02b3356cb7/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/14107e9fbf0bfbd0fe0e4971bd4ac592/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/e22736517dc758b5c0b1bbc1a6e38607/transformed/navigation-runtime-ktx-2.5.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a4fb745b53dbfe53e97d18d5915f1526/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] /home/madoka/.gradle/caches/transforms-3/5515a296e9993d2c758349edd4c8e0f9/transformed/navigation-runtime-2.5.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03] /home/madoka/.gradle/caches/transforms-3/48873da707708a612dff3304c431845d/transformed/hilt-lifecycle-viewmodel-1.0.0-alpha03/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.6.1] /home/madoka/.gradle/caches/transforms-3/7f6f0289d24d6949c4a11aed30e3c2ce/transformed/material-1.6.1/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /home/madoka/.gradle/caches/transforms-3/2da18bbcae00b9167fe59c6b30c0a934/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/madoka/.gradle/caches/transforms-3/3e1e05ccf890eb0f56870bccbb985bc2/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] /home/madoka/.gradle/caches/transforms-3/54b166afe7eae02f2ac998538161f544/transformed/appcompat-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.hilt:hilt-work:1.0.0] /home/madoka/.gradle/caches/transforms-3/60b43631863964113b51229e6074f9b7/transformed/hilt-work-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:hilt-android:2.40] /home/madoka/.gradle/caches/transforms-3/7c9c34508e1115366f3cda92909435f4/transformed/hilt-android-2.40/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/madoka/.gradle/caches/transforms-3/e78bfb86e61012fe0dd14a46c02df705/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/madoka/.gradle/caches/transforms-3/d4bd91d1be08a8876c3c279cbc6d8420/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.7.0] /home/madoka/.gradle/caches/transforms-3/f4da5d7e648403a22eafdb8f7c3ba882/transformed/activity-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.7.0] /home/madoka/.gradle/caches/transforms-3/dba8ac2f244d4dbc8b0c712a28197891/transformed/activity-ktx-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.7.0] /home/madoka/.gradle/caches/transforms-3/8fd29abd136458e5eb459e4230b0c2a2/transformed/activity-compose-1.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.palette:palette-ktx:1.0.0] /home/madoka/.gradle/caches/transforms-3/1c8720ce654199028c980dd92052156f/transformed/palette-ktx-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0] /home/madoka/.gradle/caches/transforms-3/185931e7a769a3cd18255755ed04cdad/transformed/palette-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/madoka/.gradle/caches/transforms-3/c2dc88b8037e226a16b519397677f77a/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a318434ccc855fa432df21117c90c777/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/madoka/.gradle/caches/transforms-3/7f83ab55d20b831cfe8b569cac6229dd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.paging:paging-runtime-ktx:3.1.1] /home/madoka/.gradle/caches/transforms-3/ef5d419777f6928708eab83d6447fac8/transformed/paging-runtime-ktx-3.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.paging:paging-runtime:3.1.1] /home/madoka/.gradle/caches/transforms-3/3ae7933ac0b49ec8a10a18de312083cd/transformed/paging-runtime-3.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/1bdaeb1c1681645cd886cf63f44a43ca/transformed/navigation-common-ktx-2.5.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.2] /home/madoka/.gradle/caches/transforms-3/b775d7a966b9c8a7e3b2c2bbf328e90e/transformed/navigation-common-2.5.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/madoka/.gradle/caches/transforms-3/2c54a14428a3d409f2a558ead0132055/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.loader:loader:1.0.0] /home/madoka/.gradle/caches/transforms-3/3ef26950377517388cf0327e3ebcaad2/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/cce19d707d14a4fff75e09b458c22f5f/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /home/madoka/.gradle/caches/transforms-3/7bfaffd557e0e575005a8051a0d4af0e/transformed/lifecycle-service-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/d84be2ee7ebda589e50594cb234a4917/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /home/madoka/.gradle/caches/transforms-3/83fd962286c5f4afd2a3cf98099e682d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /home/madoka/.gradle/caches/transforms-3/01b07277856601223274a5db77ca24d4/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/madoka/.gradle/caches/transforms-3/399cb7a7517ade7349e5a194c42a6f3c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/madoka/.gradle/caches/transforms-3/ba176a8c77d1fa90ef54fc9b74a218f3/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/90eb9c873c722f41e7606ba594ac29bf/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/5254a4e1d0f7359336db0b6a6bd61a55/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /home/madoka/.gradle/caches/transforms-3/bbdf3f4740a041ac1044402d94d10ddf/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /home/madoka/.gradle/caches/transforms-3/e05661cac73c16419f2f3ed0958d39c5/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] /home/madoka/.gradle/caches/transforms-3/2120abf9ea9aa1a8aeb49d50f436439c/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/madoka/.gradle/caches/transforms-3/bee8c488ba39b6693333ad7475bedc8f/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/madoka/.gradle/caches/transforms-3/7a2d0c828649ad886ca77d6be5868cbf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/madoka/.gradle/caches/transforms-3/593045278987fae6852fa2da888f079e/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/madoka/.gradle/caches/transforms-3/f3cc606db4090a2e3bc7718fbb008da7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/madoka/.gradle/caches/transforms-3/6cff4f17b879d368e17efcec50db723e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/madoka/.gradle/caches/transforms-3/e42592148d3e23f348657e2d504c2d59/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/madoka/.gradle/caches/transforms-3/5bf23f3b1dcd4f9c98f94aee5cdf1fe5/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.0] /home/madoka/.gradle/caches/transforms-3/e6509f07305432b5683aaea4e90926ea/transformed/recyclerview-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /home/madoka/.gradle/caches/transforms-3/a19f7bb0390f69f498d3885e16c90519/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /home/madoka/.gradle/caches/transforms-3/88370f66ae34352359d3c103d9d7720b/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /home/madoka/.gradle/caches/transforms-3/2ef1b0d82bea1235ea98b3f3a0bff462/transformed/lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/cab8ef8b9c0196b0dac29bee29300e30/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/e0b9988c213f51d7624b9343f06b9edd/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/fba83a4159e6cf40e7c06795d98adcf2/transformed/material-1.2.0-alpha04/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/a1f738d498c6ab54c4a124f88aef073a/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8954ae3102e4aca87d5613444f1bbc06/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/895701ae05e43613e8a4f80c057de68a/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.github.aakira:napier-android-debug:1.4.1] /home/madoka/.gradle/caches/transforms-3/365e416e98468c25a2a63a094769bbd2/transformed/napier-debug/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/madoka/.gradle/caches/transforms-3/83c1daec397e727bcf64a43488229279/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/madoka/.gradle/caches/transforms-3/9a2ca8463416e348f09ab28af07f1964/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/madoka/.gradle/caches/transforms-3/315ada366d818854f6b08da72c0e7b0c/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b70215010587c108505a1bb150be5ce/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b7aebc1d7f8663adad0a27b22d8b05e/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /home/madoka/.gradle/caches/transforms-3/f62d910c71234e421fe107a9ef1109f5/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/madoka/.gradle/caches/transforms-3/cb86f18163d932ce2de4d5d6acd8ea66/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/madoka/.gradle/caches/transforms-3/ac695e55a3d3439b6a0c2942bcdfda31/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/madoka/.gradle/caches/transforms-3/90c547a38720c576f9d63477d843f5a8/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/madoka/.gradle/caches/transforms-3/b9a224d2a877e19eedbb742760d8e38d/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/madoka/.gradle/caches/transforms-3/b6d9c52be55b7fdc77f1ddfddef20df1/transformed/sqlite-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/madoka/.gradle/caches/transforms-3/4f5c506c0370afd5705a536f18c58d5e/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/madoka/.gradle/caches/transforms-3/8b7eee916b9867d1f0301521d7777752/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.40] /home/madoka/.gradle/caches/transforms-3/71d528133b98fc6a8ced5aa0c9b0dd63/transformed/dagger-lint-aar-2.40/AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-67
+MERGED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:7:22-73
+application
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:9:5-31:19
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:9:5-31:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.material:material:1.6.1] /home/madoka/.gradle/caches/transforms-3/7f6f0289d24d6949c4a11aed30e3c2ce/transformed/material-1.6.1/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.6.1] /home/madoka/.gradle/caches/transforms-3/7f6f0289d24d6949c4a11aed30e3c2ce/transformed/material-1.6.1/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/madoka/.gradle/caches/transforms-3/3e1e05ccf890eb0f56870bccbb985bc2/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/madoka/.gradle/caches/transforms-3/3e1e05ccf890eb0f56870bccbb985bc2/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/madoka/.gradle/caches/transforms-3/9a2ca8463416e348f09ab28af07f1964/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/madoka/.gradle/caches/transforms-3/9a2ca8463416e348f09ab28af07f1964/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:15:9-41
+	android:fullBackupContent
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:13:9-54
+	android:roundIcon
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:16:9-54
+	tools:targetApi
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:19:9-29
+	android:icon
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:18:9-47
+	android:dataExtractionRules
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:12:9-65
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:10:9-34
+activity#com.madoka.movieshop.MainActivity
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:20:9-30:20
+	android:label
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:23:13-45
+	android:exported
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:22:13-36
+	android:theme
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:24:13-51
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:25:13-29:29
+action#android.intent.action.MAIN
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:28:17-77
+	android:name
+		ADDED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml:28:27-74
+uses-sdk
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+MERGED from [com.google.accompanist:accompanist-pager-indicators:0.19.0] /home/madoka/.gradle/caches/transforms-3/a856e88f1e828dfff7d8abfc6f45a6c0/transformed/accompanist-pager-indicators-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-pager-indicators:0.19.0] /home/madoka/.gradle/caches/transforms-3/a856e88f1e828dfff7d8abfc6f45a6c0/transformed/accompanist-pager-indicators-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-pager:0.19.0] /home/madoka/.gradle/caches/transforms-3/aa0c64d1d99efe3e78d76ada85f31ec2/transformed/accompanist-pager-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-pager:0.19.0] /home/madoka/.gradle/caches/transforms-3/aa0c64d1d99efe3e78d76ada85f31ec2/transformed/accompanist-pager-0.19.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.20.0] /home/madoka/.gradle/caches/transforms-3/eb98c80eeea880d650b1852b2e67d357/transformed/accompanist-swiperefresh-0.20.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.20.0] /home/madoka/.gradle/caches/transforms-3/eb98c80eeea880d650b1852b2e67d357/transformed/accompanist-swiperefresh-0.20.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-placeholder:0.20.0] /home/madoka/.gradle/caches/transforms-3/f67a89a43e68c933e63c8076845a6a98/transformed/accompanist-placeholder-0.20.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-placeholder:0.20.0] /home/madoka/.gradle/caches/transforms-3/f67a89a43e68c933e63c8076845a6a98/transformed/accompanist-placeholder-0.20.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.github.a914-gowtham:compose-ratingbar:1.2.3] /home/madoka/.gradle/caches/transforms-3/d1432f687ce74ab8d7927e833aafbf98/transformed/compose-ratingbar-1.2.3/AndroidManifest.xml:5:5-7:41
+MERGED from [io.github.a914-gowtham:compose-ratingbar:1.2.3] /home/madoka/.gradle/caches/transforms-3/d1432f687ce74ab8d7927e833aafbf98/transformed/compose-ratingbar-1.2.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /home/madoka/.gradle/caches/transforms-3/b9f0d4486d1bc6569ce3e82c16930314/transformed/constraintlayout-compose-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /home/madoka/.gradle/caches/transforms-3/b9f0d4486d1bc6569ce3e82c16930314/transformed/constraintlayout-compose-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [:data] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:data] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:commons] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/commons/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:commons] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/commons/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.work:work-runtime-ktx:2.7.0] /home/madoka/.gradle/caches/transforms-3/efa2391869c286017b9ee13df04b39c6/transformed/work-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.work:work-runtime-ktx:2.7.0] /home/madoka/.gradle/caches/transforms-3/efa2391869c286017b9ee13df04b39c6/transformed/work-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.4.3] /home/madoka/.gradle/caches/transforms-3/b754ae97edd6a55a77ba7530fc0807f0/transformed/room-ktx-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.4.3] /home/madoka/.gradle/caches/transforms-3/b754ae97edd6a55a77ba7530fc0807f0/transformed/room-ktx-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [io.coil-kt:coil-compose:2.2.0] /home/madoka/.gradle/caches/transforms-3/35d32bf3bcbeefeb795edde9fdd5542a/transformed/coil-compose-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose:2.2.0] /home/madoka/.gradle/caches/transforms-3/35d32bf3bcbeefeb795edde9fdd5542a/transformed/coil-compose-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/c09c281c346a6805144857ab41b1e648/transformed/coil-compose-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/c09c281c346a6805144857ab41b1e648/transformed/coil-compose-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil:2.2.0] /home/madoka/.gradle/caches/transforms-3/eb9690a62bc453bc34cb53fe302d01c7/transformed/coil-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil:2.2.0] /home/madoka/.gradle/caches/transforms-3/eb9690a62bc453bc34cb53fe302d01c7/transformed/coil-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/ed1c011544753b6e1c64b180eee9c9eb/transformed/coil-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:2.2.0] /home/madoka/.gradle/caches/transforms-3/ed1c011544753b6e1c64b180eee9c9eb/transformed/coil-base-2.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.24.3-alpha] /home/madoka/.gradle/caches/transforms-3/48c08446abb6684c13948a682d437d22/transformed/accompanist-navigation-animation-0.24.3-alpha/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.24.3-alpha] /home/madoka/.gradle/caches/transforms-3/48c08446abb6684c13948a682d437d22/transformed/accompanist-navigation-animation-0.24.3-alpha/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/madoka/.gradle/caches/transforms-3/9bfba83052e1b4e388ac9473138d092b/transformed/hilt-navigation-compose-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-navigation-compose:1.0.0] /home/madoka/.gradle/caches/transforms-3/9bfba83052e1b4e388ac9473138d092b/transformed/hilt-navigation-compose-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.2] /home/madoka/.gradle/caches/transforms-3/d69d9fde014be414b171916435daaaea/transformed/navigation-compose-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.2] /home/madoka/.gradle/caches/transforms-3/d69d9fde014be414b171916435daaaea/transformed/navigation-compose-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/aa32fc884d687f61200f2429870e2fee/transformed/material-ripple-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/aa32fc884d687f61200f2429870e2fee/transformed/material-ripple-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/3417a3689369339ad1c38344776131eb/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/3417a3689369339ad1c38344776131eb/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/29180102c5248b9a2735fea779bfa910/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/29180102c5248b9a2735fea779bfa910/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8cd676666615b0afb7ffbf75f45cd64d/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8cd676666615b0afb7ffbf75f45cd64d/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/f05fc2bf18472cb5d91d2e0af072da9e/transformed/material-icons-core-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-icons-core:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/f05fc2bf18472cb5d91d2e0af072da9e/transformed/material-icons-core-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.25.1] /home/madoka/.gradle/caches/transforms-3/fb48e8798936f4b39c8a0aad7a59520a/transformed/accompanist-drawablepainter-0.25.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.25.1] /home/madoka/.gradle/caches/transforms-3/fb48e8798936f4b39c8a0aad7a59520a/transformed/accompanist-drawablepainter-0.25.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8f6b27834376192523df741863a03b75/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8f6b27834376192523df741863a03b75/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/944ebeba16417e4ea82c33cd9a448d6c/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/944ebeba16417e4ea82c33cd9a448d6c/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9919801bb4a0ff91304f079dffa16c1f/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9919801bb4a0ff91304f079dffa16c1f/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/d84956f4e9f54e8dffabc086024e98ef/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/d84956f4e9f54e8dffabc086024e98ef/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/552f562c7a6f197112018c02b3356cb7/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/552f562c7a6f197112018c02b3356cb7/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/14107e9fbf0bfbd0fe0e4971bd4ac592/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/14107e9fbf0bfbd0fe0e4971bd4ac592/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/e22736517dc758b5c0b1bbc1a6e38607/transformed/navigation-runtime-ktx-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/e22736517dc758b5c0b1bbc1a6e38607/transformed/navigation-runtime-ktx-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a4fb745b53dbfe53e97d18d5915f1526/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-navigation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a4fb745b53dbfe53e97d18d5915f1526/transformed/hilt-navigation-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] /home/madoka/.gradle/caches/transforms-3/5515a296e9993d2c758349edd4c8e0f9/transformed/navigation-runtime-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.2] /home/madoka/.gradle/caches/transforms-3/5515a296e9993d2c758349edd4c8e0f9/transformed/navigation-runtime-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03] /home/madoka/.gradle/caches/transforms-3/48873da707708a612dff3304c431845d/transformed/hilt-lifecycle-viewmodel-1.0.0-alpha03/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03] /home/madoka/.gradle/caches/transforms-3/48873da707708a612dff3304c431845d/transformed/hilt-lifecycle-viewmodel-1.0.0-alpha03/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.1] /home/madoka/.gradle/caches/transforms-3/7f6f0289d24d6949c4a11aed30e3c2ce/transformed/material-1.6.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.1] /home/madoka/.gradle/caches/transforms-3/7f6f0289d24d6949c4a11aed30e3c2ce/transformed/material-1.6.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /home/madoka/.gradle/caches/transforms-3/2da18bbcae00b9167fe59c6b30c0a934/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /home/madoka/.gradle/caches/transforms-3/2da18bbcae00b9167fe59c6b30c0a934/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/madoka/.gradle/caches/transforms-3/3e1e05ccf890eb0f56870bccbb985bc2/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/madoka/.gradle/caches/transforms-3/3e1e05ccf890eb0f56870bccbb985bc2/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.5.1] /home/madoka/.gradle/caches/transforms-3/54b166afe7eae02f2ac998538161f544/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] /home/madoka/.gradle/caches/transforms-3/54b166afe7eae02f2ac998538161f544/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.hilt:hilt-work:1.0.0] /home/madoka/.gradle/caches/transforms-3/60b43631863964113b51229e6074f9b7/transformed/hilt-work-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.hilt:hilt-work:1.0.0] /home/madoka/.gradle/caches/transforms-3/60b43631863964113b51229e6074f9b7/transformed/hilt-work-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:hilt-android:2.40] /home/madoka/.gradle/caches/transforms-3/7c9c34508e1115366f3cda92909435f4/transformed/hilt-android-2.40/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.40] /home/madoka/.gradle/caches/transforms-3/7c9c34508e1115366f3cda92909435f4/transformed/hilt-android-2.40/AndroidManifest.xml:18:3-42
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/madoka/.gradle/caches/transforms-3/e78bfb86e61012fe0dd14a46c02df705/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/madoka/.gradle/caches/transforms-3/e78bfb86e61012fe0dd14a46c02df705/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/madoka/.gradle/caches/transforms-3/d4bd91d1be08a8876c3c279cbc6d8420/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/madoka/.gradle/caches/transforms-3/d4bd91d1be08a8876c3c279cbc6d8420/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.7.0] /home/madoka/.gradle/caches/transforms-3/f4da5d7e648403a22eafdb8f7c3ba882/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.7.0] /home/madoka/.gradle/caches/transforms-3/f4da5d7e648403a22eafdb8f7c3ba882/transformed/activity-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.0] /home/madoka/.gradle/caches/transforms-3/dba8ac2f244d4dbc8b0c712a28197891/transformed/activity-ktx-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.7.0] /home/madoka/.gradle/caches/transforms-3/dba8ac2f244d4dbc8b0c712a28197891/transformed/activity-ktx-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.0] /home/madoka/.gradle/caches/transforms-3/8fd29abd136458e5eb459e4230b0c2a2/transformed/activity-compose-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.7.0] /home/madoka/.gradle/caches/transforms-3/8fd29abd136458e5eb459e4230b0c2a2/transformed/activity-compose-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.palette:palette-ktx:1.0.0] /home/madoka/.gradle/caches/transforms-3/1c8720ce654199028c980dd92052156f/transformed/palette-ktx-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette-ktx:1.0.0] /home/madoka/.gradle/caches/transforms-3/1c8720ce654199028c980dd92052156f/transformed/palette-ktx-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /home/madoka/.gradle/caches/transforms-3/185931e7a769a3cd18255755ed04cdad/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] /home/madoka/.gradle/caches/transforms-3/185931e7a769a3cd18255755ed04cdad/transformed/palette-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/madoka/.gradle/caches/transforms-3/c2dc88b8037e226a16b519397677f77a/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/madoka/.gradle/caches/transforms-3/c2dc88b8037e226a16b519397677f77a/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a318434ccc855fa432df21117c90c777/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/madoka/.gradle/caches/transforms-3/a318434ccc855fa432df21117c90c777/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/madoka/.gradle/caches/transforms-3/7f83ab55d20b831cfe8b569cac6229dd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/madoka/.gradle/caches/transforms-3/7f83ab55d20b831cfe8b569cac6229dd/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.paging:paging-runtime-ktx:3.1.1] /home/madoka/.gradle/caches/transforms-3/ef5d419777f6928708eab83d6447fac8/transformed/paging-runtime-ktx-3.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.paging:paging-runtime-ktx:3.1.1] /home/madoka/.gradle/caches/transforms-3/ef5d419777f6928708eab83d6447fac8/transformed/paging-runtime-ktx-3.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.paging:paging-runtime:3.1.1] /home/madoka/.gradle/caches/transforms-3/3ae7933ac0b49ec8a10a18de312083cd/transformed/paging-runtime-3.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.paging:paging-runtime:3.1.1] /home/madoka/.gradle/caches/transforms-3/3ae7933ac0b49ec8a10a18de312083cd/transformed/paging-runtime-3.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/1bdaeb1c1681645cd886cf63f44a43ca/transformed/navigation-common-ktx-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.2] /home/madoka/.gradle/caches/transforms-3/1bdaeb1c1681645cd886cf63f44a43ca/transformed/navigation-common-ktx-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.2] /home/madoka/.gradle/caches/transforms-3/b775d7a966b9c8a7e3b2c2bbf328e90e/transformed/navigation-common-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.2] /home/madoka/.gradle/caches/transforms-3/b775d7a966b9c8a7e3b2c2bbf328e90e/transformed/navigation-common-2.5.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/madoka/.gradle/caches/transforms-3/2c54a14428a3d409f2a558ead0132055/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/madoka/.gradle/caches/transforms-3/2c54a14428a3d409f2a558ead0132055/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.loader:loader:1.0.0] /home/madoka/.gradle/caches/transforms-3/3ef26950377517388cf0327e3ebcaad2/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/madoka/.gradle/caches/transforms-3/3ef26950377517388cf0327e3ebcaad2/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/cce19d707d14a4fff75e09b458c22f5f/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/cce19d707d14a4fff75e09b458c22f5f/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /home/madoka/.gradle/caches/transforms-3/7bfaffd557e0e575005a8051a0d4af0e/transformed/lifecycle-service-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.1] /home/madoka/.gradle/caches/transforms-3/7bfaffd557e0e575005a8051a0d4af0e/transformed/lifecycle-service-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/d84be2ee7ebda589e50594cb234a4917/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/d84be2ee7ebda589e50594cb234a4917/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /home/madoka/.gradle/caches/transforms-3/83fd962286c5f4afd2a3cf98099e682d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /home/madoka/.gradle/caches/transforms-3/83fd962286c5f4afd2a3cf98099e682d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /home/madoka/.gradle/caches/transforms-3/01b07277856601223274a5db77ca24d4/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /home/madoka/.gradle/caches/transforms-3/01b07277856601223274a5db77ca24d4/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/madoka/.gradle/caches/transforms-3/399cb7a7517ade7349e5a194c42a6f3c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/madoka/.gradle/caches/transforms-3/399cb7a7517ade7349e5a194c42a6f3c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/madoka/.gradle/caches/transforms-3/ba176a8c77d1fa90ef54fc9b74a218f3/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/madoka/.gradle/caches/transforms-3/ba176a8c77d1fa90ef54fc9b74a218f3/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/90eb9c873c722f41e7606ba594ac29bf/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/90eb9c873c722f41e7606ba594ac29bf/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/5254a4e1d0f7359336db0b6a6bd61a55/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /home/madoka/.gradle/caches/transforms-3/5254a4e1d0f7359336db0b6a6bd61a55/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /home/madoka/.gradle/caches/transforms-3/bbdf3f4740a041ac1044402d94d10ddf/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /home/madoka/.gradle/caches/transforms-3/bbdf3f4740a041ac1044402d94d10ddf/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /home/madoka/.gradle/caches/transforms-3/e05661cac73c16419f2f3ed0958d39c5/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /home/madoka/.gradle/caches/transforms-3/e05661cac73c16419f2f3ed0958d39c5/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/madoka/.gradle/caches/transforms-3/2120abf9ea9aa1a8aeb49d50f436439c/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/madoka/.gradle/caches/transforms-3/2120abf9ea9aa1a8aeb49d50f436439c/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/madoka/.gradle/caches/transforms-3/bee8c488ba39b6693333ad7475bedc8f/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/madoka/.gradle/caches/transforms-3/bee8c488ba39b6693333ad7475bedc8f/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/madoka/.gradle/caches/transforms-3/7a2d0c828649ad886ca77d6be5868cbf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/madoka/.gradle/caches/transforms-3/7a2d0c828649ad886ca77d6be5868cbf/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/madoka/.gradle/caches/transforms-3/593045278987fae6852fa2da888f079e/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/madoka/.gradle/caches/transforms-3/593045278987fae6852fa2da888f079e/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/madoka/.gradle/caches/transforms-3/f3cc606db4090a2e3bc7718fbb008da7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/madoka/.gradle/caches/transforms-3/f3cc606db4090a2e3bc7718fbb008da7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/madoka/.gradle/caches/transforms-3/6cff4f17b879d368e17efcec50db723e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/madoka/.gradle/caches/transforms-3/6cff4f17b879d368e17efcec50db723e/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/madoka/.gradle/caches/transforms-3/e42592148d3e23f348657e2d504c2d59/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/madoka/.gradle/caches/transforms-3/e42592148d3e23f348657e2d504c2d59/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/madoka/.gradle/caches/transforms-3/5bf23f3b1dcd4f9c98f94aee5cdf1fe5/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/madoka/.gradle/caches/transforms-3/5bf23f3b1dcd4f9c98f94aee5cdf1fe5/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.2.0] /home/madoka/.gradle/caches/transforms-3/e6509f07305432b5683aaea4e90926ea/transformed/recyclerview-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.0] /home/madoka/.gradle/caches/transforms-3/e6509f07305432b5683aaea4e90926ea/transformed/recyclerview-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/madoka/.gradle/caches/transforms-3/a19f7bb0390f69f498d3885e16c90519/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/madoka/.gradle/caches/transforms-3/a19f7bb0390f69f498d3885e16c90519/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /home/madoka/.gradle/caches/transforms-3/88370f66ae34352359d3c103d9d7720b/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /home/madoka/.gradle/caches/transforms-3/88370f66ae34352359d3c103d9d7720b/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /home/madoka/.gradle/caches/transforms-3/2ef1b0d82bea1235ea98b3f3a0bff462/transformed/lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1] /home/madoka/.gradle/caches/transforms-3/2ef1b0d82bea1235ea98b3f3a0bff462/transformed/lifecycle-viewmodel-compose-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/cab8ef8b9c0196b0dac29bee29300e30/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/cab8ef8b9c0196b0dac29bee29300e30/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/e0b9988c213f51d7624b9343f06b9edd/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/e0b9988c213f51d7624b9343f06b9edd/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/fba83a4159e6cf40e7c06795d98adcf2/transformed/material-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material:1.2.0-alpha04] /home/madoka/.gradle/caches/transforms-3/fba83a4159e6cf40e7c06795d98adcf2/transformed/material-1.2.0-alpha04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/a1f738d498c6ab54c4a124f88aef073a/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/a1f738d498c6ab54c4a124f88aef073a/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8954ae3102e4aca87d5613444f1bbc06/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/8954ae3102e4aca87d5613444f1bbc06/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/895701ae05e43613e8a4f80c057de68a/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/895701ae05e43613e8a4f80c057de68a/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [io.github.aakira:napier-android-debug:1.4.1] /home/madoka/.gradle/caches/transforms-3/365e416e98468c25a2a63a094769bbd2/transformed/napier-debug/AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.aakira:napier-android-debug:1.4.1] /home/madoka/.gradle/caches/transforms-3/365e416e98468c25a2a63a094769bbd2/transformed/napier-debug/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/madoka/.gradle/caches/transforms-3/83c1daec397e727bcf64a43488229279/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/madoka/.gradle/caches/transforms-3/83c1daec397e727bcf64a43488229279/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/madoka/.gradle/caches/transforms-3/9a2ca8463416e348f09ab28af07f1964/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/madoka/.gradle/caches/transforms-3/9a2ca8463416e348f09ab28af07f1964/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/madoka/.gradle/caches/transforms-3/315ada366d818854f6b08da72c0e7b0c/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/madoka/.gradle/caches/transforms-3/315ada366d818854f6b08da72c0e7b0c/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b70215010587c108505a1bb150be5ce/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b70215010587c108505a1bb150be5ce/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b7aebc1d7f8663adad0a27b22d8b05e/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/madoka/.gradle/caches/transforms-3/1b7aebc1d7f8663adad0a27b22d8b05e/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /home/madoka/.gradle/caches/transforms-3/f62d910c71234e421fe107a9ef1109f5/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /home/madoka/.gradle/caches/transforms-3/f62d910c71234e421fe107a9ef1109f5/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/madoka/.gradle/caches/transforms-3/cb86f18163d932ce2de4d5d6acd8ea66/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/madoka/.gradle/caches/transforms-3/cb86f18163d932ce2de4d5d6acd8ea66/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/madoka/.gradle/caches/transforms-3/ac695e55a3d3439b6a0c2942bcdfda31/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/madoka/.gradle/caches/transforms-3/ac695e55a3d3439b6a0c2942bcdfda31/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/madoka/.gradle/caches/transforms-3/90c547a38720c576f9d63477d843f5a8/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/madoka/.gradle/caches/transforms-3/90c547a38720c576f9d63477d843f5a8/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/madoka/.gradle/caches/transforms-3/b9a224d2a877e19eedbb742760d8e38d/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /home/madoka/.gradle/caches/transforms-3/b9a224d2a877e19eedbb742760d8e38d/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/madoka/.gradle/caches/transforms-3/b6d9c52be55b7fdc77f1ddfddef20df1/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /home/madoka/.gradle/caches/transforms-3/b6d9c52be55b7fdc77f1ddfddef20df1/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/madoka/.gradle/caches/transforms-3/4f5c506c0370afd5705a536f18c58d5e/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/madoka/.gradle/caches/transforms-3/4f5c506c0370afd5705a536f18c58d5e/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] /home/madoka/.gradle/caches/transforms-3/8b7eee916b9867d1f0301521d7777752/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/madoka/.gradle/caches/transforms-3/8b7eee916b9867d1f0301521d7777752/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.40] /home/madoka/.gradle/caches/transforms-3/71d528133b98fc6a8ced5aa0c9b0dd63/transformed/dagger-lint-aar-2.40/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.40] /home/madoka/.gradle/caches/transforms-3/71d528133b98fc6a8ced5aa0c9b0dd63/transformed/dagger-lint-aar-2.40/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:data] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-77
+	android:name
+		ADDED from [:data] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-74
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:domain] /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] /home/madoka/.gradle/caches/transforms-3/c09b822f8a6231911caeb7a904adca6f/transformed/ui-test-manifest-1.6.5/AndroidManifest.xml:24:13-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:25:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:27:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:5-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:28:22-74
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:31:9-39:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/madoka/.gradle/caches/transforms-3/143a34967ef4f554986a093546773878/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:35:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:33:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:32:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:36:13-38:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:38:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:37:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:41:9-46:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:44:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:45:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:46:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:43:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:42:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:47:9-53:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:50:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:52:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:53:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:49:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:48:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:54:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:57:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:58:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:56:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:55:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:116:13-120:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:117:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:117:25-76
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] /home/madoka/.gradle/caches/transforms-3/3d4def58441d13d4ba7bc9427ecafbab/transformed/work-runtime-2.7.0/AndroidManifest.xml:140:25-85
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/madoka/.gradle/caches/transforms-3/16090b447ae492840a6b4543e00d5ea4/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/madoka/.gradle/caches/transforms-3/4042ba6de0f4e28fe913c7847bcf2f59/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.madoka.movieshop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.madoka.movieshop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] /home/madoka/.gradle/caches/transforms-3/9806668da9eb44687ed096b05e0f3789/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.4.3] /home/madoka/.gradle/caches/transforms-3/c768c8e039887c931e7673caf1d89a7e/transformed/room-runtime-2.4.3/AndroidManifest.xml:26:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/madoka/.gradle/caches/transforms-3/1e92c8ea88371cbc886817b118cc4e21/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

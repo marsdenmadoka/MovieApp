@@ -37,27 +37,27 @@ kotlin {
       val commonMain by getting {
           //put your multiplatform dependencies here
           dependencies {
-          implementation(libs.compose.foundation)
-          implementation(libs.compose.material3)
+         // implementation(libs.compose.foundation)
+        //  implementation(libs.compose.material3)
 
 
-          implementation("com.squareup.sqldelight:runtime:1.5.5")
-          implementation("com.squareup.sqldelight:coroutines-extensions:1.5.5")
-              implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+//          implementation("com.squareup.sqldelight:runtime:1.5.5")
+//          implementation("com.squareup.sqldelight:coroutines-extensions:1.5.5")
+//              implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
           }
 
         }
        val commonTest by getting{
            dependencies {
-               implementation(kotlin("test"))
+              // implementation(kotlin("test"))
            }
             //implementation(libs.kotlin.test)
         }
         val androidMain by getting {
             dependencies {
-                implementation("com.squareup.sqldelight:android-driver:1.5.5")
-                implementation("androidx.appcompat:appcompat:1.6.1")
-                implementation("androidx.activity:activity-compose:1.7.2")
+//                implementation("com.squareup.sqldelight:android-driver:1.5.5")
+//                implementation("androidx.appcompat:appcompat:1.6.1")
+//                implementation("androidx.activity:activity-compose:1.7.2")
             }
         }
         val androidUnitTest by getting
@@ -66,7 +66,7 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependencies {
-                implementation("com.squareup.sqldelight:native-driver:1.5.5")
+                //implementation("com.squareup.sqldelight:native-driver:1.5.5")
             }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -105,9 +105,9 @@ android {
 //}
 
 dependencies {
-    implementation("androidx.core:core:1.10.1")
-    commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
-    commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+//    implementation("androidx.core:core:1.10.1")
+//    commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
+//    commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
+//    commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
+//    commonMainApi("dev.icerock.moko:mvvm-flow-compose:0.16.1")
 }
