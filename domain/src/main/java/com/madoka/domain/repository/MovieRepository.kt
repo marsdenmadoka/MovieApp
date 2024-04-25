@@ -2,7 +2,9 @@ package com.madoka.domain.repository
 
 import com.madoka.commons.Resource
 import com.madoka.domain.model.Movie
+import dagger.Provides
 import kotlinx.coroutines.flow.Flow
+
 
 interface MovieRepository {
 
