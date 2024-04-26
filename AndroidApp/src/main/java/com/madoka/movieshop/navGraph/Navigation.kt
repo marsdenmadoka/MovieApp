@@ -1,6 +1,8 @@
 package com.madoka.movieshop.navGraph
 
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -12,15 +14,19 @@ import com.madoka.movieshop.screens.home.HomeScreen
 
 
 
-@OptIn(ExperimentalAnimationApi::class)
+@OptIn(ExperimentalAnimationApi::class, ExperimentalSharedTransitionApi::class)
 @Composable
 fun MainNavigationGraph() {
 
     val navController = rememberAnimatedNavController()
+
+SharedTransitionLayout(){
     NavHost(navController = navController, startDestination = NavItem.Home.route ) {
 
         composable(route = NavItem.Home.route) {
-            HomeScreen(navController = navController)
+            HomeScreen(
+                animatedVisibilityScope = this@composable,
+                navController = navController)
         }
 
 //        composable(route=NavItem.Details.route){
@@ -38,9 +44,15 @@ fun MainNavigationGraph() {
         ) {
             val movieID = it.arguments?.getInt("movieId")
             if (movieID != null) {
-                 detailsScreen(navController = navController, movieId = movieID)
+                detailsScreen(
+                    animatedVisibilityScope = this@composable,
+                    navController = navController,
+                    movieId = movieID,)
             }
 
         }
     }
+
+}
+
 }

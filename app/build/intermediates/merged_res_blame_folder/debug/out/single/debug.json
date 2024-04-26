@@ -1,0 +1,158 @@
+[
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_star.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/star.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_rating_star.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_rating_star.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_condensed_light.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_condensed_light.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/xml_backup_rules.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_back.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_gothica1_semibold.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/gothica1_semibold.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_background_bottom_sheet_progress.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/background_bottom_sheet_progress.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_gothica1_medium.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/gothica1_medium.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_videocam.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_videocam.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/xml_data_extraction_rules.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_settings.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_settings.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_condensed_regular.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_condensed_regular.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_gothica1_bold.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/gothica1_bold.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_bold.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_bold.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_gothica1_black.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/gothica1_black.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_drawable1.png.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/drawable1.png"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_play.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_play.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_actor.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_actor.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_gothica1_regular.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/gothica1_regular.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_medium.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_medium.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_regular.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_regular.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/font_roboto_light.ttf.flat",
+        "source": "com.madoka.movieshop.app-main-80:/font/roboto_light.ttf"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_logo.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/logo.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.madoka.movieshop.app-main-80:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_ic_home.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.madoka.movieshop.app-merged_res-78:/drawable_logo_n.xml.flat",
+        "source": "com.madoka.movieshop.app-main-80:/drawable/logo_n.xml"
+    }
+]

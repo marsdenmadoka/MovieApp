@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.madoka.movieshop.app-mergeDebugResources-76:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/madoka/.gradle/caches/transforms-3/8587c0582cf83079932e89196427fa2f/transformed/core-1.12.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/home/madoka/.gradle/caches/transforms-3/54b166afe7eae02f2ac998538161f544/transformed/appcompat-1.5.1/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 #introduction
 
-An Android app consuming [MovieDb API]("https://developers.themoviedb.org/3") to display Movie lists 
-built with Jetpack Compose,Clean Architecture Principle , MVVM pattern as
+An App consuming [MovieDb API]("https://developers.themoviedb.org/3") to display Movie lists 
+built with Jetpack Compose,Clean Architecture Principle , MVVM ,MVI pattern as
 well as Architecture Components.
 
 This app is now migrating to kotlin Multi Platform
@@ -14,9 +14,9 @@ app navigates to the Details Screen which shows more details.
 
 
 ## Architecture
-The app is built using the Modular MVVM architectural pattern and makes use of Android Jetpack components.
+The app is built using the Modular MVVM architectural pattern  in a Clean Architecture and makes use of Android Jetpack components.
 MVVM allows for the separation of concern. The app has composable screen that communicates to ViewModel
-which in turn communicates to the usecase which communicates with Repository to get data.
+which in turn communicates to the usecases which communicates with Repository to get data.
 
 # What is Clean Architecture?
 
@@ -24,7 +24,7 @@ A well planned architecture is extremely important for an app to scale and all a
 ## Prerequisite.
  To run the application you'll need add your api key in gradle.properties file. Generate your api key by [creating](https://www.themoviedb.org/signup) an IMDB account and [generating](https://www.themoviedb.org/settings/api) an api key.
 
-## Screenshoots
+## Screenshots
 These are the app's screenshots:
 
 <p align="center">
@@ -35,10 +35,9 @@ These are the app's screenshots:
 <img src="Screenshoots/Screenshot3.png" width=300/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="screenshoots/Screenshot4.png" width=300/>|
 </p>
 
-
 <p align="center">
 
-## Demo
+## Application Demo
 </p>
 <p align="center">
 <img src="screenshoots/gif.gif" width=300/>

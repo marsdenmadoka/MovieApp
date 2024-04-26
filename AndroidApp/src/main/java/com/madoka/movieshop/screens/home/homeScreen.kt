@@ -1,5 +1,9 @@
 package com.madoka.movieshop.screens.home
 
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -38,7 +42,8 @@ import com.madoka.movieshop.ui.theme.DeepBlue
 @Composable
 fun HomeScreen(
     navController: NavController,
-    viewModel: HomeViewModel = hiltViewModel()
+    viewModel: HomeViewModel = hiltViewModel(),
+    animatedVisibilityScope: AnimatedVisibilityScope
 ) {
 //    val playingNowMovieState = viewModel.moviePlayingNowState.value
 //    val trendingMovieState = viewModel.movieTrendingState.value
@@ -68,6 +73,7 @@ fun HomeScreen(
             TrendingNowMovies(
                 moviesSate = trendingMovieState,
                 navController = navController,
+                animatedVisibilityScope = animatedVisibilityScope
             )
             PopularMovies(
                 moviesSate = popularMovieState,
@@ -81,9 +87,9 @@ fun HomeScreen(
 
 
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalPagerApi::class, ExperimentalSharedTransitionApi::class)
 @Composable
-private fun TopSectionPlayingNow(
+ private  fun TopSectionPlayingNow(
     moviesState: MovieState,
     navController: NavController,
 ) {
@@ -102,6 +108,7 @@ private fun TopSectionPlayingNow(
         state = pagerState
     )
     { page ->
+
 //        TopPlayingNowSectionItem(movie = , moviesState = , onClickItem = )
         TopPlayingNowSectionItem(
             modifier = Modifier
@@ -130,10 +137,13 @@ private fun TopSectionPlayingNow(
 
 }
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun TrendingNowMovies(
     moviesSate: MovieState,
     navController: NavController,
+    modifier: Modifier = Modifier,
+    animatedVisibilityScope: AnimatedVisibilityScope
 ) {
     //separate our sections class created in components
     Separator(
@@ -159,13 +169,21 @@ fun TrendingNowMovies(
             )
     ) {
         items(moviesSate.movies) { item ->
-            TrendingMoviesItem(
-                movie = item,
-                onClickItem = { movie ->
-                    navController.navigate("details/${movie.movieId}")
-                    //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
-                },
-            )
+
+            SharedTransitionScope {
+                TrendingMoviesItem(
+                  animatedVisibilityScope=animatedVisibilityScope,
+                    movie = item,
+//                modifier = Modifier
+//                    .clickable {  },
+                    onClickItem = { movie ->
+                        navController.navigate("details/${movie.movieId}")
+                        //navController.navigate("details/${movie.id!!}/${movie.cacheId}")
+                    },
+                )
+            }
+
+
         }
     }
 }
@@ -216,6 +234,6 @@ fun PopularMovies(
 @Composable
 private fun HomeScreenPreview() {
     val navController: NavController? = null
-    HomeScreen(navController = navController!!)
+    //HomeScreen(navController = navController!!)
 
 }
