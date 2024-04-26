@@ -1,9 +1,0 @@
-com.madoka.shared-pngs-0 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/generated/res/pngs/release
-com.madoka.shared-resValues-1 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/generated/res/resValues/release
-com.madoka.shared-mergeReleaseResources-2 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.madoka.shared-mergeReleaseResources-3 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.madoka.shared-merged_res-4 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/build/intermediates/merged_res/release
-com.madoka.shared-androidMain-5 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/src/androidMain/res
-com.madoka.shared-androidRelease-6 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/src/androidRelease/res
-com.madoka.shared-main-7 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/src/main/res
-com.madoka.shared-release-8 /home/madoka/AndroidStudioProjects/Master-Projects/MovieShop/shared/src/release/res
